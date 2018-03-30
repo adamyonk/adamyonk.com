@@ -1,0 +1,10 @@
+{
+  "trailingComma": "es5",
+  "semi": false,
+  "overrides": [
+    {
+      "files": ".{prettier,babel}rc",
+      "options": { "parser": "json" }
+    }
+  ]
+}
