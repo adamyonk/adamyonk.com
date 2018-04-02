@@ -10,6 +10,7 @@ I was recently setting up a Jekyll site that had the JavaScript and CSS compiled
 
 ```javascript
 var webpack = require("webpack")
+
 module.exports = {
   plugins: [new webpack.BannerPlugin("---\n---\n\n", { raw: true })],
 }

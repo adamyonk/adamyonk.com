@@ -19,7 +19,7 @@ See `git-merge-pr` below or [grab it from my dotfiles][git-merge-pr]!
 
 ## git-merge-pr
 
-```shell
+```bash
 #!/usr/bin/env bash
 
 # Contributors:

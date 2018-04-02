@@ -2,6 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import Link from "gatsby-link"
 import Helmet from "react-helmet"
+require("prismjs/themes/prism-solarizedlight.css")
 
 const TemplateWrapper = ({ children }) => (
   <React.Fragment>
@@ -245,20 +246,20 @@ const TemplateWrapper = ({ children }) => (
         line-height: 0;
       }
 
-      code,
-      pre {
-        font-family: var(--monospace);
-      }
+      // code,
+      // pre {
+      //   font-family: var(--monospace);
+      // }
 
-      pre code {
-        background: var(--base3);
-        border-radius: 2px;
-        box-sizing: border-box;
-        display: block;
-        overflow: scroll;
-        padding: 0.25em 0.75em;
-        width: 100%;
-      }
+      // pre code {
+      //   background: var(--base3);
+      //   border-radius: 2px;
+      //   box-sizing: border-box;
+      //   display: block;
+      //   overflow: scroll;
+      //   padding: 0.25em 0.75em;
+      //   width: 100%;
+      // }
 
       .logo {
         align-items: center;
@@ -360,6 +361,54 @@ const TemplateWrapper = ({ children }) => (
 
       header h1 {
         margin-bottom: 0em;
+      }
+
+      /**
+       * Prism things:
+       */
+      .gatsby-highlight-code-line {
+        background-color: #feb;
+        display: block;
+        margin-right: -1em;
+        margin-left: -1em;
+        padding-right: 1em;
+        padding-left: 0.75em;
+        border-left: 0.25em solid #f99;
+      }
+
+      /**
+       * Add back the container background-color, border-radius, padding, margin
+       * and overflow that we removed from <pre>.
+       */
+      .gatsby-highlight {
+        background-color: #fdf6e3;
+        border-radius: 0.3em;
+        margin: 0.5em 0;
+        padding: 1em;
+        overflow: auto;
+      }
+
+      /**
+       * Remove the default PrismJS theme background-color, border-radius, margin,
+       * padding and overflow.
+       * 1. Make the element just wide enough to fit its content.
+       * 2. Always fill the visible space in .gatsby-highlight.
+       */
+      .gatsby-highlight pre[class*="language-"] {
+        background-color: transparent;
+        margin: 0;
+        padding: 0;
+        overflow: initial;
+        float: left; /* 1 */
+        min-width: 100%; /* 2 */
+      }
+
+      :not(pre) > code[class*="language-"] {
+        // display: inline-block;
+      }
+      code[class*="language-"],
+      pre[class*="language-"] {
+        font-family: var(--body);
       }
     `}</style>
   </React.Fragment>

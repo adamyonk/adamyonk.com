@@ -11,10 +11,10 @@ tags: [apple, macos, command-line]
 * Name it "Add to Safari Reading List" and add a "Run AppleScript" action with the following AppleScript, and don't forget to use "Google Chrome Canary" and or "Safari Technology Preview" instead if you prefer them:
 
   ```applescript
-  tell application "Google Chrome"
-    set pageUrl to get URL of active tab of first window
-  end tell
-  tell application "Safari" to add reading list item pageUrl
+    tell application "Google Chrome"
+      set pageUrl to get URL of active tab of first window
+    end tell
+    tell application "Safari" to add reading list item pageUrl
   ```
 
   ![](/img/send-chrome-tab-to-safari-reading-list/3.png)

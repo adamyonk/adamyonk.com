@@ -10,4 +10,4 @@ I put together a pretty simple solution for masking yet another native HTML inpu
 
 I'm just kidding. You guys are great!
 
-<a class="jsbin-embed" href="http://jsbin.com/susuda/embed?output">JS Bin on jsbin.com</a><script src="http://static.jsbin.com/js/embed.min.js?3.35.9"></script>
+<iframe src="https://codesandbox.io/embed/8k2kjzll32?autoresize=1&hidenavigation=1&moduleview=1" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>

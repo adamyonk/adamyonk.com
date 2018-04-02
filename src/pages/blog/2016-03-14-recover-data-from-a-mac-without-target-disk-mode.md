@@ -10,28 +10,28 @@ I was recently trying to pull data off of an iMac for a friend, but didn't have 
 
 Start up your Mac in single-user mode<sup>[2](#2)</sup>, then run the following commands<sup>[3](#3)</sup>:
 
-```shell
+```bash
 # Check the filesystem
-$ /sbin/fsck -y
+/sbin/fsck -y
 
 # Mount the root volume
-$ mount -uw /
+mount -uw /
 
 # Create mount destination
-$ mkdir /Volumes/backup
+mkdir /Volumes/backup
 
 # Get a list of available drives
-$ df -h
+df -h
 
 # Plug in USB backup drive, look for new drive name
-$ df -h
+df -h
 
 # Mount the drive with the name you got from last step. Probably looks
 # something like /dev/rdisk2s2. Note the rdisk / disk name difference.
-$ mount -t hfs /dev/disk2s2 /Volumes/backup
+mount -t hfs /dev/disk2s2 /Volumes/backup
 
 # rsync data to your backup
-$ rsync -ahz /Users/you/ /Volumes/backup/
+rsync -ahz /Users/you/ /Volumes/backup/
 ```
 
 <sup><a name="1">1</a></sup>Share files between two computers with target disk mode: [https://support.apple.com/en-us/HT201462][target disk mode]
