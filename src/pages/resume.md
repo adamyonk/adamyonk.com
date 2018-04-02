@@ -12,7 +12,7 @@ _References available upon request._
 
 # Job History
 
-## Librato/Solar Winds
+## Librato/SolarWinds
 
 Engineer, Senior Engineer  
 December 2013 – Present

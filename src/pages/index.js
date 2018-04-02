@@ -27,7 +27,7 @@ export default class IndexPage extends React.Component {
         </Helmet>
         <p>
           I’m Adam Jahnke. I work on{" "}
-          <a href="https://appoptics.com">AppOptics</a> at Solar Winds. I
+          <a href="https://appoptics.com">AppOptics</a> at SolarWinds. I
           thoroughly enjoy writing code. I love to make the complex simple. I
           live in Springfield, Missouri with my beautiful wife{" "}
           <Link
