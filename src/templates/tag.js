@@ -4,7 +4,7 @@ import PostList from "../components/PostList"
 export default ({ data }) => {
   const { edges: posts = [] } = (data && data.allMarkdownRemark) || {}
   return (
-    <section className="section">
+    <section>
       <PostList posts={posts} />
     </section>
   )

@@ -3,10 +3,10 @@ import React from "react"
 export default ({ data }) => {
   const { markdownRemark: post } = data
   return (
-    <section className="section">
+    <article>
       <h2>{post.frontmatter.title}</h2>
       <div dangerouslySetInnerHTML={{ __html: post.html }} />
-    </section>
+    </article>
   )
 }
 

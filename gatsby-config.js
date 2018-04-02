@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: "Gatsby Default Starter",
+    title: "Adam Jahnke ☕️🏍 (adamyonk)",
     description: "",
     siteUrl: "https://adamyonk.com",
     author: "Adam Jahnke",
@@ -9,29 +9,29 @@ module.exports = {
     { resolve: "gatsby-plugin-react-next" },
     { resolve: "gatsby-plugin-react-helmet" },
     { resolve: "gatsby-plugin-styled-jsx" },
-    // {
-    //   resolve: "gatsby-plugin-feed-generator",
-    //   feedQuery: `
-    //     {
-    //       allMarkdownRemark(
-    //         filter: { frontmatter: { templateKey: { eq: "post" } } }
-    //         sort: { order: DESC, fields: [frontmatter___date] }
-    //       ) {
-    //         edges {
-    //           node {
-    //             html
-    //             id
-    //             frontmatter {
-    //               date
-    //               path
-    //               title
-    //             }
-    //           }
-    //         }
-    //       }
-    //     }
-    //   `,
-    // },
+    {
+      resolve: "gatsby-plugin-feed-generator",
+      feedQuery: `
+        {
+          allMarkdownRemark(
+            filter: { frontmatter: { templateKey: { eq: "post" } } }
+            sort: { order: DESC, fields: [frontmatter___date] }
+          ) {
+            edges {
+              node {
+                html
+                id
+                frontmatter {
+                  date
+                  path
+                  title
+                }
+              }
+            }
+          }
+        }
+      `,
+    },
     {
       resolve: "gatsby-source-filesystem",
       options: {
