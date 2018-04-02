@@ -28,3 +28,14 @@ collections:
       - {label: "Path", name: "path", widget: "hidden", default: "/about"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}
+
+  - name: "resume"
+    label: "Résumé"
+    folder: "src/pages/resume"
+    create: false
+    slug: "{{slug}}"
+    fields:
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "page"}
+      - {label: "Path", name: "path", widget: "hidden", default: "/resume"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown"}
