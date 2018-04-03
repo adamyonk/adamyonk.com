@@ -1,6 +1,7 @@
 import React from "react"
 import Helmet from "react-helmet"
 import Date from "../components/Date"
+import Meta from "../components/Meta"
 import Tags from "../components/Tags"
 
 export default function Template({ data }) {
@@ -10,18 +11,15 @@ export default function Template({ data }) {
       <Helmet title={`Blog | ${post.frontmatter.title}`} />
       <article>
         <h1>{post.frontmatter.title}</h1>
-        <div className="post-meta">
+        <Meta>
           Posted <Date date={post.frontmatter.date} /> under{" "}
           <Tags tags={post.frontmatter.tags} />
-        </div>
+        </Meta>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
       </article>
       <style jsx>{`
         h1 {
           margin-bottom: 0;
-        }
-        .post-meta {
-          font-size: 0.8em;
         }
       `}</style>
     </React.Fragment>

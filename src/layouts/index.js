@@ -404,7 +404,7 @@ const TemplateWrapper = ({ children }) => (
       }
 
       :not(pre) > code[class*="language-"] {
-        // display: inline-block;
+        white-space: normal;
       }
       code[class*="language-"],
       pre[class*="language-"] {
