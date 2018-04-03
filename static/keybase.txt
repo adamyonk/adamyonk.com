@@ -1,0 +1,94 @@
+==================================================================
+https://keybase.io/adamyonk
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://adamyonk.com
+  * I am adamyonk (https://keybase.io/adamyonk) on keybase.
+  * I have a public key with fingerprint 2CC2 12C4 019C 5A99 6F79  DF40 537C 1353 D51C AEFE
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "client": {
+            "name": "keybase.io node.js client",
+            "version": "0.7.8"
+        },
+        "key": {
+            "fingerprint": "2cc212c4019c5a996f79df40537c1353d51caefe",
+            "host": "keybase.io",
+            "key_id": "537C1353D51CAEFE",
+            "uid": "a5271ff788e2e238445f1c9f70537f00",
+            "username": "adamyonk"
+        },
+        "merkle_root": {
+            "ctime": 1432678202,
+            "hash": "434d0b478c565d9f661d269458c090f8af62dea609ce9f1a601a55b66784c96122acb636d21a8ab0deb2012839753a8ffa41a2c2f16e7536252f87c6dd5e1bb2",
+            "seqno": 228136
+        },
+        "service": {
+            "hostname": "adamyonk.com",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1432678233,
+    "expire_in": 157680000,
+    "prev": "101c43c300398718960904d1e1f2803662f38e90d639b7888cde793c2d2a4e21",
+    "seqno": 8,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: GnuPG v2
+Comment: GPGTools - http://gpgtools.org
+
+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
+wVXS5f5CyVfPaorDWxL+BA==
+=guXT
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/adamyonk
+
+==================================================================
