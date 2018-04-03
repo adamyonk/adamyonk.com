@@ -16,7 +16,7 @@ module.exports = {
 }
 ```
 
-The `{ raw: true }` bit in the options is important, otherwise `BannerPlugin` will output the passed string as a comment and Liquid won't know about it.
+The `javascript±{ raw: true }` bit in the options is important, otherwise `BannerPlugin` will output the passed string as a comment and Liquid won't know about it.
 
 When Jekyll picks up my built bundle to compile it into `/_site`, it will now have the triple-dashes prepended to the file. I use the `style-loader` with Webpack so that I can `require` styles in my JavaScript and have them written to the document `<head>`. So now I'll be able to use Liquid tags for things like this:
 
