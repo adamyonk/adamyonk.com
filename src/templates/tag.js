@@ -3,7 +3,6 @@ import Helmet from "react-helmet"
 import PostList from "../components/PostList"
 
 export default props => {
-  console.log(props)
   const { edges: posts = [] } =
     (props.data && props.data.allMarkdownRemark) || {}
   return (

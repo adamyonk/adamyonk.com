@@ -2,6 +2,8 @@
 templateKey: 'page'
 path: /resume
 title: Résumé
+date: ''
+updated: ''
 ---
 
 _Adam Jahnke_  
