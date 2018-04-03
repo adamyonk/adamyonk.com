@@ -1,10 +1,15 @@
 import React from "react"
+import Helmet from "react-helmet"
 import PostList from "../components/PostList"
 
-export default ({ data }) => {
-  const { edges: posts = [] } = (data && data.allMarkdownRemark) || {}
+export default props => {
+  console.log(props)
+  const { edges: posts = [] } =
+    (props.data && props.data.allMarkdownRemark) || {}
   return (
     <section>
+      <Helmet title={`Posts tagged "${props.pathContext.tag}" | Adam Jahnke`} />
+      <h1>Posts tagged "{props.pathContext.tag}"</h1>
       <PostList posts={posts} />
     </section>
   )

@@ -5,6 +5,8 @@ path: /uses
 date: 2018-01-23 10:32:59 -0600
 ---
 
+Things I use.
+
 ## Software
 
 * 1Password

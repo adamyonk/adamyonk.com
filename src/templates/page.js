@@ -1,4 +1,5 @@
 import React from "react"
+import Helmet from "react-helmet"
 import Date from "../components/Date"
 import Meta from "../components/Meta"
 
@@ -7,6 +8,7 @@ export default ({ data }) => {
   const { date, updated, title } = post.frontmatter
   return (
     <article>
+      <Helmet title={`${post.frontmatter.title} | Adam Jahnke`} />
       <h1>{title}</h1>
       <div dangerouslySetInnerHTML={{ __html: post.html }} />
       {!!date && (

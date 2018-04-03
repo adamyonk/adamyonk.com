@@ -8,7 +8,7 @@ export default function Template({ data }) {
   const { markdownRemark: post } = data
   return (
     <React.Fragment>
-      <Helmet title={`Blog | ${post.frontmatter.title}`} />
+      <Helmet title={`${post.frontmatter.title} | Adam Jahnke`} />
       <article>
         <h1>{post.frontmatter.title}</h1>
         <Meta>
