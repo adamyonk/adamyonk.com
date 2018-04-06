@@ -14,7 +14,7 @@ module.exports = {
       feedQuery: `
         {
           allMarkdownRemark(
-            filter: { frontmatter: { templateKey: { eq: "post" } } },
+            filter: { frontmatter: { templateKey: { eq: "post" }, published: { eq: true } } },
             sort: { order: DESC, fields: [frontmatter___date] }
           ) {
             edges {

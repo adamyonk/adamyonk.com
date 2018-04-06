@@ -4,6 +4,7 @@ title: Rails 4, Strong Parameters, and Nested Forms
 path: /rails-4-strong-parameters-and-nested-forms
 date: 2013-05-16 13:19:06 -0500
 tags: [rails]
+published: true
 ---
 
 I recently started building a Rails 4 app and ran into some hangups when using strong parameters with nested models and forms. It seems to be lacking documentation for this specific scenario, so I wanted to share my findings.

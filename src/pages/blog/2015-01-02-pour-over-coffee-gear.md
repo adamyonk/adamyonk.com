@@ -4,6 +4,7 @@ title: Pour Over Coffee Gear
 date: 2015-01-04 22:44:00 -0600
 path: /pour-over-coffee-gear
 tags: [gear, coffee]
+published: true
 ---
 
 Writing about something as subjective as coffee is difficult. So don't take this as anything more than my personal opinion and preferences on coffee. I tried to boil the categories down to my favorite three items at varying price points. This post is mainly about gear, I may write something more along the lines of brewing how-tos in the future.

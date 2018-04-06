@@ -4,6 +4,7 @@ path: /chrome-to-safari-reading-list
 title: Send Chrome tab to Safari Reading List
 date: 2017-05-10T17:12:33.962Z
 tags: [apple, macos, command-line]
+published: true
 ---
 
 * Since Chrome's "Bookmark All Tabs…" shortcut defaults to ⇧⌘D (the same as Safari's "Add to Reading List"), change it to something else: ![](/img/send-chrome-tab-to-safari-reading-list/1.png)

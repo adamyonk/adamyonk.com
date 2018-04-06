@@ -4,6 +4,7 @@ title: GitHub Merge Button from CLI
 path: /github-merge-button-from-cli
 date: 2016-03-08 12:42:39 -0600
 tags: [command-line, github]
+published: true
 ---
 
 It's no fun to have to clean up git history after a botched command line merge of a GitHub pull request. I love to live life in the shell, and I don't want to open a new browser tab just to click [The Merge Button][], so sometimes I'm stubborn and I don't. And sometimes I waste a lot of time cleaning up the mess that happens when I try to do all of that with an outdated master branch.

@@ -48,7 +48,9 @@ export default class IndexPage extends React.Component {
 export const pageQuery = graphql`
   query IndexQuery {
     allMarkdownRemark(
-      filter: { frontmatter: { templateKey: { eq: "post" } } }
+      filter: {
+        frontmatter: { templateKey: { eq: "post" }, published: { eq: true } }
+      }
       sort: { order: DESC, fields: [frontmatter___date] }
     ) {
       edges {
