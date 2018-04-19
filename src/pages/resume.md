@@ -2,7 +2,7 @@
 templateKey: 'page'
 path: /resume
 title: Résumé
-date: ''
+date: 2018-04-19T21:08:13.490Z
 updated: ''
 ---
 
