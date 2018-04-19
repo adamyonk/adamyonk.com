@@ -3,7 +3,7 @@ templateKey: 'post'
 title: Rails + webpack - webpacker
 path: /rails-webpack-webpacker
 date: 2018-04-04T21:06:49.000Z
-published: false
+published: true
 tags: [webpack, javascript, rails]
 ---
 
