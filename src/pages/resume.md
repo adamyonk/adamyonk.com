@@ -29,7 +29,7 @@ for developer happiness.
 
 ### Responsibilities:
 
-* Front end development, build process, architecture (Webpack, Babel, React,
+* Front end development, build process, architecture (webpack, Babel, React,
   Apollo, Redux, Backbone, Angular)
 * Ruby development (Rails, Sinatra)
 * Developer tools (Bash, Node.js, Docker, Vagrant)
