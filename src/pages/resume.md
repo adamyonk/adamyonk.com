@@ -3,7 +3,7 @@ templateKey: 'page'
 path: /resume
 title: Résumé
 date: 2018-04-19T21:08:13.490Z
-updated: ''
+updated: 2018-05-05T02:00:00.000Z
 ---
 
 _Adam Jahnke_  
