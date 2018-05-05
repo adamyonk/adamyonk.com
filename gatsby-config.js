@@ -11,26 +11,28 @@ module.exports = {
     { resolve: "gatsby-plugin-styled-jsx" },
     {
       resolve: "gatsby-plugin-feed-generator",
-      feedQuery: `
-        {
-          allMarkdownRemark(
-            filter: { frontmatter: { templateKey: { eq: "post" }, published: { eq: true } } },
-            sort: { order: DESC, fields: [frontmatter___date] }
-          ) {
-            edges {
-              node {
-                html
-                id
-                frontmatter {
-                  date
-                  path
-                  title
+      options: {
+        feedQuery: `
+          {
+            allMarkdownRemark(
+              filter: { frontmatter: { templateKey: { eq: "post" }, published: { eq: true } } },
+              sort: { order: DESC, fields: [frontmatter___date] }
+            ) {
+              edges {
+                node {
+                  html
+                  id
+                  frontmatter {
+                    date
+                    path
+                    title
+                  }
                 }
               }
             }
           }
-        }
-      `,
+        `,
+      },
     },
     {
       resolve: "gatsby-source-filesystem",
