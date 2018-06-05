@@ -31,20 +31,22 @@ Things I use.
   [iOS](https://itunes.apple.com/us/app/halide-raw-manual-camera/id885697368?mt=8&at=1001lJ7Y)
 * Gyroscope
   [iOS](https://itunes.apple.com/us/app/gyroscope-health/id1104085053?mt=8&at=1001lJ7Y)
-* Moves
-  [iOS](https://itunes.apple.com/us/app/moves/id509204969?mt=8&at=1001lJ7Y)
 * RescueTime [macOS](https://www.rescuetime.com/)
 * Pinner
   [iOS](https://itunes.apple.com/us/app/pinner-for-pinboard/id591613202?mt=8&at=1001lJ7Y)
 * Apollo
   [iOS](https://itunes.apple.com/us/app/apollo-for-reddit/id979274575?mt=8&at=1001lJ7Y)
+* Blink
+  [iOS](https://itunes.apple.com/us/app/blink-shell-mosh-ssh/id1156707581?mt=8&at=1001lJ7Y)
 * TunnelBlick [macOS](https://www.tunnelblick.net/)
 * Kap [macOS](https://getkap.co/)
+* iTerm2 [macOS](https://iterm2.com/)
 
 ## Hardware
 
+<!-- * [iPad Mini 4](http://amzn.to/2DXuSL2) -->
+
 * [13-inch MacBook Pro with Touch Bar and Touch ID](http://amzn.to/2F3062U)
-* [iPad Mini 4](http://amzn.to/2DXuSL2)
 * [iPhone X](https://amzn.to/2EfALBM)
 * [Apple Watch Series 3](http://amzn.to/2rtYQ6X)
 * [Kindle Voyage](https://amzn.to/2EeVRQX)
@@ -69,6 +71,15 @@ Things I use.
 * [Nite Ize S-Biner #2 Stainless](http://amzn.to/2GlKjO6)
 * [Vargo Titanium Water Bottle](http://amzn.to/2n1O1n0)
 * [Weego Jump Starter 22s](http://amzn.to/2DybaIa)
+
+## Repair
+
+* [Pro Tech Toolkit](https://www.ifixit.com/Store/Tools/Pro-Tech-Toolkit/IF145-307)
+* [Magnetic Project Mat](https://www.ifixit.com/Store/Tools/Magnetic-Project-Mat/IF145-167-4)
+* [Heat Gun](https://www.ifixit.com/Store/Tools/Heat-Gun/IF145-031-1)
+* [iOpener](https://www.ifixit.com/Store/Tools/iOpener/IF145-198-8)
+* [Dust Blower](https://www.ifixit.com/Store/Tools/Dust-Blower/IF145-064-1)
+* [iFixit Manifesto](https://www.ifixit.com/Manifesto)
 
 [macos]: https://linkmaker.itunes.apple.com/assets/shared/badges/en-us/macappstore-sm.svg
 [ios]: https://linkmaker.itunes.apple.com/assets/shared/badges/en-us/appstore-sm.svg
