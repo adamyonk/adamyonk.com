@@ -16,6 +16,10 @@ const TemplateWrapper = ({ children }) => (
         href="https://fonts.googleapis.com/css?family=Fira+Sans:400,400i"
         rel="stylesheet"
       />
+      <link rel="authorization_endpoint" href="https://indieauth.com/auth" />
+      <link rel="token_endpoint" href="https://tokens.indieauth.com/token" />
+      <link href="https://twitter.com/adamyonk" rel="me" />
+      <link href="https://github.com/adamyonk" rel="me" />
     </Helmet>
     <div className="logo">
       <Link to="/">⤫</Link>
