@@ -26,10 +26,10 @@ export default class IndexPage extends React.Component {
           <script src="https://identity.netlify.com/v1/netlify-identity-widget.js" />
         </Helmet>
         <p>
-          I’m Adam Jahnke. I work on{" "}
-          <a href="https://appoptics.com">AppOptics</a> at SolarWinds. I
-          thoroughly enjoy writing code. I love to make the complex simple. I
-          live in Springfield, Missouri with my beautiful wife{" "}
+          I’m Adam Jahnke. I work on the Studio Platform at{" "}
+          <a href="https://invisionapp.com">InVision</a>. I thoroughly enjoy
+          writing code. I love to make the complex simple. I live in
+          Springfield, Missouri with my beautiful wife{" "}
           <Link
             title="oliviayonk on Twitter"
             to="https://twitter.com/oliviayonk"
