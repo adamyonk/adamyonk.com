@@ -1,5 +1,5 @@
 ---
-templateKey: 'post'
+templateKey: "post"
 title: Sir Jony Ive
 path: /sir-jony-ive
 date: 2012-12-06 13:39:39 -0600

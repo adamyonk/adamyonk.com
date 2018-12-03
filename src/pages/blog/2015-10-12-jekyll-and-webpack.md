@@ -1,5 +1,5 @@
 ---
-templateKey: 'post'
+templateKey: "post"
 title: Jekyll and Webpack
 path: /jekyll-and-webpack
 date: 2015-10-12 09:30:00 -0600

@@ -1,5 +1,5 @@
 ---
-templateKey: 'post'
+templateKey: "post"
 title: CoffeeScript Dependency Checking
 path: /coffeescript-dependency-checking
 date: 2018-04-04T21:06:49.000Z

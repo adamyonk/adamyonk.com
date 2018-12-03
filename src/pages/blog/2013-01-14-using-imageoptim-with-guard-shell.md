@@ -1,5 +1,5 @@
 ---
-templateKey: 'post'
+templateKey: "post"
 title: Using ImageOptim with guard-shell
 path: /using-imageoptim-with-guard-shell
 date: 2013-01-14 10:14:37 -0600

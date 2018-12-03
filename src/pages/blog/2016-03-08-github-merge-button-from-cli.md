@@ -1,5 +1,5 @@
 ---
-templateKey: 'post'
+templateKey: "post"
 title: GitHub Merge Button from CLI
 path: /github-merge-button-from-cli
 date: 2016-03-08 12:42:39 -0600

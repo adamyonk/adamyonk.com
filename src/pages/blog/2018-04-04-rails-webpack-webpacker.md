@@ -1,5 +1,5 @@
 ---
-templateKey: 'post'
+templateKey: "post"
 title: Rails + webpack - webpacker
 path: /rails-webpack-webpacker
 date: 2018-04-04T21:06:50.000Z
@@ -156,9 +156,9 @@ Now, in your JavaScript files, you can require stylesheets like so:
 
 ```javascript{2}
 // app/assets/javascripts/application.js
-require("stylesheets/application.css");
+require("stylesheets/application.css")
 
-console.log("Hello from application.js!");
+console.log("Hello from application.js!")
 ```
 
 ## Tell Rails where to find assets from webpack-dev-server
@@ -185,10 +185,9 @@ Then wrap the paths of any assets you're including in that helper, and don't for
 <html>
   <head>
     <title>Webpacked</title>
-    <%= csrf_meta_tags %>
-
-    <%= stylesheet_link_tag webpack_asset_url('application.css'), media: 'all' %>
-    <%= javascript_include_tag webpack_asset_url('application.js') %>
+    <%= csrf_meta_tags %> <%= stylesheet_link_tag
+    webpack_asset_url('application.css'), media: 'all' %> <%=
+    javascript_include_tag webpack_asset_url('application.js') %>
   </head>
 
   <body>
@@ -342,11 +341,10 @@ Then just include that `runtime` chunk before any other JavaScript:
 <html>
   <head>
     <title>Webpacked</title>
-    <%= csrf_meta_tags %>
-
-    <%= stylesheet_link_tag webpack_asset_url('application.css'), media: 'all' %>
-    <%= javascript_include_tag webpack_asset_url('runtime.js') %>
-    <%= javascript_include_tag webpack_asset_url('application.js') %>
+    <%= csrf_meta_tags %> <%= stylesheet_link_tag
+    webpack_asset_url('application.css'), media: 'all' %> <%=
+    javascript_include_tag webpack_asset_url('runtime.js') %> <%=
+    javascript_include_tag webpack_asset_url('application.js') %>
   </head>
 
   <body>

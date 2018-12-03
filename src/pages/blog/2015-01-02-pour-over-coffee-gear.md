@@ -1,5 +1,5 @@
 ---
-templateKey: 'post'
+templateKey: "post"
 title: Pour Over Coffee Gear
 date: 2015-01-04 22:44:00 -0600
 path: /pour-over-coffee-gear
@@ -123,7 +123,7 @@ The stand-out feature in a kettle is a goose-neck spout. It allows for very accu
 
 ## Accessories
 
-The Chemex has the benefit of being its own serving vessel, but for the V60 and Wave, a vessel is needed to capture the coffee. While not absolutely necessary (a mason jar will do), the Hario Coffee Server ([$26](http://amzn.com/B000P4B4LU)) is a beautiful serving vessel.
+The Chemex has the benefit of being its own serving vessel, but for the V60 and Wave, a vessel is needed to capture the coffee. While not absolutely necessary (a mason jar will do), the Hario Coffee Server ([\$26](http://amzn.com/B000P4B4LU)) is a beautiful serving vessel.
 
 ## Summary
 

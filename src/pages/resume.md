@@ -1,5 +1,5 @@
 ---
-templateKey: 'page'
+templateKey: "page"
 path: /resume
 title: Résumé
 date: 2018-04-19T21:08:13.490Z
@@ -14,10 +14,19 @@ _References available upon request._
 
 # Job History
 
+## InVision
+
+Senior Engineer  
+June 2018 – Present
+
+### Responsibilities:
+
+- Development of the Studio App Store
+
 ## Librato/SolarWinds
 
 Engineer, Senior Engineer  
-December 2013 – Present
+December 2013 – June 2018
 
 I was fortunate enough to be hired to work with a bunch of data-visualization
 nerds at Librato (now [AppOptics](https://appoptics.com)) when it was still in
@@ -29,10 +38,10 @@ for developer happiness.
 
 ### Responsibilities:
 
-* Front end development, build process, architecture (webpack, Babel, React,
+- Front end development, build process, architecture (webpack, Babel, React,
   Apollo, Redux, Backbone, Angular)
-* Ruby development (Rails, Sinatra)
-* Developer tools (Bash, Node.js, Docker, Vagrant)
+- Ruby development (Rails, Sinatra)
+- Developer tools (Bash, Node.js, Docker, Vagrant)
 
 ## Pure Charity
 
@@ -52,10 +61,10 @@ for finding ways to automate tedious processes for the whole company.
 
 ### Responsibilities:
 
-* All front-end development and architecture (Haml, Sass, CoffeeScript, AJAX,
+- All front-end development and architecture (Haml, Sass, CoffeeScript, AJAX,
   PJAX, JavaScript templating, Backbone)
-* Rails development
-* Ruby development and automation
+- Rails development
+- Ruby development and automation
 
 ## Elevate, LLC
 
@@ -74,37 +83,41 @@ to bring ideas and goals to fruition.
 
 ### Responsibilities:
 
-* All front-end development (HTML, CSS, JavaScript, Sass, CoffeeScript)
-* Building and maintaining WordPress sites
-* Building and maintaining PHP sites using a custom content management system
+- All front-end development (HTML, CSS, JavaScript, Sass, CoffeeScript)
+- Building and maintaining WordPress sites
+- Building and maintaining PHP sites using a custom content management system
 
 # Technologies
 
-* JavaScript
-  * Webpack
-  * Babel
-  * React
-  * Redux
-  * Apollo
-  * Backbone/Ampersand
-  * Angular
-  * CoffeeScript
-  * jQuery
-* Node.js
-* Darwin/\*nix environments
-* Ruby
-  * Rails
-  * Sinatra
-  * Jekyll
-* HTML
-  * Haml
-* CSS
-  * SCSS/Sass
-  * styled-components
-  * styled-jsx
-* PHP
-* Docker
-* Vagrant
+- JavaScript
+  - Webpack
+  - Babel
+  - React
+  - Redux
+  - Apollo
+  - Gatsby
+  - Backbone/Ampersand
+  - Angular
+  - CoffeeScript
+  - jQuery
+- Node.js
+- Electron
+- GraphQL
+- Darwin/\*nix environments
+- Ruby
+  - Rails
+  - Sinatra
+  - Jekyll
+- Go
+- HTML
+  - Haml
+- CSS
+  - SCSS/Sass
+  - styled-components
+  - styled-jsx
+- PHP
+- Docker
+- Vagrant
 
 # Education
 

@@ -1,5 +1,5 @@
 ---
-templateKey: 'post'
+templateKey: "post"
 title: The Things We Admire
 path: /the-things-we-admire
 date: 2014-03-29 10:27:26 -0500

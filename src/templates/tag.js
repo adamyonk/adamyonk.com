@@ -1,16 +1,22 @@
 import React from "react"
 import Helmet from "react-helmet"
+import { graphql } from "gatsby"
 import PostList from "../components/PostList"
+import Layout from "../components/layout"
 
 export default props => {
   const { edges: posts = [] } =
     (props.data && props.data.allMarkdownRemark) || {}
   return (
-    <section>
-      <Helmet title={`Posts tagged "${props.pathContext.tag}" | Adam Jahnke`} />
-      <h1>Posts tagged "{props.pathContext.tag}"</h1>
-      <PostList posts={posts} />
-    </section>
+    <Layout>
+      <section>
+        <Helmet
+          title={`Posts tagged "${props.pageContext.tag}" | Adam Jahnke`}
+        />
+        <h1>Posts tagged &laquo;{props.pageContext.tag}&raquo;</h1>
+        <PostList posts={posts} />
+      </section>
+    </Layout>
   )
 }
 

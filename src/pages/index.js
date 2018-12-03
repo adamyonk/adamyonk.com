@@ -1,7 +1,8 @@
 import React from "react"
-import Link from "gatsby-link"
+import { graphql, Link } from "gatsby"
 import Helmet from "react-helmet"
 import PostList from "../components/PostList"
+import Layout from "../components/layout"
 
 export default class IndexPage extends React.Component {
   componentDidMount() {
@@ -21,26 +22,28 @@ export default class IndexPage extends React.Component {
     const { edges: posts = [] } = (data && data.allMarkdownRemark) || {}
 
     return (
-      <section className="section">
-        <Helmet>
-          <script src="https://identity.netlify.com/v1/netlify-identity-widget.js" />
-        </Helmet>
-        <p>
-          I’m Adam Jahnke. I work on the Studio Platform at{" "}
-          <a href="https://invisionapp.com">InVision</a>. I thoroughly enjoy
-          writing code. I love to make the complex simple. I live in
-          Springfield, Missouri with my beautiful wife{" "}
-          <Link
-            title="oliviayonk on Twitter"
-            to="https://twitter.com/oliviayonk"
-          >
-            Olivia
-          </Link>{" "}
-          and son Phoenix.
-        </p>
-        <h2>Recent Posts:</h2>
-        <PostList posts={posts} />
-      </section>
+      <Layout>
+        <section className="section">
+          <Helmet>
+            <script src="https://identity.netlify.com/v1/netlify-identity-widget.js" />
+          </Helmet>
+          <p>
+            I’m Adam Jahnke. I work on the Studio Platform at{" "}
+            <a href="https://invisionapp.com">InVision</a>. I thoroughly enjoy
+            writing code. I love to make the complex simple. I live in
+            Springfield, Missouri with my beautiful wife{" "}
+            <Link
+              title="oliviayonk on Twitter"
+              to="https://twitter.com/oliviayonk"
+            >
+              Olivia
+            </Link>{" "}
+            and son Phoenix.
+          </p>
+          <h2>Recent Posts:</h2>
+          <PostList posts={posts} />
+        </section>
+      </Layout>
     )
   }
 }

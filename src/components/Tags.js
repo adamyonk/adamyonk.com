@@ -1,5 +1,4 @@
 import React from "react"
-import Link from "gatsby-link"
 
 const Tag = ({ name }) => (
   <React.Fragment>
@@ -18,6 +17,8 @@ export default ({ tags = [] }) => (
       </React.Fragment>
     ))}
     {tags.length > 1 && " and "}
-    {tags.slice(-1).map(tag => <Tag key={tag} name={tag} />)}
+    {tags.slice(-1).map(tag => (
+      <Tag key={tag} name={tag} />
+    ))}
   </React.Fragment>
 )

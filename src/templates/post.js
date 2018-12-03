@@ -1,13 +1,15 @@
 import React from "react"
 import Helmet from "react-helmet"
+import { graphql } from "gatsby"
 import Date from "../components/Date"
 import Meta from "../components/Meta"
 import Tags from "../components/Tags"
+import Layout from "../components/layout"
 
 export default function Template({ data }) {
   const { markdownRemark: post } = data
   return (
-    <React.Fragment>
+    <Layout>
       <Helmet title={`${post.frontmatter.title} | Adam Jahnke`} />
       <article>
         <h1>{post.frontmatter.title}</h1>
@@ -22,7 +24,7 @@ export default function Template({ data }) {
           margin-bottom: 0;
         }
       `}</style>
-    </React.Fragment>
+    </Layout>
   )
 }
 

@@ -1,5 +1,5 @@
 ---
-templateKey: 'post'
+templateKey: "post"
 title: Rails 4, Strong Parameters, and Nested Forms
 path: /rails-4-strong-parameters-and-nested-forms
 date: 2013-05-16 13:19:06 -0500

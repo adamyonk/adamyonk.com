@@ -1,5 +1,5 @@
 ---
-templateKey: 'post'
+templateKey: "post"
 title: CSS Map Pins
 path: /css-map-pins
 date: 2013-05-17 14:57:00 -0500

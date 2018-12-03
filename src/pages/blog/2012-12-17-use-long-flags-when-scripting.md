@@ -1,5 +1,5 @@
 ---
-templateKey: 'post'
+templateKey: "post"
 title: Use long flags when scripting
 path: /use-long-flags-when-scripting
 date: 2012-12-17 10:32:59 -0600
