@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql, Link } from "gatsby"
+import { graphql } from "gatsby"
 import Helmet from "react-helmet"
 import PostList from "../components/PostList"
 import Layout from "../components/layout"
@@ -32,12 +32,12 @@ export default class IndexPage extends React.Component {
             <a href="https://invisionapp.com">InVision</a>. I thoroughly enjoy
             writing code. I love to make the complex simple. I live in
             Springfield, Missouri with my beautiful wife{" "}
-            <Link
+            <a
               title="oliviayonk on Twitter"
-              to="https://twitter.com/oliviayonk"
+              href="https://twitter.com/oliviayonk"
             >
               Olivia
-            </Link>{" "}
+            </a>{" "}
             and son Phoenix.
           </p>
           <h2>Recent Posts:</h2>
