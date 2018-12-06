@@ -17,6 +17,7 @@ export default function Template({ data }) {
           Posted <Date date={post.frontmatter.date} /> under{" "}
           <Tags tags={post.frontmatter.tags} />
         </Meta>
+        <Meta>{post.timeToRead} minute read</Meta>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
       </article>
       <style jsx>{`
@@ -32,6 +33,7 @@ export const pageQuery = graphql`
   query BlogPostByPath($path: String!) {
     markdownRemark(frontmatter: { path: { eq: $path } }) {
       html
+      timeToRead
       frontmatter {
         date
         path
