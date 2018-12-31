@@ -4,16 +4,13 @@ import { graphql } from "gatsby"
 import PostList from "../components/PostList"
 import Layout from "../components/layout"
 
-export default props => {
-  const { edges: posts = [] } =
-    (props.data && props.data.allMarkdownRemark) || {}
+export default ({ data, pageContext }) => {
+  const { edges: posts = [] } = (data && data.allMarkdownRemark) || {}
   return (
     <Layout>
       <section>
-        <Helmet
-          title={`Posts tagged "${props.pageContext.tag}" | Adam Jahnke`}
-        />
-        <h1>Posts tagged &laquo;{props.pageContext.tag}&raquo;</h1>
+        <Helmet title={`Posts tagged "${pageContext.tag}" | Adam Jahnke`} />
+        <h1>Posts tagged &laquo;{pageContext.tag}&raquo;</h1>
         <PostList posts={posts} />
       </section>
     </Layout>

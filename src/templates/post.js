@@ -6,7 +6,7 @@ import Meta from "../components/Meta"
 import Tags from "../components/Tags"
 import Layout from "../components/layout"
 
-export default function Template({ data }) {
+export default ({ data }) => {
   const { markdownRemark: post } = data
   return (
     <Layout>
