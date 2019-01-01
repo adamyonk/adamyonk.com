@@ -6,7 +6,8 @@
   "dependencies": {
     "date-fns": "^1.29.0",
     "gatsby": "^2.0.60",
-    "gatsby-plugin-feed-generator": "^1.0.6",
+    "gatsby-plugin-feed": "^2.0.11",
+    "gatsby-plugin-feed-generator": "^1.0.8",
     "gatsby-plugin-react-helmet": "^3.0.4",
     "gatsby-plugin-sharp": "^2.0.14",
     "gatsby-plugin-styled-jsx": "^3.0.3",
