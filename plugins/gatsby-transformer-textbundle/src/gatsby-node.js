@@ -35,11 +35,6 @@ async function onCreateNode(
       tags: [],
       title: "",
       ...data,
-      // title: "Recover Data from a Mac without Target Disk Mode",
-      // path: "/recover-data-without-target-disk-mode",
-      // date: "2016-03-14 09:17:28 -0500",
-      // tags: ["apple", "macos", "command-line"],
-      // published: true,
     },
     excerpt,
     rawMarkdownBody: content,
@@ -51,11 +46,8 @@ async function onCreateNode(
     .update(JSON.stringify(childNode))
     .digest(`hex`)
 
-  console.log(childNode)
-
   createNode(childNode, { name: `gatsby-transformer-remark` })
   createParentChildLink({ parent: node, child: childNode })
 }
 
 exports.onCreateNode = onCreateNode
-// exports.sourceNodes = sourceNodes

@@ -52,7 +52,6 @@ async function onCreateNode({
     fileAbsolutePath: `${node.absolutePath}`
   };
   childNode.internal.contentDigest = crypto.createHash(`md5`).update(JSON.stringify(childNode)).digest(`hex`);
-  console.log(childNode);
   createNode(childNode, {
     name: `gatsby-transformer-remark`
   });
@@ -62,4 +61,4 @@ async function onCreateNode({
   });
 }
 
-exports.onCreateNode = onCreateNode; // exports.sourceNodes = sourceNodes
+exports.onCreateNode = onCreateNode;
