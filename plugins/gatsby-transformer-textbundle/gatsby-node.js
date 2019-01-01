@@ -40,17 +40,19 @@ async function onCreateNode({
       type: "MarkdownRemark"
     },
     frontmatter: {
-      tags: [],
       _PARENT: node.id,
-      path: `/${(data.title || filename).replace(/['",]/g, "").replace(/ /g, "-")}`,
+      date: new Date().toString(),
+      path: `/${(data.title || filename).replace(/ /g, "-").replace(/[^\w-]/g, "")}`,
+      tags: [],
+      title: "",
       ...data
     },
     excerpt,
     rawMarkdownBody: content,
     fileAbsolutePath: `${node.absolutePath}`
   };
-  childNode.internal.contentDigest = crypto.createHash(`md5`).update(JSON.stringify(childNode)).digest(`hex`); // console.log(childNode)
-
+  childNode.internal.contentDigest = crypto.createHash(`md5`).update(JSON.stringify(childNode)).digest(`hex`);
+  console.log(childNode);
   createNode(childNode, {
     name: `gatsby-transformer-remark`
   });

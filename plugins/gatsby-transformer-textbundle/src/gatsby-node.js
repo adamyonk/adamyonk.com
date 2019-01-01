@@ -27,11 +27,13 @@ async function onCreateNode(
       type: "MarkdownRemark",
     },
     frontmatter: {
-      tags: [],
       _PARENT: node.id,
+      date: new Date().toString(),
       path: `/${(data.title || filename)
-        .replace(/['",]/g, "")
-        .replace(/ /g, "-")}`,
+        .replace(/ /g, "-")
+        .replace(/[^\w-]/g, "")}`,
+      tags: [],
+      title: "",
       ...data,
       // title: "Recover Data from a Mac without Target Disk Mode",
       // path: "/recover-data-without-target-disk-mode",
@@ -49,7 +51,7 @@ async function onCreateNode(
     .update(JSON.stringify(childNode))
     .digest(`hex`)
 
-  // console.log(childNode)
+  console.log(childNode)
 
   createNode(childNode, { name: `gatsby-transformer-remark` })
   createParentChildLink({ parent: node, child: childNode })
