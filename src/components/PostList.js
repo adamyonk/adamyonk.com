@@ -5,14 +5,16 @@ import Tags from "./Tags"
 
 export default ({ posts }) => (
   <ul className="posts">
-    {posts.map(({ node: p }) => (
-      <li key={p.id}>
-        <div className="date">
-          <Date date={p.frontmatter.date} />
-        </div>
-        <Link to={p.frontmatter.path}>{p.frontmatter.title}</Link>
+    {posts.map(({ node: { id, frontmatter: { date, path, title, tags } } }) => (
+      <li key={id}>
+        {date && (
+          <div className="date">
+            <Date date={date} />
+          </div>
+        )}
+        <Link to={path}>{title}</Link>
         <div className="tags">
-          <Tags tags={p.frontmatter.tags} />
+          <Tags tags={tags} />
         </div>
       </li>
     ))}

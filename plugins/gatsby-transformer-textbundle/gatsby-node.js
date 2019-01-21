@@ -1,64 +1,61 @@
-"use strict";
+"use strict"
 
-const path = require("path");
+const path = require("path")
 
-const {
-  parse
-} = require("./lib/parse");
+const { parse } = require("./lib/parse")
 
-const crypto = require("crypto");
+const crypto = require("crypto")
 
-async function onCreateNode({
-  node,
-  actions,
-  loadNodeContent,
-  createNodeId,
-  createContentDigest
-}, pluginOptions) {
-  const {
-    createNode,
-    createParentChildLink
-  } = actions;
+async function onCreateNode(
+  { node, actions, loadNodeContent, createNodeId, createContentDigest },
+  pluginOptions,
+) {
+  const { createNode, createParentChildLink } = actions
 
-  if (node.internal.type !== "File" || !node.internal.description.match(/\.ulysses\/Text\.txt"$/)) {
-    return;
+  if (
+    node.internal.type !== "File" ||
+    !node.internal.description.match(/\.ulysses\/Text\.txt"$/)
+  ) {
+    return
   }
 
-  const bundlePath = path.dirname(node.absolutePath);
-  const filename = path.basename(bundlePath, ".ulysses");
-  const {
-    content,
-    data,
-    excerpt
-  } = await parse(bundlePath);
+  const bundlePath = path.dirname(node.absolutePath)
+  const filename = path.basename(bundlePath, ".ulysses")
+  const { content, data, excerpt } = await parse(bundlePath)
   const childNode = {
     id: createNodeId(`${node.id} >>> MarkdownRemark`),
     children: [],
     parent: node.id,
     internal: {
       content,
-      type: "MarkdownRemark"
+      type: "MarkdownRemark",
     },
     frontmatter: {
       _PARENT: node.id,
       date: new Date().toString(),
-      path: `/${(data.title || filename).replace(/ /g, "-").replace(/[^\w-]/g, "")}`,
+      path: `/${(data.title || filename)
+        .replace(/ /g, "-")
+        .replace(/[^\w-]/g, "")}`,
       tags: [],
       title: "",
-      ...data
+      ...data,
     },
     excerpt,
     rawMarkdownBody: content,
-    fileAbsolutePath: `${node.absolutePath}`
-  };
-  childNode.internal.contentDigest = crypto.createHash(`md5`).update(JSON.stringify(childNode)).digest(`hex`);
+    fileAbsolutePath: `${node.absolutePath}`,
+  }
+  childNode.internal.contentDigest = crypto
+    .createHash(`md5`)
+    .update(JSON.stringify(childNode))
+    .digest(`hex`)
+
   createNode(childNode, {
-    name: `gatsby-transformer-remark`
-  });
+    name: `gatsby-transformer-remark`,
+  })
   createParentChildLink({
     parent: node,
-    child: childNode
-  });
+    child: childNode,
+  })
 }
 
-exports.onCreateNode = onCreateNode;
+exports.onCreateNode = onCreateNode // exports.sourceNodes = sourceNodes

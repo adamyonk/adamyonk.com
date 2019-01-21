@@ -79,18 +79,22 @@ const mapNodesToHtml = replacements => {
 
 const parseMd = (md, replacements) => {
   const formatted = format(md.replace(/￼/g, "%s"), ...replacements)
-  return grayMatter(formatted, {
+  const data = grayMatter(formatted, {
     excerpt: (file, options) => {
       if (file.data.title) {
         return
       }
-      file.data.title = file.content
+      const match = file.content
+        .trim()
         .split("\n")
         .slice(0, 1)
         .join("")
-        .replace(/^# /, "")
+        .match(/^# (.*)$/)
+      file.data.title = match ? match[0] : undefined
     },
   })
+  data.content = data.content.replace(/^# (.*)$/, "")
+  return data
 }
 
 const parse = async file => {

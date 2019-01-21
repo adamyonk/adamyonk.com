@@ -1,55 +1,0 @@
-<sheet version="1">
-<markup version="1" identifier="markdownxl" displayName="Markdown XL">
-	<tag definition="heading1" pattern="#"></tag>
-	<tag definition="heading2" pattern="##"></tag>
-	<tag definition="heading3" pattern="###"></tag>
-	<tag definition="heading4" pattern="####"></tag>
-	<tag definition="heading5" pattern="#####"></tag>
-	<tag definition="heading6" pattern="######"></tag>
-	<tag definition="codeblock" pattern="``"></tag>
-	<tag definition="codeblock" pattern="''"></tag>
-	<tag definition="comment" pattern="%%"></tag>
-	<tag definition="nativeblock" pattern="~~"></tag>
-	<tag definition="blockquote" pattern="&gt;"></tag>
-	<tag definition="orderedList" pattern="\d."></tag>
-	<tag definition="unorderedList" pattern="*"></tag>
-	<tag definition="unorderedList" pattern="+"></tag>
-	<tag definition="unorderedList" pattern="-"></tag>
-	<tag definition="divider" pattern="----"></tag>
-	<tag definition="code" startPattern="`" endPattern="`"></tag>
-	<tag definition="delete" startPattern="||" endPattern="||"></tag>
-	<tag definition="emph" startPattern="*" endPattern="*"></tag>
-	<tag definition="emph" startPattern="_" endPattern="_"></tag>
-	<tag definition="inlineComment" startPattern="++" endPattern="++"></tag>
-	<tag definition="inlineNative" startPattern="~" endPattern="~"></tag>
-	<tag definition="mark" startPattern="::" endPattern="::"></tag>
-	<tag definition="strong" startPattern="__" endPattern="__"></tag>
-	<tag definition="strong" startPattern="**" endPattern="**"></tag>
-	<tag definition="annotation" startPattern="{" endPattern="}"></tag>
-	<tag definition="link" startPattern="[" endPattern="]"></tag>
-	<tag definition="footnote" pattern="(fn)"></tag>
-	<tag definition="image" pattern="(img)"></tag>
-	<tag definition="video" pattern="(vid)"></tag>
-</markup>
-<string xml:space="preserve">
-<p>---</p>
-<p>title: Apple Thunderbolt Display</p>
-<p>---</p>
-<p></p>
-<p><tags><tag kind="heading1"># </tag></tags>Apple Thunderbolt Display</p>
-<p></p>
-<p><tags><tag kind="unorderedList">- </tag></tags>$400</p>
-<p><tags><tag kind="unorderedList">- </tag></tags><element kind="link"><attribute identifier="URL">https://springfield.craigslist.org/ele/d/apple-thunderbolt-display/6740966222.html</attribute><attribute identifier="title">View on Craigslist</attribute>Craigslist</element></p>
-<p></p>
-<p>Apple Thunderbolt Display in original packaging.</p>
-<p></p>
-<p>There is one dead pixel in the right-center part of the screen. Hard to notice unless you're looking for it.</p>
-<p></p>
-<p>I have the MagSafe 2 adaptor, so it works with new and old MacBooks, but I've been having some issues with it recently where it will power my MacBook, but not charge it. Not sure if it's the MacBook or the Display, but feel free to bring your MacBook by to try it out before buying. It doesn't effect the functionality of the display besides needing to use the power cord that came with your laptop.</p>
-<p></p>
-<p>Here's the Apple description:</p>
-<p><tags><tag kind="blockquote">&gt; </tag></tags>27-inch (diagonal viewable image size) thin film transistor (TFT) active-matrix liquid crystal display (LCD) with in-plane switching (IPS).  Cables: Built-in Thunderbolt cable Built-in MagSafe cable (up to 85W)  Peripheral connections: Three powered USB 2.0 ports FireWire 800 port Gigabit Ethernet port Thunderbolt port Kensington security slot  Specs: Resolution: 2560 by 1440 pixels Colors (maximum): 16.7 million Aspect ratio: 16:9 Viewing angle: 178° horizontal; 178° vertical Brightness: 375 cd/m2 Contrast ratio: 1000:1 Response time: 12 ms Height: 19.35 inches (49.1 cm) Width: 25.7 inches (65 cm) Depth (with stand): 8.15 inches (20.7 cm) Weight: 23.5 pounds (10.8 kg)  Built-in FaceTime HD camera with microphone Built-in 2.1 speaker system (49 watts)</p>
-<p></p>
-<p><element kind="image"><attribute identifier="image">243c74fb80ca456f9397e1378c76e3fa</attribute><attribute identifier="URL">http://adamyonk.com</attribute><attribute identifier="title">Title</attribute><attribute identifier="description">Description</attribute></element><element kind="image"><attribute identifier="image">415d76d0cb5043e7983a6a0679f81080</attribute></element><element kind="image"><attribute identifier="image">f8feb1dbdfe04405803820f68a0a7b2c</attribute></element><element kind="image"><attribute identifier="image">90f5887342994ac0b816c15bfaf5fefd</attribute></element><element kind="image"><attribute identifier="image">1504f55ec97e44fab339f82ad6a34ddd</attribute></element><element kind="image"><attribute identifier="image">cb1fd41063af4698b010b53cf8eb910b</attribute></element><element kind="image"><attribute identifier="image">d3640ffc143141be91d73dce6238978a</attribute></element><element kind="image"><attribute identifier="image">a7f7b057dbdc42eba038a13e394e6732</attribute></element><element kind="image"><attribute identifier="image">180abdca0db84eeda9915c10da8c8149</attribute></element><element kind="image"><attribute identifier="image">8b27c0e418954c8a9d0fed3edc13f7b3</attribute></element></p>
-</string>
-</sheet>
