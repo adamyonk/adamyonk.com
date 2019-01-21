@@ -9,8 +9,8 @@ export default ({ data, pageContext }) => {
   return (
     <Layout>
       <section>
-        <Helmet title={`Posts tagged "${pageContext.tag}" | Adam Jahnke`} />
-        <h1>Posts tagged &laquo;{pageContext.tag}&raquo;</h1>
+        <Helmet title={`For Sale | Adam Jahnke`} />
+        <h1>For Sale</h1>
         <PostList posts={posts} />
       </section>
     </Layout>
@@ -18,11 +18,9 @@ export default ({ data, pageContext }) => {
 }
 
 export const tagPageQuery = graphql`
-  query TagPage($tag: String!) {
+  query SalePage {
     allMarkdownRemark(
-      filter: {
-        frontmatter: { templateKey: { eq: "post" }, tags: { in: [$tag] } }
-      }
+      filter: { frontmatter: { templateKey: { eq: "sale" } } }
       sort: { order: DESC, fields: [frontmatter___date] }
     ) {
       edges {
@@ -31,8 +29,8 @@ export const tagPageQuery = graphql`
           frontmatter {
             date
             path
-            tags
             title
+            price
           }
         }
       }

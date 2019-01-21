@@ -59,7 +59,7 @@ exports.createPages = ({ actions, graphql }) => {
       createPage({
         path: node.frontmatter.path,
         component: path.resolve(
-          `src/templates/${String(node.frontmatter.templateKey)}.js`,
+          `src/templates/${String(node.frontmatter.templateKey || "page")}.js`,
         ),
         context: {}, // additional data can be passed via context
       })

@@ -100,6 +100,9 @@ module.exports = {
       },
     },
     {
+      resolve: "gatsby-transformer-textbundle",
+    },
+    {
       resolve: "gatsby-transformer-remark",
       options: {
         plugins: [
@@ -112,8 +115,9 @@ module.exports = {
           {
             resolve: "gatsby-remark-images",
             options: {
-              maxWidth: 800,
+              backgroundColor: "transparent",
               linkImagesToOriginal: true,
+              maxWidth: 800,
             },
           },
         ],

@@ -1,0 +1,23 @@
+{
+  "id": "fb2d8e0d-9a1b-5040-8297-b494bf91af3e",
+  "children": [],
+  "parent": "b45a109e-8a4c-5ce1-b70a-3d958753a3d8",
+  "internal": {
+    "content": "\nI was recently trying to pull data off of an iMac for a friend, but didn't have any Macs around with FireWire ports to get at the iMac HD in target disk mode<sup><a name=\"1-ref\"></a>[1](#1)</sup>. This method does require an external hard drive.\n\nStart up your Mac in single-user mode<sup><a name=\"2-ref\"></a>[2](#2)</sup>, then run the following commands<sup><a name=\"3-ref\"></a>[3](#3)</sup>:\n\n```bash\n# Check the filesystem\n/sbin/fsck -y\n\n# Mount the root volume\nmount -uw /\n\n# Create mount destination\nmkdir /Volumes/backup\n\n# Get a list of available drives\ndf -h\n\n# Plug in USB backup drive, look for new drive name\ndf -h\n\n# Mount the drive with the name you got from last step. Probably looks\n# something like /dev/rdisk2s2. Note the rdisk / disk name difference.\nmount -t hfs /dev/disk2s2 /Volumes/backup\n\n# rsync data to your backup\nrsync -ahz /Users/you/ /Volumes/backup/\n```\n\n<sup><a name=\"1\"></a><a href=\"#1-ref\">1</a></sup>Share files between two computers with target disk mode: [https://support.apple.com/en-us/HT201462][target disk mode]\n\n<sup><a name=\"2\"></a><a href=\"#2-ref\">2</a></sup>How to start up your Mac in single-user or verbose mode: [https://support.apple.com/en-us/HT201573][single user mode]\n\n<sup><a name=\"3\"></a><a href=\"#3-ref\">3</a></sup>Mount USB Memory Sticks in single user mode: [http://hints.macworld.com/article.php?story=20030714194313542][macworld]\n\n[target disk mode]: https://support.apple.com/en-us/HT201462\n[single user mode]: https://support.apple.com/en-us/HT201573\n[macworld]: http://hints.macworld.com/article.php?story=20030714194313542\n",
+    "type": "MarkdownRemark",
+    "contentDigest": "6df669b7e7755b6347667943d3e1e5b5",
+    "owner": "gatsby-transformer-remark"
+  },
+  "frontmatter": {
+    "title": "Recover Data from a Mac without Target Disk Mode",
+    "templateKey": "post",
+    "path": "/recover-data-without-target-disk-mode",
+    "date": "2016-03-14 09:17:28 -0500",
+    "tags": ["apple", "macos", "command-line"],
+    "published": true,
+    "_PARENT": "b45a109e-8a4c-5ce1-b70a-3d958753a3d8"
+  },
+  "excerpt": "",
+  "rawMarkdownBody": "\nI was recently trying to pull data off of an iMac for a friend, but didn't have any Macs around with FireWire ports to get at the iMac HD in target disk mode<sup><a name=\"1-ref\"></a>[1](#1)</sup>. This method does require an external hard drive.\n\nStart up your Mac in single-user mode<sup><a name=\"2-ref\"></a>[2](#2)</sup>, then run the following commands<sup><a name=\"3-ref\"></a>[3](#3)</sup>:\n\n```bash\n# Check the filesystem\n/sbin/fsck -y\n\n# Mount the root volume\nmount -uw /\n\n# Create mount destination\nmkdir /Volumes/backup\n\n# Get a list of available drives\ndf -h\n\n# Plug in USB backup drive, look for new drive name\ndf -h\n\n# Mount the drive with the name you got from last step. Probably looks\n# something like /dev/rdisk2s2. Note the rdisk / disk name difference.\nmount -t hfs /dev/disk2s2 /Volumes/backup\n\n# rsync data to your backup\nrsync -ahz /Users/you/ /Volumes/backup/\n```\n\n<sup><a name=\"1\"></a><a href=\"#1-ref\">1</a></sup>Share files between two computers with target disk mode: [https://support.apple.com/en-us/HT201462][target disk mode]\n\n<sup><a name=\"2\"></a><a href=\"#2-ref\">2</a></sup>How to start up your Mac in single-user or verbose mode: [https://support.apple.com/en-us/HT201573][single user mode]\n\n<sup><a name=\"3\"></a><a href=\"#3-ref\">3</a></sup>Mount USB Memory Sticks in single user mode: [http://hints.macworld.com/article.php?story=20030714194313542][macworld]\n\n[target disk mode]: https://support.apple.com/en-us/HT201462\n[single user mode]: https://support.apple.com/en-us/HT201573\n[macworld]: http://hints.macworld.com/article.php?story=20030714194313542\n",
+  "fileAbsolutePath": "/Users/adam/Code/adamyonk.com/src/pages/blog/2016-03-14-recover-data-from-a-mac-without-target-disk-mode.md"
+}
