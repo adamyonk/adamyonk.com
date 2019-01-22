@@ -100,9 +100,6 @@ module.exports = {
       },
     },
     {
-      resolve: "gatsby-transformer-textbundle",
-    },
-    {
       resolve: "gatsby-transformer-remark",
       options: {
         plugins: [
