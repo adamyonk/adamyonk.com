@@ -3,7 +3,7 @@ templateKey: "page"
 path: /uses
 title: Uses
 date: 2018-01-23 10:32:59 -0600
-updated: 2018-12-02 21:00:00 -0600
+updated: 2019-01-28 21:00:00 -0600
 ---
 
 Things I use.
@@ -37,6 +37,10 @@ Things I use.
   [iOS](https://itunes.apple.com/us/app/pinner-for-pinboard/id591613202?mt=8&at=1001lJ7Y)
 - Apollo
   [iOS](https://itunes.apple.com/us/app/apollo-for-reddit/id979274575?mt=8&at=1001lJ7Y)
+- Working Copy
+  [iOS](https://itunes.apple.com/us/app/working-copy/id896694807)
+- Scriptable
+  [iOS](https://itunes.apple.com/us/app/scriptable/id1405459188)
 - Blink
   [iOS](https://itunes.apple.com/us/app/blink-shell-mosh-ssh/id1156707581?mt=8&at=1001lJ7Y)
 - kitty [macOS](https://sw.kovidgoyal.net/kitty/)
@@ -45,12 +49,13 @@ Things I use.
 
 <!-- * [iPad Mini 4](http://amzn.to/2DXuSL2) -->
 
-- [13-inch MacBook Pro with Touch Bar and Touch ID](http://amzn.to/2F3062U)
+- [Apple 13-inch MacBook Pro with Touch Bar and Touch ID](http://amzn.to/2F3062U)
 - [LG UltraFine 27" 5K Display](http://a.co/d/eKBeHuL)
 - [Roost Laptop Stand](http://amzn.to/2DXrUWU)
 - [Ultimate Hacking Keyboard](https://ultimatehackingkeyboard.com)
-- [iPhone X](https://amzn.to/2EfALBM)
+- [Apple iPhone X](https://amzn.to/2EfALBM)
 - [Apple Watch Series 4](http://amzn.to/2rtYQ6X)
+- [Apple AirPods](https://www.apple.com/airpods/)
 - [Kindle Voyage](https://amzn.to/2EeVRQX)
 - [Ubiquiti Unifi PRO AP](http://amzn.to/2G49SD7)
 - [Ubiquiti UniFi Switch 8](http://a.co/d/jkqnJeI)
@@ -61,6 +66,9 @@ Things I use.
 - [ecobee3 Thermostat](http://amzn.to/2DpSxTu)
 - [iDevices Switch](http://amzn.to/2n0uBPC)
 - [iDevices Wall Switch](http://amzn.to/2G2xIPL)
+- [Wyze Cam](https://www.amazon.com/Wyze-Indoor-Wireless-Camera-Vision/dp/B076H3SRXG)
+- [Wyze Cam Pan](https://www.amazon.com/Wyze-1080p-Indoor-Camera-Vision/dp/B07DGR98VQ)
+- [homebridge](https://github.com/nfarina/homebridge) (running on Raspberry Pi)
 
 ## EDC
 
