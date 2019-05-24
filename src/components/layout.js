@@ -147,6 +147,15 @@ const TemplateWrapper = ({ children }) => (
         --body: var(--monospace);
       }
 
+      @media (prefers-color-scheme: light) {
+        :root {
+          --background: var(--base3);
+          --foreground: var(--base02);
+
+          --link: var(--yellow);
+        }
+      }
+
       body {
         background-color: var(--background);
         color: var(--foreground);
