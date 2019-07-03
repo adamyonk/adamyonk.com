@@ -18,6 +18,8 @@ const TemplateWrapper = ({ children }) => (
       />
       <link rel="authorization_endpoint" href="https://indieauth.com/auth" />
       <link rel="token_endpoint" href="https://tokens.indieauth.com/token" />
+      <link rel="webmention" href="https://webmention.io/adamyonk.com/webmention" />
+      <link rel="pingback" href="https://webmention.io/adamyonk.com/xmlrpc" />
       <link href="https://twitter.com/adamyonk" rel="me" />
       <link href="https://github.com/adamyonk" rel="me" />
     </Helmet>
