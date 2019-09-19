@@ -5,7 +5,7 @@ import Tags from "./Tags"
 
 export default ({ posts }) => (
   <ul className="posts">
-    {posts.map(({ node: { id, frontmatter: { date, path, title, tags } } }) => (
+    {posts.map(({ node: { id, frontmatter: { date, path, price, title, tags } } }) => (
       <li key={id}>
         {date && (
           <div className="date">
@@ -13,6 +13,14 @@ export default ({ posts }) => (
           </div>
         )}
         <Link to={path}>{title}</Link>
+        {price && (
+        <div className="tags">
+          {parseFloat(price).toLocaleString("en-US", {
+            currency: "USD",
+            style: "currency",
+          })}
+        </div>
+        )}
         <div className="tags">
           <Tags tags={tags} />
         </div>

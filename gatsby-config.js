@@ -120,5 +120,20 @@ module.exports = {
         ],
       },
     },
+    {
+      resolve: `gatsby-plugin-webmention`,
+      options: {
+        username: "adamyonk.com",
+        identity: {
+          github: "adamyonk",
+          twitter: "adamyonk"
+        },
+        mentions: true,
+        pingbacks: true,
+        // forwardPingbacksAsWebmentions: "https://example.com/endpoint",
+        domain: "adamyonk.com",
+        token: process.env.WEBMENTIONS_TOKEN
+      }
+    }
   ],
 }

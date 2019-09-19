@@ -10,6 +10,7 @@ export default ({ data }) => {
   return (
     <Layout>
       <Helmet title={`${post.frontmatter.title} | Adam Jahnke`} />
+      <a href="/for-sale">&laquo; Back to all</a>
       <article>
         <h1>{post.frontmatter.title}</h1>
         <Meta>
