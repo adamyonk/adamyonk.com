@@ -30,6 +30,8 @@ Things I use.
   [iOS](https://itunes.apple.com/us/app/soulver/id348142037?mt=8&at=1001lJ7Y)
 - Halide
   [iOS](https://itunes.apple.com/us/app/halide-raw-manual-camera/id885697368?mt=8&at=1001lJ7Y)
+- Darkroom
+  [iOS](https://apps.apple.com/us/app/darkroom-photo-editor/id953286746)
 - Gyroscope
   [iOS](https://itunes.apple.com/us/app/gyroscope-health/id1104085053?mt=8&at=1001lJ7Y)
 - RescueTime [macOS](https://www.rescuetime.com/)
@@ -43,7 +45,8 @@ Things I use.
   [iOS](https://itunes.apple.com/us/app/scriptable/id1405459188)
 - Blink
   [iOS](https://itunes.apple.com/us/app/blink-shell-mosh-ssh/id1156707581?mt=8&at=1001lJ7Y)
-- kitty [macOS](https://sw.kovidgoyal.net/kitty/)
+- Hyper
+  [macOS](https://hyper.is/)
 
 ## Hardware
 
@@ -53,10 +56,10 @@ Things I use.
 - [LG UltraFine 27" 5K Display](http://a.co/d/eKBeHuL)
 - [Roost Laptop Stand](http://amzn.to/2DXrUWU)
 - [Ultimate Hacking Keyboard](https://ultimatehackingkeyboard.com)
+- [Apple iPad Pro 11"](https://www.amazon.com/Apple-iPad-11-inch-Wi-Fi-256GB/dp/B07K3BZSNK)
 - [Apple iPhone X](https://amzn.to/2EfALBM)
 - [Apple Watch Series 4](http://amzn.to/2rtYQ6X)
 - [Apple AirPods](https://www.apple.com/airpods/)
-- [Kindle Voyage](https://amzn.to/2EeVRQX)
 - [Ubiquiti Unifi PRO AP](http://amzn.to/2G49SD7)
 - [Ubiquiti UniFi Switch 8](http://a.co/d/jkqnJeI)
 - [Ubiquity Unifi Security Gateway](http://amzn.to/2F2ne1l)
@@ -80,6 +83,9 @@ Things I use.
 - [Mini Carabiners](http://amzn.to/2GjZo2N)
 - [Nite Ize S-Biner #2 Stainless](http://amzn.to/2GlKjO6)
 - [Vargo Titanium Water Bottle](http://amzn.to/2n1O1n0)
+
+## Auto
+
 - [Weego Jump Starter 22s](http://amzn.to/2DybaIa)
 
 ## Repair
