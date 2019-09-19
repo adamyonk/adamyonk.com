@@ -3,7 +3,6 @@ import Helmet from "react-helmet"
 import { graphql } from "gatsby"
 import Date from "../components/Date"
 import Meta from "../components/Meta"
-import Tags from "../components/Tags"
 import Layout from "../components/layout"
 
 export default ({ data }) => {
@@ -14,10 +13,17 @@ export default ({ data }) => {
       <article>
         <h1>{post.frontmatter.title}</h1>
         <Meta>
-          Posted <Date date={post.frontmatter.date} /> under{" "}
-          <Tags tags={post.frontmatter.tags} />
+          {parseFloat(post.frontmatter.price).toLocaleString("en-US", {
+            currency: "USD",
+            style: "currency",
+          })}
+          {post.frontmatter.date && (
+            <>
+              {", posted "}
+              <Date date={post.frontmatter.date} />
+            </>
+          )}
         </Meta>
-        <Meta>{post.timeToRead} minute read</Meta>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
       </article>
       <style jsx>{`
@@ -30,14 +36,14 @@ export default ({ data }) => {
 }
 
 export const pageQuery = graphql`
-  query BlogPostByPath($path: String!) {
+  query SalePostByPath($path: String!) {
     markdownRemark(frontmatter: { path: { eq: $path } }) {
       html
       timeToRead
       frontmatter {
         date
         path
-        tags
+        price
         title
       }
     }
