@@ -382,6 +382,12 @@ const TemplateWrapper = ({ children }) => (
         list-style-type: decimal;
       }
 
+      article li > p,
+      article li > ul {
+        margin-bottom: 0;
+        margin-top: 0;
+      }
+
       article table {
         margin-bottom: 1.5em;
       }
