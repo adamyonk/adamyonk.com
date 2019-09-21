@@ -114,7 +114,6 @@ const TemplateWrapper = ({ children }) => (
       <a className="sale" href="/for-sale" title="For Sale">
         <svg width="11" height="11" viewBox="0 0 12 12">
           <path
-            fill-rule="evenodd"
             d="M0.22265625,7.59960938 C-0.0703125,7.30664062 -0.0703125,6.8203125 0.22265625,6.52734375 L6.6796875,0.0703125 C6.72070312,0.029296875 6.79101562,0 6.84960938,0 L11.25,0 C11.6660156,0 12,0.333984375 12,0.75 L12,5.15039062 C12,5.20898438 11.9707031,5.27929688 11.9296875,5.3203125 L5.47265625,11.7773438 C5.1796875,12.0703125 4.69335938,12.0703125 4.40039062,11.7773438 L0.22265625,7.59960938 Z M8.25,2.625 C8.25,3.25195312 8.74804688,3.75 9.375,3.75 C10.0019531,3.75 10.5,3.25195312 10.5,2.625 C10.5,1.99804688 10.0019531,1.5 9.375,1.5 C8.74804688,1.5 8.25,1.99804688 8.25,2.625 Z"
           />
         </svg>
@@ -243,6 +242,10 @@ const TemplateWrapper = ({ children }) => (
       ol,
       ul {
         list-style-type: none;
+      }
+
+      ul li > p {
+        margin: 0;
       }
 
       dl {
@@ -441,15 +444,9 @@ const TemplateWrapper = ({ children }) => (
     `}</style>
   </React.Fragment>
 )
-// This was for Apple affiliate links
-// <script
-//   dangerouslySetInnerHTML={{
-//     __html: `var _merchantSettings=_merchantSettings || [];(function(){var autolink=document.createElement('script');autolink.type='text/javascript';autolink.async=true; autolink.src= ('https:' == document.location.protocol) ? 'https://autolinkmaker.itunes.apple.com/js/itunes_autolinkmaker.js' : 'http://autolinkmaker.itunes.apple.com/js/itunes_autolinkmaker.js';var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(autolink, s);})();`,
-//   }}
-// />
 
 TemplateWrapper.propTypes = {
-  children: PropTypes.func,
+  children: PropTypes.node,
 }
 
 export default TemplateWrapper
