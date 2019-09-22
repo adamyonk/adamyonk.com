@@ -6,26 +6,28 @@ import Meta from "../components/Meta"
 import Layout from "../components/layout"
 
 export default ({ data }) => {
-  const { markdownRemark: post } = data
+  const { markdownRemark: { html, frontmatter: { title, date, price } } } = data
   return (
     <Layout>
-      <Helmet title={`${post.frontmatter.title} | Adam Jahnke`} />
+      <Helmet title={`${title} | Adam Jahnke`} />
       <a href="/for-sale">&laquo; Back to all</a>
       <article>
-        <h1>{post.frontmatter.title}</h1>
+        <h1>{title}</h1>
         <Meta>
-          {parseFloat(post.frontmatter.price).toLocaleString("en-US", {
+          {parseFloat(price).toLocaleString("en-US", {
             currency: "USD",
             style: "currency",
           })}
-          {post.frontmatter.date && (
+          {", "}
+          <a href={`mailto:?subject=${title}&body=${window.location}`}>Email me about this</a>
+          {date && (
             <>
               {", posted "}
-              <Date date={post.frontmatter.date} />
+              <Date date={date} />
             </>
           )}
         </Meta>
-        <div dangerouslySetInnerHTML={{ __html: post.html }} />
+        <div dangerouslySetInnerHTML={{ __html: html }} />
       </article>
       <style jsx>{`
         h1 {
