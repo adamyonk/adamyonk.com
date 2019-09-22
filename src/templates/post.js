@@ -1,5 +1,5 @@
 import React from "react"
-import Helmet from "react-helmet"
+import { Helmet } from "react-helmet-async"
 import { graphql } from "gatsby"
 import Date from "../components/Date"
 import Meta from "../components/Meta"

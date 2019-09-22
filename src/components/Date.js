@@ -1,3 +1,3 @@
-import format from "date-fns/format"
+import { format, parseISO } from "date-fns"
 
-export default ({ date }) => format(date, "MMM Do, YYYY")
+export default ({ date }) => format(parseISO(date), "MMM d, yyyy")

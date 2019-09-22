@@ -6,7 +6,7 @@ module.exports = {
     author: "Adam Jahnke",
   },
   plugins: [
-    { resolve: "gatsby-plugin-react-helmet" },
+    { resolve: "@rhysforyou/gatsby-plugin-react-helmet-async" },
     { resolve: "gatsby-plugin-styled-jsx" },
     // {
     //   resolve: `gatsby-plugin-feed`,
@@ -147,21 +147,21 @@ module.exports = {
         ],
       },
     },
-    {
-      resolve: `gatsby-plugin-webmention`,
-      options: {
-        username: "adamyonk.com",
-        identity: {
-          github: "adamyonk",
-          twitter: "adamyonk"
-        },
-        mentions: true,
-        pingbacks: true,
-        // forwardPingbacksAsWebmentions: "https://example.com/endpoint",
-        domain: "adamyonk.com",
-        token: process.env.WEBMENTIONS_TOKEN
-      }
-    },
+    // {
+    //   resolve: `gatsby-plugin-webmention`,
+    //   options: {
+    //     username: "adamyonk.com",
+    //     identity: {
+    //       github: "adamyonk",
+    //       twitter: "adamyonk"
+    //     },
+    //     mentions: true,
+    //     pingbacks: true,
+    //     // forwardPingbacksAsWebmentions: "https://example.com/endpoint",
+    //     domain: "adamyonk.com",
+    //     token: process.env.WEBMENTIONS_TOKEN
+    //   }
+    // },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
