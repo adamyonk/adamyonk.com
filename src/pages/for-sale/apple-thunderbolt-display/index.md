@@ -3,6 +3,8 @@ title: Apple Thunderbolt Display
 price: 400
 path: /for-sale/apple-thunderbolt-display
 templateKey: sale
+date: 2019-09-22T14:56:38-05:00
+updated: 2019-09-22T14:56:38-05:00
 ---
 
 Apple Thunderbolt Display in original packaging.

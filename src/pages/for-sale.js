@@ -11,6 +11,9 @@ export default ({ data, pageContext }) => {
       <section>
         <Helmet title={`For Sale | Adam Jahnke`} />
         <h1>For Sale</h1>
+        <p>
+          For updates, you can subscribe via <a href="/for-sale.xml">RSS</a> or <a href="/for-sale.json">JSON Feed</a>.
+        </p>
         <PostList posts={posts} />
       </section>
     </Layout>

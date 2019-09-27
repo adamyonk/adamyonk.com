@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 import { Helmet } from "react-helmet-async"
 import { graphql } from "gatsby"
 import Date from "../components/Date"
@@ -7,6 +7,11 @@ import Layout from "../components/layout"
 
 export default ({ data }) => {
   const { markdownRemark: { html, frontmatter: { title, date, price } } } = data
+  const [location, setLocation] = useState(undefined);
+  useEffect(() => {
+    setLocation(window.location);
+  }, [location]);
+
   return (
     <Layout>
       <Helmet title={`${title} | Adam Jahnke`} />
@@ -19,10 +24,11 @@ export default ({ data }) => {
             style: "currency",
           })}
           {", "}
-          <a href={`mailto:?subject=${title}&body=${window.location}`}>Email me about this</a>
+          <a href={`mailto:?subject=${title}&body=${location}`}>email me about this</a>
           {date && (
             <>
-              {", posted "}
+              <br/>
+              {"Posted "}
               <Date date={date} />
             </>
           )}

@@ -84,7 +84,7 @@ module.exports = {
         `,
         feeds: [
           {
-            name: 'Blog',
+            name: 'feed',
             query: `
               {
                 allMarkdownRemark(
@@ -106,7 +106,46 @@ module.exports = {
               }
             `,
             normalize: ({ query: { site, allMarkdownRemark } }) => {
+              console.log('COUNT', allMarkdownRemark.edges.length);
               return allMarkdownRemark.edges.map(edge => {
+                console.log(edge.node.frontmatter.title);
+                return {
+                  title: edge.node.frontmatter.title,
+                  date: edge.node.frontmatter.date,
+                  url: site.siteMetadata.siteUrl + edge.node.frontmatter.path,
+                  html: edge.node.html,
+                }
+              })
+            },
+          },
+          {
+            name: 'sale',
+            query: `
+              {
+                allMarkdownRemark(
+                  filter: { frontmatter: { templateKey: { eq: "sale" } } },
+                  sort: { order: DESC, fields: [frontmatter___updated] }
+                ) {
+                  edges {
+                    node {
+                      html
+                      id
+                      frontmatter {
+                        date
+                        path
+                        price
+                        title
+                        updated
+                      }
+                    }
+                  }
+                }
+              }
+            `,
+            normalize: ({ query: { site, allMarkdownRemark } }) => {
+              console.log('COUNT', allMarkdownRemark.edges.length);
+              return allMarkdownRemark.edges.map(edge => {
+                console.log(edge.node.frontmatter.title);
                 return {
                   title: edge.node.frontmatter.title,
                   date: edge.node.frontmatter.date,
@@ -162,25 +201,25 @@ module.exports = {
     //     token: process.env.WEBMENTIONS_TOKEN
     //   }
     // },
-    {
-      resolve: `gatsby-plugin-manifest`,
-      options: {
-        name: "adamyonk.com",
-        short_name: "adamyonk.com",
-        start_url: "/",
-        background_color: "#073642",
-        theme_color: "#93a1a1",
-        // Enables "Add to Homescreen" prompt and disables browser UI (including back button)
-        // see https://developers.google.com/web/fundamentals/web-app-manifest/#display
-        display: "standalone",
-        icon: "static/favicon.ico", // This path is relative to the root of the site.
-        // An optional attribute which provides support for CORS check.
-        // If you do not provide a crossOrigin option, it will skip CORS for manifest.
-        // Any invalid keyword or empty string defaults to `anonymous`
-        crossOrigin: `use-credentials`,
-      },
-    },
-    { resolve: "gatsby-plugin-offline" },
-    // { resolve: "gatsby-plugin-remove-serviceworker" },
+    // {
+    //   resolve: `gatsby-plugin-manifest`,
+    //   options: {
+    //     name: "adamyonk.com",
+    //     short_name: "adamyonk.com",
+    //     start_url: "/",
+    //     background_color: "#073642",
+    //     theme_color: "#93a1a1",
+    //     // Enables "Add to Homescreen" prompt and disables browser UI (including back button)
+    //     // see https://developers.google.com/web/fundamentals/web-app-manifest/#display
+    //     display: "standalone",
+    //     icon: "static/favicon.ico", // This path is relative to the root of the site.
+    //     // An optional attribute which provides support for CORS check.
+    //     // If you do not provide a crossOrigin option, it will skip CORS for manifest.
+    //     // Any invalid keyword or empty string defaults to `anonymous`
+    //     crossOrigin: `use-credentials`,
+    //   },
+    // },
+    // { resolve: "gatsby-plugin-offline" },
+    { resolve: "gatsby-plugin-remove-serviceworker" },
   ],
 }
