@@ -5,12 +5,18 @@ import Date from "../components/Date"
 import Meta from "../components/Meta"
 import Layout from "../components/layout"
 
-export default ({ data }) => {
-  const { markdownRemark: { html, frontmatter: { title, date, price } } } = data
-  const [location, setLocation] = useState(undefined);
+export default ({
+  data: {
+    markdownRemark: {
+      html,
+      frontmatter: { title, date, price },
+    },
+  },
+}) => {
+  const [location, setLocation] = useState(undefined)
   useEffect(() => {
-    setLocation(window.location);
-  }, [location]);
+    setLocation(window.location)
+  }, [location])
 
   return (
     <Layout>
@@ -24,10 +30,12 @@ export default ({ data }) => {
             style: "currency",
           })}
           {", "}
-          <a href={`mailto:?subject=${title}&body=${location}`}>email me about this</a>
+          <a href={`mailto:?subject=${title}&body=${location}`}>
+            email me about this
+          </a>
           {date && (
             <>
-              <br/>
+              <br />
               {"Posted "}
               <Date date={date} />
             </>
@@ -48,7 +56,6 @@ export const pageQuery = graphql`
   query SalePostByPath($path: String!) {
     markdownRemark(frontmatter: { path: { eq: $path } }) {
       html
-      timeToRead
       frontmatter {
         date
         path

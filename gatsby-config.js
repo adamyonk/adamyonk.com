@@ -86,7 +86,7 @@ module.exports = {
         `,
         feeds: [
           {
-            name: 'feed',
+            name: "feed",
             query: `
               {
                 allMarkdownRemark(
@@ -99,6 +99,7 @@ module.exports = {
                       id
                       frontmatter {
                         date
+                        updated
                         path
                         title
                       }
@@ -108,18 +109,31 @@ module.exports = {
               }
             `,
             normalize: ({ query: { site, allMarkdownRemark } }) => {
-              return allMarkdownRemark.edges.map(edge => {
-                return {
-                  title: edge.node.frontmatter.title,
-                  date: edge.node.frontmatter.date,
-                  url: site.siteMetadata.siteUrl + edge.node.frontmatter.path,
-                  html: edge.node.html,
-                }
-              })
+              return allMarkdownRemark.edges.map(
+                ({
+                  edge: {
+                    node: {
+                      html,
+                      id,
+                      frontmatter: { title, date, updated, path },
+                    },
+                  },
+                }) => {
+                  return {
+                    date,
+                    date_modified: updated,
+                    date_published: date,
+                    html,
+                    id,
+                    title,
+                    url: site.siteMetadata.siteUrl + path,
+                  }
+                },
+              )
             },
           },
           {
-            name: 'for-sale',
+            name: "for-sale",
             query: `
               {
                 allMarkdownRemark(
@@ -143,16 +157,28 @@ module.exports = {
               }
             `,
             normalize: ({ query: { site, allMarkdownRemark } }) => {
-              return allMarkdownRemark.edges.map(edge => {
-                return {
-                  title: edge.node.frontmatter.title,
-                  date: edge.node.frontmatter.date,
-                  url: site.siteMetadata.siteUrl + edge.node.frontmatter.path,
-                  html: edge.node.html,
-                }
-              })
+              return allMarkdownRemark.edges.map(
+                ({
+                  edge: {
+                    node: {
+                      html,
+                      id,
+                      frontmatter: { price, title, date, updated, path },
+                    },
+                  },
+                }) => {
+                  return {
+                    date,
+                    date_modified: updated,
+                    date_published: date,
+                    html,
+                    title: `${title}: ${price}`,
+                    url: site.siteMetadata.siteUrl + path,
+                  }
+                },
+              )
             },
-          }
+          },
         ],
       },
     },

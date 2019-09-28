@@ -12,7 +12,8 @@ export default ({ data, pageContext }) => {
         <Helmet title={`For Sale | Adam Jahnke`} />
         <h1>For Sale</h1>
         <p>
-          For updates, you can subscribe via <a href="/for-sale.xml">RSS</a> or <a href="/for-sale.json">JSON Feed</a>.
+          For updates, you can subscribe via <a href="/for-sale.xml">RSS</a> or{" "}
+          <a href="/for-sale.json">JSON Feed</a>.
         </p>
         <PostList posts={posts} />
       </section>
@@ -24,7 +25,7 @@ export const tagPageQuery = graphql`
   query SalePage {
     allMarkdownRemark(
       filter: { frontmatter: { templateKey: { eq: "sale" } } }
-      sort: { order: DESC, fields: [frontmatter___title] }
+      sort: { order: DESC, fields: [frontmatter___updated] }
     ) {
       edges {
         node {
@@ -33,6 +34,7 @@ export const tagPageQuery = graphql`
             date
             path
             title
+            updated
             price
           }
         }

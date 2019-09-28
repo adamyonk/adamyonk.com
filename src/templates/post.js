@@ -6,19 +6,25 @@ import Meta from "../components/Meta"
 import Tags from "../components/Tags"
 import Layout from "../components/layout"
 
-export default ({ data }) => {
-  const { markdownRemark: post } = data
+export default ({
+  data: {
+    markdownRemark: {
+      html,
+      timeToRead,
+      frontmatter: { title, date, tags },
+    },
+  },
+}) => {
   return (
     <Layout>
-      <Helmet title={`${post.frontmatter.title} | Adam Jahnke`} />
+      <Helmet title={`${(timeToRead, title)} | Adam Jahnke`} />
       <article>
-        <h1>{post.frontmatter.title}</h1>
+        <h1>{title}</h1>
         <Meta>
-          Posted <Date date={post.frontmatter.date} /> under{" "}
-          <Tags tags={post.frontmatter.tags} />
+          Posted <Date date={date} /> under <Tags tags={tags} />
         </Meta>
-        <Meta>{post.timeToRead} minute read</Meta>
-        <div dangerouslySetInnerHTML={{ __html: post.html }} />
+        <Meta>{timeToRead} minute read</Meta>
+        <div dangerouslySetInnerHTML={{ __html: html }} />
       </article>
       <style jsx>{`
         h1 {

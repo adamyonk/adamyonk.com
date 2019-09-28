@@ -5,15 +5,20 @@ import Date from "../components/Date"
 import Meta from "../components/Meta"
 import Layout from "../components/layout"
 
-export default ({ data }) => {
-  const { markdownRemark: post } = data
-  const { date, updated, title } = post.frontmatter
+export default ({
+  data: {
+    markdownRemark: {
+      html,
+      frontmatter: { date, updated, title },
+    },
+  },
+}) => {
   return (
     <Layout>
       <article>
-        <Helmet title={`${post.frontmatter.title} | Adam Jahnke`} />
+        <Helmet title={`${title} | Adam Jahnke`} />
         <h1>{title}</h1>
-        <div dangerouslySetInnerHTML={{ __html: post.html }} />
+        <div dangerouslySetInnerHTML={{ __html: html }} />
         {!!date && (
           <Meta>
             <em>
