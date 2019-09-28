@@ -70,6 +70,8 @@ module.exports = {
     {
       resolve: "gatsby-plugin-feed-generator",
       options: {
+        rss: true,
+        json: true,
         siteQuery: `
           {
             site {
@@ -106,9 +108,7 @@ module.exports = {
               }
             `,
             normalize: ({ query: { site, allMarkdownRemark } }) => {
-              console.log('COUNT', allMarkdownRemark.edges.length);
               return allMarkdownRemark.edges.map(edge => {
-                console.log(edge.node.frontmatter.title);
                 return {
                   title: edge.node.frontmatter.title,
                   date: edge.node.frontmatter.date,
@@ -119,7 +119,7 @@ module.exports = {
             },
           },
           {
-            name: 'sale',
+            name: 'for-sale',
             query: `
               {
                 allMarkdownRemark(
@@ -143,9 +143,7 @@ module.exports = {
               }
             `,
             normalize: ({ query: { site, allMarkdownRemark } }) => {
-              console.log('COUNT', allMarkdownRemark.edges.length);
               return allMarkdownRemark.edges.map(edge => {
-                console.log(edge.node.frontmatter.title);
                 return {
                   title: edge.node.frontmatter.title,
                   date: edge.node.frontmatter.date,
