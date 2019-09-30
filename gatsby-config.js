@@ -108,14 +108,19 @@ module.exports = {
                 }
               }
             `,
-            normalize: ({ query: { site, allMarkdownRemark } }) => {
-              return allMarkdownRemark.edges.map(
+            normalize: ({
+              query: {
+                site,
+                allMarkdownRemark: { edges },
+              },
+            }) => {
+              return edges.map(
                 ({
                   edge: {
                     node: {
                       html,
                       id,
-                      frontmatter: { title, date, updated, path },
+                      frontmatter: { link, title, date, updated, path },
                     },
                   },
                 }) => {
@@ -123,6 +128,7 @@ module.exports = {
                     date,
                     date_modified: updated,
                     date_published: date,
+                    external_url: link,
                     html,
                     id,
                     title,
@@ -156,8 +162,13 @@ module.exports = {
                 }
               }
             `,
-            normalize: ({ query: { site, allMarkdownRemark } }) => {
-              return allMarkdownRemark.edges.map(
+            normalize: ({
+              query: {
+                site,
+                allMarkdownRemark: { edges },
+              },
+            }) => {
+              return edges.map(
                 ({
                   edge: {
                     node: {

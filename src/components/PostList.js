@@ -13,7 +13,7 @@ export default ({ posts }) => (
         },
       }) => (
         <li key={id}>
-          {( updated || date ) && (
+          {(updated || date) && (
             <div className="date">
               <Date date={updated || date} />
             </div>

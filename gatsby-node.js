@@ -66,3 +66,16 @@ exports.createPages = ({ actions, graphql }) => {
     })
   })
 }
+
+// https://www.gatsbyjs.org/docs/schema-customization/#nested-types
+exports.createSchemaCustomization = ({ actions: { createTypes } }) => {
+  const typeDefs = `
+    type MarkdownRemark implements Node {
+      frontmatter: Frontmatter
+    }
+    type Frontmatter {
+      link: String
+    }
+  `
+  createTypes(typeDefs)
+}

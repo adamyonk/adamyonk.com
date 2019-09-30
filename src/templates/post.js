@@ -11,7 +11,7 @@ export default ({
     markdownRemark: {
       html,
       timeToRead,
-      frontmatter: { title, date, tags },
+      frontmatter: { link, title, date, tags },
     },
   },
 }) => {
@@ -42,6 +42,7 @@ export const pageQuery = graphql`
       timeToRead
       frontmatter {
         date
+        link
         path
         tags
         title
