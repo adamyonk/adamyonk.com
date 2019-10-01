@@ -53,8 +53,8 @@ export default ({
 }
 
 export const pageQuery = graphql`
-  query SalePostByPath($path: String!) {
-    markdownRemark(frontmatter: { path: { eq: $path } }) {
+  query SalePostByPath($id: String!) {
+    markdownRemark(id: { eq: $id }) {
       html
       frontmatter {
         date

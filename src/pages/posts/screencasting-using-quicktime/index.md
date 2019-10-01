@@ -1,7 +1,6 @@
 ---
 templateKey: "post"
 title: Screencasting Using QuickTime
-path: /screencasting-using-quicktime
 date: 2018-12-29 11:13:31 -0500
 tags: [tools]
 published: true

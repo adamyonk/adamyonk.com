@@ -1,3 +1,5 @@
+const { formatPath } = require("./src/util/formatPath")
+
 module.exports = {
   siteMetadata: {
     title: "Adam Jahnke ☕️🏍 (adamyonk)",
@@ -8,65 +10,6 @@ module.exports = {
   plugins: [
     { resolve: "@rhysforyou/gatsby-plugin-react-helmet-async" },
     { resolve: "gatsby-plugin-styled-jsx" },
-    // {
-    //   resolve: `gatsby-plugin-feed`,
-    //   options: {
-    //     query: `
-    //     {
-    //       site {
-    //         siteMetadata {
-    //           title
-    //           description
-    //           siteUrl
-    //           site_url: siteUrl
-    //         }
-    //       }
-    //     }
-    //   `,
-    //     feeds: [
-    //       {
-    //         serialize: ({ query: { site, allMarkdownRemark } }) => {
-    //           return allMarkdownRemark.edges.map(edge => {
-    //             return Object.assign({}, edge.node.frontmatter, {
-    //               description: edge.node.excerpt,
-    //               date: edge.node.frontmatter.date,
-    //               url: site.siteMetadata.siteUrl + edge.node.frontmatter.path,
-    //               guid: site.siteMetadata.siteUrl + edge.node.frontmatter.path,
-    //               custom_elements: [{ "content:encoded": edge.node.html }],
-    //             })
-    //           })
-    //         },
-    //         query: `
-    //         {
-    //           allMarkdownRemark(
-    //             limit: 1000,
-    //             sort: { order: DESC, fields: [frontmatter___date] },
-    //             filter: {frontmatter: {
-    //               published: { eq: true },
-    //               templateKey: { eq: "post" },
-    //             }}
-    //           ) {
-    //             edges {
-    //               node {
-    //                 excerpt
-    //                 html
-    //                 id
-    //                 frontmatter {
-    //                   date
-    //                   path
-    //                   title
-    //                 }
-    //               }
-    //             }
-    //           }
-    //         }
-    //       `,
-    //         output: "/rss.xml",
-    //         title: "Gatsby RSS Feed",
-    //       },
-    //     ],
-    //   },
-    // },
     {
       resolve: "gatsby-plugin-feed-generator",
       options: {
@@ -97,10 +40,10 @@ module.exports = {
                     node {
                       html
                       id
+                      fileAbsolutePath
                       frontmatter {
                         date
                         updated
-                        path
                         title
                       }
                     }
@@ -116,12 +59,11 @@ module.exports = {
             }) => {
               return edges.map(
                 ({
-                  edge: {
-                    node: {
-                      html,
-                      id,
-                      frontmatter: { link, title, date, updated, path },
-                    },
+                  node: {
+                    html,
+                    id,
+                    fileAbsolutePath,
+                    frontmatter: { link, title, date, updated },
                   },
                 }) => {
                   return {
@@ -132,7 +74,8 @@ module.exports = {
                     html,
                     id,
                     title,
-                    url: site.siteMetadata.siteUrl + path,
+                    url:
+                      site.siteMetadata.siteUrl + formatPath(fileAbsolutePath),
                   }
                 },
               )
@@ -149,10 +92,10 @@ module.exports = {
                   edges {
                     node {
                       html
+                      fileAbsolutePath
                       id
                       frontmatter {
                         date
-                        path
                         price
                         title
                         updated
@@ -170,12 +113,11 @@ module.exports = {
             }) => {
               return edges.map(
                 ({
-                  edge: {
-                    node: {
-                      html,
-                      id,
-                      frontmatter: { price, title, date, updated, path },
-                    },
+                  node: {
+                    html,
+                    id,
+                    fileAbsolutePath,
+                    frontmatter: { price, title, date, updated },
                   },
                 }) => {
                   return {
@@ -184,7 +126,8 @@ module.exports = {
                     date_published: date,
                     html,
                     title: `${title}: ${price}`,
-                    url: site.siteMetadata.siteUrl + path,
+                    url:
+                      site.siteMetadata.siteUrl + formatPath(fileAbsolutePath),
                   }
                 },
               )

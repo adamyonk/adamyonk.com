@@ -59,6 +59,7 @@ export const pageQuery = graphql`
       edges {
         node {
           id
+          fileAbsolutePath
           frontmatter {
             date
             path

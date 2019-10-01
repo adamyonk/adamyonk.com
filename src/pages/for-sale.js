@@ -29,6 +29,7 @@ export const tagPageQuery = graphql`
     ) {
       edges {
         node {
+          fileAbsolutePath
           id
           frontmatter {
             date

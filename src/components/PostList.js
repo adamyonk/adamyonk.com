@@ -2,6 +2,7 @@ import React from "react"
 import Link from "gatsby-link"
 import Date from "./Date"
 import Tags from "./Tags"
+import { formatPath } from "../util/formatPath"
 
 export default ({ posts }) => (
   <ul className="posts">
@@ -9,7 +10,8 @@ export default ({ posts }) => (
       ({
         node: {
           id,
-          frontmatter: { date, path, price, title, tags, updated },
+          fileAbsolutePath,
+          frontmatter: { date, price, title, tags, updated },
         },
       }) => (
         <li key={id}>
@@ -18,7 +20,7 @@ export default ({ posts }) => (
               <Date date={updated || date} />
             </div>
           )}
-          <Link to={path}>{title}</Link>
+          <Link to={formatPath(fileAbsolutePath)}>{title}</Link>
           {price && (
             <div className="tags">
               {parseFloat(price).toLocaleString("en-US", {
