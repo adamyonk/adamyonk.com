@@ -9,11 +9,7 @@ const TemplateWrapper = ({ children }) => (
     <Helmet title="Adam Jahnke ☕️🏍 (adamyonk)">
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <link
-        rel="stylesheet"
-        href="https://cdn.rawgit.com/tonsky/FiraCode/1.204/distr/fira_code.css"
-      />
-      <link
-        href="https://fonts.googleapis.com/css?family=Fira+Sans:400,400i"
+        href="https://fonts.googleapis.com/css?family=Fira+Code|Fira+Sans:400,400i&display=fallback"
         rel="stylesheet"
       />
       <link rel="authorization_endpoint" href="https://indieauth.com/auth" />
@@ -160,7 +156,7 @@ const TemplateWrapper = ({ children }) => (
         --link: var(--base2);
         --navlink: var(--base00);
 
-        --body: "Fira Sans";
+        --body: "Fira Sans", sans-serif;
         --monospace: "Fira Code", monospace;
         --body: var(--monospace);
       }
