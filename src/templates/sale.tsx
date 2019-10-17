@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react"
-import { Helmet } from "react-helmet-async"
 import { graphql } from "gatsby"
+import SEO from "../components/SEO"
 import Date from "../components/Date"
 import Meta from "../components/Meta"
 import Layout from "../components/layout"
@@ -20,7 +20,7 @@ export default ({
 
   return (
     <Layout>
-      <Helmet title={`${title} | Adam Jahnke`} />
+      <SEO title={title} />
       <a href="/for-sale">&laquo; Back to all</a>
       <article>
         <h1>{title}</h1>

@@ -1,6 +1,6 @@
 import React from "react"
-import { Helmet } from "react-helmet-async"
 import { graphql } from "gatsby"
+import SEO from "../components/SEO"
 import PostList from "../components/PostList"
 import Layout from "../components/layout"
 
@@ -8,8 +8,8 @@ export default ({ data, pageContext: { tag } }) => {
   const { edges: posts = [] } = (data && data.allMarkdownRemark) || {}
   return (
     <Layout>
+      <SEO title={`Posts tagged &laquo;${tag}&raquo;`} />
       <section>
-        <Helmet title={`Posts tagged "${tag}" | Adam Jahnke`} />
         <h1>Posts tagged &laquo;{tag}&raquo;</h1>
         <PostList posts={posts} />
       </section>

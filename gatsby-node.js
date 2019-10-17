@@ -27,32 +27,32 @@ exports.createPages = ({ actions, graphql }) => {
           }
         }
       }
+
+      tags: allMarkdownRemark {
+        group(field: frontmatter___tags) {
+          fieldValue
+          totalCount
+        }
+      }
     }
   `).then(({ errors, data }) => {
     if (errors) {
       return Promise.reject(errors)
     }
 
-    // Generate tag index pages
-    data.pages.edges
-      // Loop through all the posts and gather unique tags
-      .reduce((a, { node: { frontmatter: { tags } } }) => {
-        if (!tags) {
-          return a
-        }
-        for (const tag of tags) {
-          a.add(tag)
-        }
-        return a
-      }, new Set())
-      // Create an index for each tag
-      .forEach(tag => {
-        createPage({
-          path: `/tags/${tag}`,
-          component: path.resolve(`src/templates/tag.js`),
-          context: { tag },
-        })
-      })
+    // Create an index page for each individual tag
+    data.tags.group.forEach(({ fieldValue: tag }) => {
+      createPage({
+        path: `/tags/${tag}`,
+        component: path.resolve(`src/templates/tag.tsx`),
+        context: { tag }
+      });
+    });
+    createPage({
+      path: `/tags`,
+      component: path.resolve(`src/templates/tags.tsx`),
+      context: { tags: data.tags.group }
+    });
 
     // Generate all pages
     data.pages.edges.forEach(
@@ -66,7 +66,7 @@ exports.createPages = ({ actions, graphql }) => {
         createPage({
           path: formatPath(fileAbsolutePath),
           component: path.resolve(
-            `src/templates/${String(templateKey || "page")}.js`,
+            `src/templates/${String(templateKey || "page")}.tsx`,
           ),
           context: { id }, // additional data can be passed via context
         })

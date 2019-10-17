@@ -8,6 +8,7 @@ module.exports = {
     author: "Adam Jahnke",
   },
   plugins: [
+    { resolve: "gatsby-plugin-typescript" },
     { resolve: "@rhysforyou/gatsby-plugin-react-helmet-async" },
     { resolve: "gatsby-plugin-styled-jsx" },
     {

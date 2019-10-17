@@ -1,50 +1,50 @@
 import React from "react"
-import { Helmet } from "react-helmet-async"
+import SEO from "../components/SEO"
 import { graphql } from "gatsby"
 import Date from "../components/Date"
 import Meta from "../components/Meta"
-import Tags from "../components/Tags"
 import Layout from "../components/layout"
 
 export default ({
   data: {
     markdownRemark: {
       html,
-      timeToRead,
-      frontmatter: { link, title, date, tags },
+      frontmatter: { date, updated, title },
     },
   },
 }) => {
   return (
     <Layout>
-      <Helmet title={`${(timeToRead, title)} | Adam Jahnke`} />
+      <SEO title={title} />
       <article>
         <h1>{title}</h1>
-        <Meta>
-          Posted <Date date={date} /> under <Tags tags={tags} />
-        </Meta>
-        <Meta>{timeToRead} minute read</Meta>
         <div dangerouslySetInnerHTML={{ __html: html }} />
+        {!!date && (
+          <Meta>
+            <em>
+              {updated ? "Originally posted" : "Posted"} <Date date={date} />
+              {updated && (
+                <React.Fragment>
+                  <br />
+                  Updated <Date date={updated} />
+                </React.Fragment>
+              )}
+            </em>
+          </Meta>
+        )}
       </article>
-      <style jsx>{`
-        h1 {
-          margin-bottom: 0;
-        }
-      `}</style>
     </Layout>
   )
 }
 
 export const pageQuery = graphql`
-  query BlogPostByPath($id: String!) {
+  query Page($id: String!) {
     markdownRemark(id: { eq: $id }) {
       html
-      timeToRead
       frontmatter {
-        date
-        link
         path
-        tags
+        date
+        updated
         title
       }
     }

@@ -4,5 +4,5 @@ exports.formatPath = path => {
     .replace(/.*\/src\/pages/, "") // Use path from /src/pages onwards
     .replace(/\.mdx?$/, "") // strip extension
     .replace(/\/index$/, "") // strip "index" for textbundle-types
-    .replace(/\d\d(\d\d)?-\d\d-\d\d-/, "") // strip date
+    .replace(/(\d{2,4})-(\d{2})-(\d{2})-/, "$1/$2/$3/") // format date
 }

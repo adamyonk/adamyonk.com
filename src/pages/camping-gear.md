@@ -1,7 +1,6 @@
 ---
 templateKey: "page"
 title: Camping Gear
-path: /camping-gear
 date: 2018-01-23 10:32:59 -0600
 updated: 2019-09-19 10:32:59 -0600
 ---
