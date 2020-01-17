@@ -18,8 +18,7 @@ _References available upon request._
 Senior Engineer, Lead Engineer  
 June 2018 – Present
 
-Worked closely with the design team to implement an "App Store" for third-party
-Studio plugins.
+Worked closely with the design team to implement an "App Store" UI for third-party Studio plugins. Refactored legacy code in the Studio Electron application to better separate logical and presentation code. Architected and organized a component library to speed up development and increase the testability of the UI layer. 
 
 ### Responsibilities:
 
