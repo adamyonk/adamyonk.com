@@ -2,7 +2,7 @@
 templateKey: "page"
 title: Résumé
 date: 2018-04-19T21:08:13.490Z
-updated: 2018-05-05T02:00:00.000Z
+updated: 2020-01-17T02:00:00.000Z
 ---
 
 _Adam Jahnke_  
@@ -15,12 +15,17 @@ _References available upon request._
 
 ## InVision
 
-Senior Engineer  
+Senior Engineer, Lead Engineer  
 June 2018 – Present
+
+Worked closely with the design team to implement an "App Store" for third-party
+Studio plugins.
 
 ### Responsibilities:
 
-- Development of the Studio App Store
+- New & existing feature development for [InVision Studio](https://www.invisionapp.com/studio) (TypeScript, React, redux)
+- Development of the Studio App Store (TypeScript, React, GraphQL, Apollo)
+- Project lead, development of the Studio Design System (TypeScript, React, Storybook)
 
 ## Librato/SolarWinds
 
@@ -89,6 +94,7 @@ to bring ideas and goals to fruition.
 # Technologies
 
 - JavaScript
+  - TypeScript
   - Webpack
   - Babel
   - React
