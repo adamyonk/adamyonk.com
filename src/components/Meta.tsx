@@ -1,8 +1,15 @@
 import React from "react"
+import cx from "classnames/dedupe"
 
-export default ({ children }) => (
+interface Props {
+  className?: string;
+}
+
+const Meta: React.FC<Props> = ({ children, className, ...props }) => (
   <>
-    <div className="post-meta">{children}</div>
+    <div className={cx([className, "post-meta"])} {...props}>
+      {children}
+    </div>
     <style jsx>{`
       .post-meta {
         font-size: 0.8em;
@@ -10,3 +17,5 @@ export default ({ children }) => (
     `}</style>
   </>
 )
+Meta.displayName = "Meta"
+export default Meta

@@ -5,7 +5,7 @@ import Date from "../components/Date"
 import Meta from "../components/Meta"
 import Layout from "../components/layout"
 
-export default ({
+const Page = ({
   data: {
     markdownRemark: {
       html,
@@ -19,23 +19,34 @@ export default ({
       <article>
         <h1>{title}</h1>
         <div dangerouslySetInnerHTML={{ __html: html }} />
-        {!!date && (
+        {(!!date || !!updated) && (
           <Meta>
             <em>
-              {updated ? "Originally posted" : "Posted"} <Date date={date} />
+              {date && (
+                <>
+                  {updated ? "Originally posted " : "Posted "}
+                  <Date date={date} />
+                </>
+              )}
               {updated && (
-                <React.Fragment>
-                  <br />
+                <>
+                  {date && <br />}
                   Updated <Date date={updated} />
-                </React.Fragment>
+                </>
               )}
             </em>
           </Meta>
         )}
+        <Meta className="print-only">
+          View this online at{" "}
+          <a href={window.location.href}>{window.location.href}</a>
+        </Meta>
       </article>
     </Layout>
   )
 }
+Page.displayName = "Page"
+export default Page
 
 export const pageQuery = graphql`
   query Page($id: String!) {

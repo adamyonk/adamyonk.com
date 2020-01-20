@@ -180,6 +180,12 @@ const TemplateWrapper = ({ children }) => (
         text-decoration-skip: ink;
         width: 90%;
       }
+      @media print {
+        body {
+          background-color: transparent;
+          font-size: 13px;
+        }
+      }
 
       ::selection {
         background-color: var(--cyan);
@@ -312,12 +318,22 @@ const TemplateWrapper = ({ children }) => (
         font-size: 250px;
         line-height: 1;
       }
+      @media print {
+        .logo a {
+          font-size: 150px;
+        }
+      }
 
       nav {
         align-items: center;
         display: flex;
         justify-content: center;
         margin: 2em auto;
+      }
+      @media print {
+        nav {
+          display: none;
+        }
       }
 
       nav a {
@@ -411,6 +427,15 @@ const TemplateWrapper = ({ children }) => (
 
       header h1 {
         margin-bottom: 0em;
+      }
+
+      .print-only {
+        display: none;
+      }
+      @media print {
+        .print-only {
+          display: block;
+        }
       }
 
       /**

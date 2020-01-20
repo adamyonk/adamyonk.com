@@ -4,7 +4,25 @@ import Date from "./Date"
 import Tags from "./Tags"
 import { formatPath } from "../util/formatPath"
 
-export default ({ posts }) => (
+interface Post {
+  node: {
+    id: string;
+    fileAbsolutePath: string;
+    frontmatter: {
+      date: string;
+      price: string;
+      title: string;
+      tags: string[];
+      updated: string;
+    };
+  };
+}
+
+interface Props {
+  posts: Post[];
+}
+
+const PostList: React.FC<Props> = ({ posts }) => (
   <ul className="posts">
     {posts.map(
       ({
@@ -53,3 +71,5 @@ export default ({ posts }) => (
     `}</style>
   </ul>
 )
+PostList.displayName = "PostList"
+export default PostList
