@@ -1,34 +1,40 @@
 ---
 templateKey: "page"
 title: Résumé
-date: 2018-04-19T21:08:13.490Z
-updated: 2020-01-17T02:00:00.000Z
+#date: 2018-04-19T21:08:13.490Z
+updated: 2020-01-20T02:00:00.000Z
 ---
 
 _Adam Jahnke_  
 Springfield, MO  
 [email](mailto:adamyonk@icloud.com) | [phone](tel:14028179871)
 
-_References available upon request._
+_References available upon request. I take privacy seriously!_
 
 # Job History
 
 ## InVision
 
-Senior Engineer, Lead Engineer  
+Senior Programmer, Lead Programmer  
 June 2018 – Present
 
-I have worked closely with the design team to implement an "App Store" UI for third-party Studio plugins; refactored legacy code in the Studio Electron application to better separate logical and presentation code; architected and organized a component library to speed up development and increase the testability of the UI layer. 
+I have worked closely with the design team to implement an "App Store" UI for
+third-party Studio plugins; refactored legacy code in the Studio Electron
+application to better separate logical and presentation code; architected and
+organized a component library to speed up development and increase the
+testability of the UI layer.
 
 ### Responsibilities:
 
-- New & existing feature development for [InVision Studio](https://www.invisionapp.com/studio) (TypeScript, React, redux)
+- New & existing feature development for [InVision
+  Studio](https://www.invisionapp.com/studio) (TypeScript, React, redux)
 - Development of the Studio App Store (TypeScript, React, GraphQL, Apollo)
-- Project lead, development of the Studio Design System (TypeScript, React, Storybook)
+- Project lead, development of the Studio Design System (TypeScript, React,
+  Storybook)
 
 ## Librato/SolarWinds
 
-Engineer, Senior Engineer  
+Programmer, Senior Programmer  
 December 2013 – June 2018
 
 I was fortunate enough to be hired to work with a bunch of data-visualization
@@ -55,7 +61,7 @@ At Pure Charity, I was hired to help build their
 [online giving application](http://purecharity.com) with a focus on front-end
 technologies. We had very open roles in the company and I took that opportunity
 to begin working more with Ruby and Rails and owning features from top to
-bottom. After a year, I was promoted to the lead front-end programmer and
+bottom. After a year, I was promoted to the lead front end programmer and
 architect; a typical day for me there was building features of all shapes and
 sizes, providing support to other developers on the team, and spending time
 reviewing code to ensure that it adhered to best practices. I also discovered a
