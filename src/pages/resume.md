@@ -18,11 +18,12 @@ _References available upon request. I take my contact's privacy seriously._
 Senior Programmer, Lead Programmer  
 June 2018 – Present
 
-I have worked closely with the design team to implement an "App Store" UI for
-third-party Studio plugins; refactored legacy code in the Studio Electron
-application to better separate logical and presentation code; architected and
-organized a component library to speed up development and increase the
-testability of our UI layer.
+I have worked closely with the design team and led the charge to implement an
+"App Store" UI for third-party Studio plugins. I've been refactoring legacy
+code in the Studio Electron application to better separate logical and
+presentation code. I was made team lead for our "design system" project; I
+architected and organized a component library to speed up development and
+increase the testability of our UI layer.
 
 ### Responsibilities:
 
