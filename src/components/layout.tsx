@@ -23,7 +23,9 @@ const TemplateWrapper = ({ children }) => (
       <link href="https://github.com/adamyonk" rel="me" />
     </Helmet>
     <div className="logo">
-      <Link to="/">⤫</Link>
+      <Link className="logo-link" to="/">
+        ⤫
+      </Link>
     </div>
     {children}
     <nav>
@@ -229,6 +231,22 @@ const TemplateWrapper = ({ children }) => (
         border-bottom: 1px dotted transparent;
         color: var(--link);
         text-decoration: none;
+      }
+
+      @media print {
+        a[href]:not(.logo-link)::after {
+          content: " (" attr(href) ")";
+        }
+
+        a[href^="tel:"] span,
+        a[href^="mailto:"] span {
+        display: none;
+        }
+
+        a[href^="tel:"]::after,
+        a[href^="mailto:"]::after {
+          content: attr(href);
+        }
       }
 
       a:hover {

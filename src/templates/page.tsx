@@ -28,7 +28,7 @@ const Page = ({
             <em>
               {date && (
                 <>
-                  {updated ? "Originally posted " : "Posted "}
+                  {updated ? "Originally published " : "Published "}
                   <Date date={date} />
                 </>
               )}
@@ -43,7 +43,7 @@ const Page = ({
         )}
         {location && (
           <Meta className="print-only">
-            View this online at <a href={location.href}>{location.href}</a>
+            View this <a href={location.href}>online</a>
           </Meta>
         )}
       </article>

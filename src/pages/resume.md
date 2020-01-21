@@ -2,14 +2,14 @@
 templateKey: "page"
 title: Résumé
 #date: 2018-04-19T21:08:13.490Z
-updated: 2020-01-20T02:00:00.000Z
+updated: 2020-01-20T08:00:00.000Z
 ---
 
 _Adam Jahnke_  
 Springfield, MO  
-[email](mailto:adamyonk@icloud.com) | [phone](tel:14028179871)
+[<span>email</span>](mailto:adamyonk@icloud.com) | [<span>phone</span>](tel:14028179871)
 
-_References available upon request. I take privacy seriously!_
+_References available upon request. I take my contact's privacy seriously._
 
 # Job History
 
@@ -22,12 +22,13 @@ I have worked closely with the design team to implement an "App Store" UI for
 third-party Studio plugins; refactored legacy code in the Studio Electron
 application to better separate logical and presentation code; architected and
 organized a component library to speed up development and increase the
-testability of the UI layer.
+testability of our UI layer.
 
 ### Responsibilities:
 
 - New & existing feature development for [InVision
-  Studio](https://www.invisionapp.com/studio) (TypeScript, React, redux)
+  Studio](https://www.invisionapp.com/studio)
+  (Node.js, TypeScript, React, redux)
 - Development of the Studio App Store (TypeScript, React, GraphQL, Apollo)
 - Project lead, development of the Studio Design System (TypeScript, React,
   Storybook)
@@ -86,9 +87,9 @@ built the front ends for all of Elevate’s contract work. After graduating high
 school, I was promoted to lead developer and began working full-time. I worked
 very closely with the owner/designer and was challenged constantly to translate
 his designs into working interfaces that were functional and intuitive. Being a
-part of a very small company, I was stretched to learn all aspects of business
-and develop the ability to teach myself and grow whatever skill was necessary
-to bring ideas and goals to fruition.
+part of a very small company, I was stretched to learn about the business and
+develop the ability to teach myself and grow whatever skill was necessary to
+bring ideas and goals to fruition.
 
 ### Responsibilities:
 
@@ -119,16 +120,16 @@ to bring ideas and goals to fruition.
   - Sinatra
   - Jekyll
 - Go
-- HTML
-  - Haml
 - CSS
   - SCSS/Sass
+  - Stylus
   - styled-components
   - styled-jsx
 - PHP
+- HTML
 - Docker
 - Vagrant
 
 # Education
 
-High school diploma
+High school diploma.
