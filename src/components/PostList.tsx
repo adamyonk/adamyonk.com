@@ -1,4 +1,4 @@
-import React from "react"
+import React, { FC } from "react"
 import Link from "gatsby-link"
 import Date from "./Date"
 import Tags from "./Tags"
@@ -22,7 +22,7 @@ interface Props {
   posts: Post[];
 }
 
-const PostList: React.FC<Props> = ({ posts }) => (
+const PostList: FC<Props> = ({ posts }) => (
   <ul className="posts">
     {posts.map(
       ({

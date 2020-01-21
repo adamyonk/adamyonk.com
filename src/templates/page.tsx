@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 import SEO from "../components/SEO"
 import { graphql } from "gatsby"
 import Date from "../components/Date"
@@ -13,6 +13,10 @@ const Page = ({
     },
   },
 }) => {
+  const [location, setLocation] = useState(undefined)
+  useEffect(() => {
+    setLocation(window.location)
+  })
   return (
     <Layout>
       <SEO title={title} />
@@ -37,10 +41,11 @@ const Page = ({
             </em>
           </Meta>
         )}
-        <Meta className="print-only">
-          View this online at{" "}
-          <a href={window.location.href}>{window.location.href}</a>
-        </Meta>
+        {location && (
+          <Meta className="print-only">
+            View this online at <a href={location.href}>{location.href}</a>
+          </Meta>
+        )}
       </article>
     </Layout>
   )

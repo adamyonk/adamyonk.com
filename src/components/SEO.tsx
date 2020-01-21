@@ -5,7 +5,7 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React from "react"
+import React, { FC } from "react"
 import { Helmet } from "react-helmet-async"
 import { useStaticQuery, graphql } from "gatsby"
 
@@ -16,7 +16,7 @@ interface Props {
   title: string;
 }
 
-const SEO: React.FC<Props> = ({
+const SEO: FC<Props> = ({
   description = "",
   lang = "en",
   meta = [],

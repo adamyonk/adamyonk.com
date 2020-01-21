@@ -5,7 +5,7 @@ import Date from "../components/Date"
 import Meta from "../components/Meta"
 import Layout from "../components/layout"
 
-export default ({
+const Sale = ({
   data: {
     markdownRemark: {
       html,
@@ -16,7 +16,7 @@ export default ({
   const [location, setLocation] = useState(undefined)
   useEffect(() => {
     setLocation(window.location)
-  }, [location])
+  })
 
   return (
     <Layout>
@@ -51,6 +51,8 @@ export default ({
     </Layout>
   )
 }
+Sale.displayName = "Sale"
+export default Sale
 
 export const pageQuery = graphql`
   query SalePostByPath($id: String!) {
