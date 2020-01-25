@@ -20,7 +20,6 @@ takes effort from both employees _and_ employers to achieve it. I'm so glad to
 hear the stance Basecamp has publicly taken on this, but I'd love to hear from
 _you_ how real it is, and how it has effected your life.
 
-I'm not worried about trying to participate in the next big network or viral product. I want to create tools that help make people's lives better. That feels meaningful and worthwhile to me.
 
 I have been fascinated with computers since junior high when I started learning
 about programming. I have been very fortunate to be guided in mentorship by
@@ -35,7 +34,7 @@ experiences and specific strengths. I try to help where I can in open-source
 projects, but I would be excited to work on a team that regularly writes open
 code!
 
-In reading through the employee handbook, I was struck by how we _value the
+I'm not worried about trying to participate in the next big network or viral product. I want to create tools that help make people's lives better. That feels meaningful and worthwhile to me. In reading through the employee handbook, I was struck by how we _value the
 same things_. That's why I'm applying for this job, and why I think I could
 work well here.
 
