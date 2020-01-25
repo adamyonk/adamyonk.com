@@ -21,10 +21,10 @@ hear the stance Basecamp has publicly taken on this, but I'd love to hear from
 _you_ how real it is, and how it has effected your life.
 
 I have been fascinated with
-computers since junior high, when I started learning about programming. I
-have been very fortunate to be guided in mentorship by several people that I
+computers since junior high when I started learning about programming. I
+have been very fortunate to be guided in mentorship by several people whom I
 continue to seek out for career and technical advice. I have a soft spot for
-mentorships and I have started trying to devote time to mentoring beginner
+mentorships and I have started devoting time to mentoring beginner
 programmers in recent years.
 
 Unfortunately, most of the code I've been responsible for in my career is  proprietary information, but I've detailed which areas and
