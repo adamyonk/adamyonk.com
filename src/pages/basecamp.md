@@ -22,7 +22,7 @@ _you_ how real it is, and how it has effected your life.
 
 I don't have a degree, but I also wouldn't be so proud as to say that I'm
 "self-taught"; perhaps "self-motivated", though. I have been fascinated with
-computers since junior high, when I started learning about web development.  I
+computers since junior high, when I started learning about programming. I
 have been very fortunate to be guided in metorship by several people that I
 continue to seek out for career and technical advice. I have a soft spot for
 mentorships and I have started trying to devote time to mentoring beginner
@@ -34,6 +34,8 @@ technologies I'm familiar with in my résumé, and I would love to talk about my
 experiences and specific strengths. I try to help where I can in open-source
 projects, but I would be so excited to work on a team that regularly writes
 open code!
+
+In reading through the employee handbook, I was struck by how we _value the same things_. That's why I'm applying for this job, and why I think I could work well here.
 
 Thank you for your consideration,  
 Adam Jahnke
