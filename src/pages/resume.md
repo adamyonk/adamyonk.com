@@ -2,7 +2,7 @@
 templateKey: "page"
 title: Résumé
 #date: 2018-04-19T21:08:13.490Z
-updated: 2020-01-20T08:00:00.000Z
+updated: 2020-01-25T08:00:00.000Z
 ---
 
 _Adam Jahnke_  

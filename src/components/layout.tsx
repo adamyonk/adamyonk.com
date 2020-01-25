@@ -235,12 +235,12 @@ const TemplateWrapper = ({ children }) => (
 
       @media print {
         a[href]:not(.logo-link)::after {
-          content: " (" attr(href) ")";
+          content: " [" attr(href) "]";
         }
 
         a[href^="tel:"] span,
         a[href^="mailto:"] span {
-        display: none;
+          display: none;
         }
 
         a[href^="tel:"]::after,
@@ -338,7 +338,7 @@ const TemplateWrapper = ({ children }) => (
       }
       @media print {
         .logo a {
-          font-size: 150px;
+          font-size: 120px;
         }
       }
 
