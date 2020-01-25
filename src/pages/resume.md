@@ -21,15 +21,15 @@ June 2018 – Present
 I have worked closely with the design team and led the charge to implement an
 "App Store" UI for third-party Studio plugins. I've been refactoring legacy
 code in the Studio Electron application to better separate logical and
-presentation code. I was made team lead for our "design system" project; I
-architected and organized a component library to speed up development and
-increase the testability of our UI layer.
+presentation code. I was made team lead for our "design system" project in
+which I architected and organized a component library to speed up development
+and increase the testability of our UI layer.
 
 ### Responsibilities:
 
 - New & existing feature development for [InVision
   Studio](https://www.invisionapp.com/studio)
-  (Node.js, TypeScript, React, redux)
+  (Node.js, TypeScript, React, Redux)
 - Development of the Studio App Store (TypeScript, React, GraphQL, Apollo)
 - Project lead, development of the Studio Design System (TypeScript, React,
   Storybook)
