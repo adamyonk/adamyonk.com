@@ -7,7 +7,7 @@ date: 2020-01-25T21:08:13.490Z
 
 I'm Adam Jahnke-I've been working on the web for 15 years now, and I enjoy it
 more and more all the time. I have experience all over the stack (Ruby and
-Rails included), but my main focus has been JavaScript, in the browser and
+Rails included), but my focus has been more front end; a lot of JavaScript, in the browser and
 Node.js. I _absolutely love_ working on command line tools and automation; I
 feel at home on the command line. I think my technical skill and experience
 makes me a good candidate for this position, but I want to be sure that I would
@@ -19,7 +19,6 @@ believe in a more human and healthy work environment, and I believe that it
 takes effort from both employees _and_ employers to achieve it. I'm so glad to
 hear the stance Basecamp has publicly taken on this, but I'd love to hear from
 _you_ how real it is, and how it has effected your life.
-
 
 I have been fascinated with computers since junior high when I started learning
 about programming. I have been very fortunate to be guided in mentorship by
