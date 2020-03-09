@@ -1,4 +1,6 @@
-exports.formatPath = (path: string) => {
+// This needs to be a plain JS file because it's used in a node context as
+// well.
+exports.formatPath = path => {
   // Generate page paths based on their location in the filesystem
   return path
     .replace(/.*\/src\/pages/, "") // Use path from /src/pages onwards
