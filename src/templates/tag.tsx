@@ -4,7 +4,7 @@ import SEO from "../components/SEO"
 import PostList from "../components/PostList"
 import Layout from "../components/layout"
 
-export default ({ data, pageContext: { tag } }) => {
+const Tag = ({ data, pageContext: { tag } }) => {
   const { edges: posts = [] } = (data && data.allMarkdownRemark) || {}
   return (
     <Layout>
@@ -16,6 +16,8 @@ export default ({ data, pageContext: { tag } }) => {
     </Layout>
   )
 }
+Tag.displayName = "Tag"
+export default Tag
 
 export const tagPageQuery = graphql`
   query TagPage($tag: String!) {

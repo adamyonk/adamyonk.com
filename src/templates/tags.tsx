@@ -1,9 +1,9 @@
-import React from "react";
-import Link from "gatsby-link";
-import SEO from "../components/SEO";
-import Layout from "../components/layout";
+import React from "react"
+import Link from "gatsby-link"
+import SEO from "../components/SEO"
+import Layout from "../components/layout"
 
-export default ({ pageContext: { tags } }) => {
+const Tags = ({ pageContext: { tags } }) => {
   return (
     <Layout>
       <SEO title="Posts by Tag" />
@@ -20,5 +20,7 @@ export default ({ pageContext: { tags } }) => {
         </ul>
       </section>
     </Layout>
-  );
-};
+  )
+}
+Tags.displayName = "Tags"
+export default Tags

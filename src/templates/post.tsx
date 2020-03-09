@@ -1,19 +1,21 @@
 import React from "react"
 import { graphql } from "gatsby"
 import SEO from "../components/SEO"
+import Commits from "../components/Commits"
 import Date from "../components/Date"
 import Meta from "../components/Meta"
 import Tags from "../components/Tags"
 import Layout from "../components/layout"
 
-export default ({
+const Post = ({
   data: {
     markdownRemark: {
       html,
       timeToRead,
-      frontmatter: { link, title, date, tags },
+      frontmatter: { title, date, tags },
     },
   },
+  pageContext: { commits },
 }) => {
   return (
     <Layout>
@@ -25,6 +27,7 @@ export default ({
         </Meta>
         <Meta>{timeToRead} minute read</Meta>
         <div dangerouslySetInnerHTML={{ __html: html }} />
+        <Commits commits={commits} />
       </article>
       <style jsx>{`
         h1 {
@@ -34,6 +37,8 @@ export default ({
     </Layout>
   )
 }
+Post.displayName = "Post"
+export default Post
 
 export const pageQuery = graphql`
   query BlogPostByPath($id: String!) {

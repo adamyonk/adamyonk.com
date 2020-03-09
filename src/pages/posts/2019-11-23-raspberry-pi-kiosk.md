@@ -23,6 +23,7 @@ open a browser in "kiosk" mode and refresh occasionally.
 I'll talk about the menu script first. Here is the source:
 
 ```bash
+
 ```
 
 ### Kiosk Script

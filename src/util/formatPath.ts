@@ -1,4 +1,4 @@
-exports.formatPath = path => {
+exports.formatPath = (path: string) => {
   // Generate page paths based on their location in the filesystem
   return path
     .replace(/.*\/src\/pages/, "") // Use path from /src/pages onwards

@@ -4,7 +4,7 @@ import { graphql } from "gatsby"
 import PostList from "../components/PostList"
 import Layout from "../components/layout"
 
-export default ({
+const ForSale = ({
   data: {
     allMarkdownRemark: { edges: posts },
   },
@@ -23,6 +23,8 @@ export default ({
     </Layout>
   )
 }
+ForSale.displayName = "ForSale"
+export default ForSale
 
 export const tagPageQuery = graphql`
   query SalePage {

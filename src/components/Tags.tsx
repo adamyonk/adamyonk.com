@@ -7,8 +7,9 @@ const Tag = ({ name }) => (
     </a>
   </>
 )
+Tag.displayName = "Tag"
 
-export default ({ tags = [] }) => (
+const Tags = ({ tags = [] }) => (
   <>
     {tags.slice(0, -1).map((tag, i) => (
       <React.Fragment key={tag}>
@@ -22,3 +23,5 @@ export default ({ tags = [] }) => (
     ))}
   </>
 )
+Tags.displayName = "Tags"
+export default Tags

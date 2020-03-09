@@ -13,6 +13,8 @@ const Meta: React.FC<Props> = ({ children, className, ...props }) => (
     <style jsx>{`
       .post-meta {
         font-size: 0.8em;
+        line-height: 1.2;
+        margin: 0.8em 0;
       }
     `}</style>
   </>
