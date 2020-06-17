@@ -24,7 +24,7 @@ const Index = ({
           >
             Olivia
           </a>
-          . We <a href="https://a-and-o.co">write</a> together occasionally.
+          . We <a href="https://jahnke.blog">write</a> together occasionally.
         </p>
         <h2>Recent Posts:</h2>
         <PostList posts={posts} />

@@ -145,6 +145,9 @@ module.exports = {
       },
     },
     {
+      resolve: "gatsby-plugin-sharp",
+    },
+    {
       resolve: "gatsby-transformer-remark",
       options: {
         plugins: [
@@ -199,6 +202,6 @@ module.exports = {
     //   },
     // },
     // { resolve: "gatsby-plugin-offline" },
-    { resolve: "gatsby-plugin-remove-serviceworker" },
+    // { resolve: "gatsby-plugin-remove-serviceworker" },
   ],
 }

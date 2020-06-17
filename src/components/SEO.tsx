@@ -13,7 +13,7 @@ interface Props {
   description?: string;
   lang?: string;
   meta?: { name: string; content: string }[];
-  title: string;
+  title?: string;
 }
 
 const SEO: FC<Props> = ({
