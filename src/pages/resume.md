@@ -2,7 +2,7 @@
 templateKey: "page"
 title: Résumé
 #date: 2018-04-19T21:08:13.490Z
-updated: 2020-01-25T08:00:00.000Z
+updated: 2020-08-17T08:00:00.000Z
 ---
 
 _Adam Jahnke_  
@@ -21,18 +21,20 @@ June 2018 – Present
 I have worked closely with the design team and led the charge to implement an
 "App Store" UI for third-party Studio plugins. I've been refactoring legacy
 code in the Studio Electron application to better separate logical and
-presentation code. I was made team lead for our "design system" project in
-which I architected and organized a component library to speed up development
-and increase the testability of our UI layer.
+presentation code, and create a better interface for user input. I was made
+team lead for our "design system" project in which I architected and organized
+a component library to speed up development and increase the testability of our
+UI layer.
 
 ### Responsibilities:
 
 - New & existing feature development for [InVision
-  Studio](https://www.invisionapp.com/studio)
-  (Node.js, TypeScript, React, Redux)
+  Studio](https://www.invisionapp.com/studio) (Node.js, TypeScript, React,
+  Redux)
 - Development of the Studio App Store (TypeScript, React, GraphQL, Apollo)
 - Project lead, development of the Studio Design System (TypeScript, React,
   Storybook)
+- Refactoring the Studio design tools (camera tools, keyboard shortcuts)
 
 ## Librato/SolarWinds
 

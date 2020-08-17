@@ -65,12 +65,12 @@ const TemplateWrapper = ({ children }) => (
         <svg width="11" height="11" viewBox="0 0 480 480">
           <defs>
             <linearGradient id="a" x1="50%" x2="50%" y1="0" y2="78%">
-              <stop offset="0%" stop-color="#fb0"></stop>
-              <stop offset="100%" stop-color="#f80"></stop>
+              <stop offset="0%" stopColor="#fb0"></stop>
+              <stop offset="100%" stopColor="#f80"></stop>
             </linearGradient>
             <linearGradient id="b" x1="50%" x2="50%" y1="0" y2="100%">
-              <stop offset="0%" stop-color="#ffc"></stop>
-              <stop offset="100%" stop-color="#ff6"></stop>
+              <stop offset="0%" stopColor="#ffc"></stop>
+              <stop offset="100%" stopColor="#ff6"></stop>
             </linearGradient>
           </defs>
           <path
@@ -189,7 +189,7 @@ const TemplateWrapper = ({ children }) => (
         --navlink: var(--base00);
 
         --body: "Fira Sans", sans-serif;
-        --monospace: "Fira Code", monospace;
+        --monospace: "JetBrains Mono", "Fira Code", monospace;
         --body: var(--monospace);
       }
 
@@ -208,7 +208,7 @@ const TemplateWrapper = ({ children }) => (
         font-family: var(--body);
         line-height: 150%;
         margin: 1.5rem auto;
-        max-width: 40rem;
+        max-width: 50rem;
         text-decoration-skip: ink;
         width: 90%;
       }
