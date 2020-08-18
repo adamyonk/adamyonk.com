@@ -21,8 +21,8 @@ interfaces.
 
 # Usage
 Though I have worked remotely for nearly the entirety of my career, I really
-love to work **with** people. I don't think distance needs to be a hinderance
-to that. I do well developing trust with my colleages and I value humility.
+love to work **with** people. I don't think distance needs to be a hindrance to
+that. I do well developing trust with my colleagues and I value humility.
 
 I see new people, environments, and challenges as opportunities to learn. I
 sincerely value feedback, even if it's negative; I want to be better.

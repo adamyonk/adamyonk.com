@@ -5,8 +5,7 @@ title: Basecamp
 updated: 2020-08-17T08:00:00.000Z
 ---
 
-Hey, I'm Adam Jahnke - I've been working in software since
-2006, and I love it.
+Hey, I'm Adam Jahnke - I've been working in software since 2006, and I love it.
 
 I appreciate what Basecamp stands for as a company; I have a family and we have
 been witness to the industry's tendency to push the limits by asking for too

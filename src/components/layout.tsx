@@ -368,7 +368,7 @@ const TemplateWrapper = ({ children }) => (
       }
       @media print {
         .logo a {
-          font-size: 80px;
+          font-size: 60px;
         }
       }
 
