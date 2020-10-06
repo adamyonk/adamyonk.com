@@ -265,11 +265,11 @@ const TemplateWrapper: React.FC = ({ children }) => {
         color: var(--link);
         text-decoration: none;
       }
-      a:not([href^="/"]):not([href*="${location.hostname}"])::after {
-        content: " ↗";
-        font-size: 0.75em;
-        vertical-align: top;
-      }
+      // a:not([href^="/"]):not([href*="${location && location.hostname}"])::after {
+      //   content: " ↗";
+      //   font-size: 0.75em;
+      //   vertical-align: top;
+      // }
 
       @media print {
         a[href]:not(.logo-link)::after {
