@@ -23,8 +23,8 @@ I have worked closely with the design team and led the charge to implement an
 code in the Studio Electron application to better separate logical and
 presentation code, and create a better interface for user input. I was made
 team lead for our "design system" project in which I architected and organized
-a component library to speed up development and increase the testability of our
-UI layer.
+a component library package to speed up development and increase the
+testability of our UI layer.
 
 ### Responsibilities:
 
@@ -33,8 +33,9 @@ UI layer.
   Redux)
 - Development of the Studio App Store (TypeScript, React, GraphQL, Apollo)
 - Project lead, development of the Studio Design System (TypeScript, React,
-  Storybook)
-- Refactoring the Studio design tools (camera tools, keyboard shortcuts)
+  Storybook, Webpack, Tailwind, GitHub Actions)
+- Refactoring the Studio design tools (camera tools, keyboard shortcuts, user
+  input)
 
 ## Librato/SolarWinds
 

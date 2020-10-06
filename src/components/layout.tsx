@@ -188,9 +188,8 @@ const TemplateWrapper = ({ children }) => (
         --link: var(--base2);
         --navlink: var(--base00);
 
-        --body: "Fira Sans", sans-serif;
-        --monospace: "JetBrains Mono", "Fira Code", monospace;
-        --body: var(--monospace);
+        --body: "Fira Sans", system-ui, sans-serif;
+        --font-monospace: "JetBrains Mono", "Fira Code", monospace;
       }
 
       @media (prefers-color-scheme: light) {
@@ -262,6 +261,11 @@ const TemplateWrapper = ({ children }) => (
         color: var(--link);
         text-decoration: none;
       }
+      a:not([href^="/"]):not([href*="${window.location.hostname}"])::after {
+        content: " ↗";
+        font-size: 0.75em;
+        vertical-align: top;
+      }
 
       @media print {
         a[href]:not(.logo-link)::after {
@@ -283,10 +287,29 @@ const TemplateWrapper = ({ children }) => (
         border-color: var(--link);
       }
 
+      hr {
+        color: var(--base00);
+        border: none;
+        border-bottom: 0.1em solid currentColor;
+        margin: 2em;
+        position: relative;
+      }
+      hr::after {
+        background-color: var(--background);
+        content: "⤫";
+        font-size: 1em;
+        left: 50%;
+        padding: 0 1em;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+
       blockquote {
         border-left: 0.2em solid var(--yellow);
-        font-size: 1.3em;
+        font-size: 1em;
         line-height: 150%;
+        margin-left: 1em;
         padding-left: 1em;
       }
 

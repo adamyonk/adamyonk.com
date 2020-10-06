@@ -9,7 +9,7 @@ interface Props {
 
 const Commits: React.FC<Props> = ({ commits }) => (
   <>
-    {commits.all.length && (
+    {!!commits.all.length && (
       <details>
         <summary>History</summary>
         {commits.all.map(( commit: GitCommit ) => (

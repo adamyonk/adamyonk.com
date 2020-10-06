@@ -38,7 +38,7 @@
     "deploy": "now --public",
     "format": "prettier \"**/*.{js,json,md}\" --write ",
     "prod": "gatsby build && gatsby serve",
-    "start": "gatsby develop",
+    "start": "gatsby develop --host 0.0.0.0",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {

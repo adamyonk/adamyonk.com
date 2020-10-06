@@ -7,8 +7,8 @@ tags: [gatsby]
 ---
 
 Some very dear friends of mine run a restaraunt called The Wheelhouse. They
-recently they opened a location in a hotel where their menu is on display on a
-large TV in the lobby. Unfortunatly the TV had been controlled by the hotel IT
+recently opened a location in a hotel where their menu is on display on a large
+TV in the lobby. Unfortunatly the TV had been controlled by the hotel IT
 department and they were sometimes slow to respond to requests to change the
 image running on the TV, so we took matters into our own hands.
 
