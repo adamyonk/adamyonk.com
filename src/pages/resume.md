@@ -13,10 +13,15 @@ _References available upon request. I take my contact's privacy seriously._
 
 # Job History
 
+## Jeli
+
+Software Engineer  
+November 2020 — Present
+
 ## InVision
 
-Senior Programmer, Lead Programmer  
-June 2018 – Present
+Senior Software Engineer, Lead Software Engineer  
+June 2018 – November 2020
 
 I have worked closely with the design team and led the charge to implement an
 "App Store" UI for third-party Studio plugins. I've been refactoring legacy
@@ -39,7 +44,7 @@ testability of our UI layer.
 
 ## Librato/SolarWinds
 
-Programmer, Senior Programmer  
+Front End Engineer, Senior Engineer  
 December 2013 – June 2018
 
 I was fortunate enough to be hired to work with a bunch of data-visualization
@@ -59,7 +64,7 @@ for developer happiness.
 
 ## Pure Charity
 
-Programmer, Lead Front End Programmer  
+Developer  
 July 2011 – November 2013
 
 At Pure Charity, I was hired to help build their
@@ -82,7 +87,7 @@ for finding ways to automate tedious processes for the whole company.
 
 ## Elevate, LLC
 
-Programmer  
+Developer  
 February 2005 – July 2011
 
 I was hired as employee Nº 2 at [Elevate](http://elevate.co), a web design
