@@ -27,6 +27,7 @@ const TemplateWrapper: React.FC = ({ children }) => {
         <link href="https://micro.blog/adamyonk" rel="me" />
         <link href="https://reddit.com/u/adamyonk" rel="me" />
         <link href="https://twitter.com/adamyonk" rel="me" />
+        <script async defer data-domain="adamyonk.com" src="https://plausible.io/js/plausible.js"></script>
       </Helmet>
       <div className="logo">
         <Link className="logo-link" to="/">
