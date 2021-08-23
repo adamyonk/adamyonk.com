@@ -14,9 +14,9 @@ const Index = ({
       <SEO />
       <section className="section">
         <p>
-          I’m Adam Jahnke. I am currently building things at{" "} <a
-            href="https://jeli.io">Jeli</a>. I live in Springfield, Missouri
-          with my beautiful wife{" "}
+          I’m Adam Jahnke. I am currently building things at{" "}
+          <a href="https://jeli.io">Jeli</a>. I live in Springfield, Missouri
+          with my wonderful wife{" "}
           <a
             title="oliviayonk on Twitter"
             href="https://twitter.com/oliviayonk"
