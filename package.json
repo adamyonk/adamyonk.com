@@ -14,7 +14,7 @@
     "gatsby": "^2.23.4",
     "gatsby-plugin-feed-generator": "^2.0.5",
     "gatsby-plugin-manifest": "^2.4.11",
-    "gatsby-plugin-mdx": "^1.2.34",
+    "gatsby-plugin-mdx": "^2.14.1",
     "gatsby-plugin-offline": "^3.2.10",
     "gatsby-plugin-remove-serviceworker": "^1.0.0",
     "gatsby-plugin-sharp": "^2.6.11",
