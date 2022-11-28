@@ -6,8 +6,6 @@ const Footer = () => {
     <footer className="bg-neutral-50 border-t border-neutral-200">
       <Container>
         <div className="py-6 flex flex-col lg:flex-row items-center">
-          &copy; Adam Jahnke {new Date().getFullYear()}
-          &nbsp;|&nbsp;
           <Link rel="me" href="https://github.com/adamyonk">
             GitHub
           </Link>
