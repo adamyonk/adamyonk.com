@@ -1,15 +1,14 @@
 import markdownToHtml from "lib/markdownToHtml";
-import { getMDBySlug, getMD } from "lib/api";
+import { getMD, getMDBySlug } from "lib/api";
 import PostBody from "components/post-body";
-import PostHeader from "components/post-header";
 
 export const dynamicParams = false;
 export async function generateStaticParams() {
-  return getMD('_posts', ["slug"]);
+  return getMD('_pages', ["slug"]);
 }
 
-export default async function Post({ params }) {
-  const post = getMDBySlug('_posts', params.slug, [
+export default async function Page({ params }) {
+  const post = getMDBySlug('_pages', params.slug, [
     "title",
     "date",
     "slug",
@@ -21,12 +20,6 @@ export default async function Post({ params }) {
   const content = await markdownToHtml(post.content || "");
   return (
     <article className="mb-32">
-      <PostHeader
-        title={post.title}
-        coverImage={post.coverImage}
-        date={post.date}
-        author={post.author}
-      />
       <PostBody content={content} />
     </article>
   );

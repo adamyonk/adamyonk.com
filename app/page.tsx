@@ -1,10 +1,10 @@
-import { getAllPosts } from "lib/api";
+import { getMD } from "lib/api";
 import MoreStories from "../components/more-stories";
 import HeroPost from "../components/hero-post";
 import Intro from "../components/intro";
 
 export default async function Index() {
-  const allPosts = getAllPosts([
+  const allPosts = getMD('_posts', [
     "title",
     "date",
     "slug",
