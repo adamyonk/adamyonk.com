@@ -1,7 +1,5 @@
 ---
-templateKey: "post"
 title: Jekyll and Webpack
-path: /jekyll-and-webpack
 date: "2015-10-12T09:30:00-0600"
 author:
   name: Adam Jahnke

@@ -1,7 +1,5 @@
 ---
-templateKey: "post"
 title: GitHub Merge Button from CLI
-path: /github-merge-button-from-cli
 author:
   name: Adam Jahnke
   picture: "https://secure.gravatar.com/avatar/95c4a6a54bb911712b9f153afff92f69?size=200"

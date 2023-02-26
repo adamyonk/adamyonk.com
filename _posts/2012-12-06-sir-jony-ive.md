@@ -1,7 +1,5 @@
 ---
-templateKey: "post"
 title: Sir Jony Ive
-path: /sir-jony-ive
 date: "2012-12-06T13:39:39-0600"
 author:
   name: Adam Jahnke

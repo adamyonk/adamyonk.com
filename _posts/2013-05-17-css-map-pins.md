@@ -1,7 +1,5 @@
 ---
-templateKey: "post"
 title: CSS Map Pins
-path: /css-map-pins
 date: "2013-05-17T14:57:00-0500"
 author:
   name: Adam Jahnke

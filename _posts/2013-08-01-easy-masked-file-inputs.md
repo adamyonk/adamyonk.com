@@ -1,7 +1,5 @@
 ---
-templateKey: "post"
 title: Masked file inputs
-path: /easy-masked-file-inputs
 date: "2013-08-01T11:13:31-0500"
 author:
   name: Adam Jahnke

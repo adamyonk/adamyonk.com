@@ -1,96 +1,45 @@
 import fs from "fs";
 import { join } from "path";
 import matter from "gray-matter";
+import * as s from "superstruct";
 
-const postsDirectory = join(process.cwd(), "_posts");
-const pagesDirectory = join(process.cwd(), "_pages");
+const Post = s.object({
+  author: s.object({
+    name: s.string(),
+    picture: s.optional(s.string()),
+  }),
+  content: s.string(),
+  excerpt: s.optional(s.string()),
+  coverImage: s.optional(s.string()),
+  date: s.string(),
+  slug: s.string(),
+  published: s.optional(s.boolean()),
+  tags: s.array(s.string()),
+  title: s.string(),
+});
+export type Post = s.Infer<typeof Post>;
 
-export function getPostSlugs() {
-  return fs.readdirSync(postsDirectory);
-}
-export function getMDSlugs(dir: string) {
+export function getPaths(dir: string) {
   return fs.readdirSync(join(process.cwd(), dir));
 }
 
-export function getPostBySlug(slug: string, fields: string[] = []) {
-  const realSlug = slug.replace(/\.md$/, "");
-  const fullPath = join(postsDirectory, `${realSlug}.md`);
-  const fileContents = fs.readFileSync(fullPath, "utf8");
-  const { data, content } = matter(fileContents);
-
-  type Items = {
-    [key: string]: string;
-  };
-
-  const items: Items = {};
-
-  // Ensure only the minimal needed data is exposed
-  fields.forEach((field) => {
-    if (field === "slug") {
-      items[field] = realSlug;
-    }
-    if (field === "content") {
-      items[field] = content;
-    }
-
-    if (typeof data[field] !== "undefined") {
-      items[field] = data[field];
-    }
-  });
-
-  return items;
-}
-export function getMDBySlug(dir: string, slug: string, fields: string[] = []) {
+export async function getMDBySlug(dir: string, slug: string) {
   const realSlug = slug.replace(/\.md$/, "");
   const fullPath = join(join(process.cwd(), dir), `${realSlug}.md`);
   const fileContents = fs.readFileSync(fullPath, "utf8");
   const { data, content } = matter(fileContents);
-
-  type Items = {
-    [key: string]: string;
-  } & {
-    author?: {
-      name: string;
-      picture: string;
-    };
-    ogImage?: {
-      url: string;
-    }
+  let post = {
+    ...data,
+    content,
+    slug,
   };
-
-  const items: Items = {};
-
-  // Ensure only the minimal needed data is exposed
-  fields.forEach((field) => {
-    if (field === "slug") {
-      items[field] = realSlug;
-    }
-    if (field === "content") {
-      items[field] = content;
-    }
-
-    if (typeof data[field] !== "undefined") {
-      items[field] = data[field];
-    }
-  });
-
-  return items;
+  return s.mask(post, Post, "Could not parse post!");
 }
 
-export function getAllPosts(fields: string[] = []) {
-  const slugs = getPostSlugs();
-  const posts = slugs
-    .map((slug) => getPostBySlug(slug, fields))
-    // sort posts by date in descending order
-    .sort((post1, post2) => (post1.date > post2.date ? -1 : 1));
-  return posts;
-}
-
-export function getMD(dir: string, fields: string[] = []) {
-  const slugs = getMDSlugs(dir);
-  const posts = slugs
-    .map((slug) => getMDBySlug(dir, slug, fields))
-    // sort posts by date in descending order
+export async function getMD(dir: string) {
+  const slugs = getPaths(dir);
+  const posts = (await Promise.all(slugs.map((slug) => getMDBySlug(dir, slug))))
+    .filter((post) => post.published !== false)
     .sort((post1, post2) => (post1.date > post2.date ? -1 : 1));
   return posts;
 }

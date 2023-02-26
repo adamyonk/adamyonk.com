@@ -1,26 +1,10 @@
-import Avatar from "./avatar";
+// import Avatar from "./avatar";
 import DateFormatter from "./date-formatter";
 import CoverImage from "./cover-image";
 import Link from "next/link";
-import type Author from "../interfaces/author";
+import type { Post } from "lib/api";
 
-type Props = {
-  title: string;
-  coverImage: string;
-  date: string;
-  excerpt: string;
-  author: Author;
-  slug: string;
-};
-
-const HeroPost = ({
-  title,
-  coverImage,
-  date,
-  excerpt,
-  // author,
-  slug,
-}: Props) => {
+const HeroPost = ({ title, coverImage, date, excerpt, author, slug }: Post) => {
   return (
     <section>
       {coverImage && (

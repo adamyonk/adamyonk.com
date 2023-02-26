@@ -1,7 +1,5 @@
 ---
-templateKey: "post"
 title: The Things We Admire
-path: /the-things-we-admire
 date: "2014-03-29T10:27:26-0500"
 author:
   name: Adam Jahnke

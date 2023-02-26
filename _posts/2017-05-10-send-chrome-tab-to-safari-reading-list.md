@@ -1,6 +1,4 @@
 ---
-templateKey: post
-path: /chrome-to-safari-reading-list
 title: Send Chrome tab to Safari Reading List
 date: "2017-05-10T17:12:33.962Z"
 author:

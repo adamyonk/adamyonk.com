@@ -1,6 +1,6 @@
 ---
-title: "Simple Post Tagging in Gatsby"
-date: "2019-10-01T05:35:07.322Z"
+title: "Raspberry Pi Kiosk"
+date: "2019-11-23T05:35:07.322Z"
 tags: [gatsby]
 author:
   name: Adam Jahnke

@@ -1,11 +1,9 @@
 ---
-templateKey: "post"
 title: Pour Over Coffee Gear
 date: "2015-01-04T22:44:00-0600"
 author:
   name: Adam Jahnke
   picture: "https://secure.gravatar.com/avatar/95c4a6a54bb911712b9f153afff92f69?size=200"
-path: /pour-over-coffee-gear
 tags: [gear, coffee]
 published: true
 ---

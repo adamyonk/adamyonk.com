@@ -1,7 +1,5 @@
 ---
-templateKey: "post"
 title: Rails + webpack - webpacker
-path: /rails-webpack-webpacker
 date: "2018-04-04T21:06:50.000Z"
 author:
   name: Adam Jahnke

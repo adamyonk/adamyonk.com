@@ -1,7 +1,5 @@
 ---
-templateKey: "post"
 title: Recover Data from a Mac without Target Disk Mode
-path: /recover-data-without-target-disk-mode
 date: "2016-03-14T09:17:28-0500"
 author:
   name: Adam Jahnke

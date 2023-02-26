@@ -1,5 +1,4 @@
 ---
-templateKey: "post"
 title: Screencasting Using QuickTime
 date: "2018-12-29T11:13:31-0500"
 author:

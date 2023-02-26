@@ -1,7 +1,5 @@
 ---
-templateKey: "post"
 title: Using ImageOptim with guard-shell
-path: /using-imageoptim-with-guard-shell
 date: "2013-01-14T10:14:37-0600"
 author:
   name: Adam Jahnke

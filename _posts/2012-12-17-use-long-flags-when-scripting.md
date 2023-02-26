@@ -1,7 +1,5 @@
 ---
-templateKey: "post"
 title: Use long flags when scripting
-path: /use-long-flags-when-scripting
 date: "2012-12-17T10:32:59-0600"
 author:
   name: Adam Jahnke
