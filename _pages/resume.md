@@ -1,3 +1,12 @@
+---
+author:
+  name: "Adam Jahnke"
+  picture: "https://secure.gravatar.com/avatar/95c4a6a54bb911712b9f153afff92f69?size=200"
+date: "2012-12-06T13:39:39-0600"
+tags: []
+title: "Resume"
+---
+
 _Adam Jahnke_  
 Springfield, MO  
 [<span>email</span>](mailto:adamyonk@icloud.com) | [<span>phone</span>](tel:14028179871)
@@ -11,9 +20,14 @@ _References available upon request._
 Software Engineer  
 November 2020 — Present
 
+As employee Nº 9, I have been living out my favorite part of startup life, wearing many hats and covering as many bases
+as possible, helping the team to adapt quickly to changing business needs and enabling rapid development, flexibity, and
+resiliency of our systems.
+
 ### Responsibilities:
 
-- Iteratively migrated front end from create-react-app with home-grown deployment system to Next.js on Vercel
+- Refactored a crucual API service in-place, implemented stricter type-safety, linting rules to help cement good practices
+- Iteratively migrated front end from create-react-app with a home-grown deployment system to Next.js on Vercel
 - Architectural decisionmaking
 - Custom data visualizations
 - Internal tooling
@@ -24,11 +38,11 @@ November 2020 — Present
 Senior Software Engineer, Lead Software Engineer  
 June 2018 – November 2020
 
-I have worked closely with the design team and led the charge to implement an "App Store" UI for third-party Studio
-plugins. I've been refactoring legacy code in the Studio Electron application to better separate logical and
-presentation code, and create a better interface for user input. I was made team lead for our "design system" project in
+I worked closely with the design team and led the charge to implement an "App Store" UI for third-party InVision Studio
+plugins. I refactored legacy code in the InVision Studio Electron application to better separate logical and
+presentation code, and created a better interface for user input. I was made team lead for our "design system" project in
 which I architected and organized a component library package to speed up development and increase the testability of
-our UI layer.
+our UI layer. I was certified as an "incident commander" in InVision's certification program.
 
 ### Responsibilities:
 
@@ -38,6 +52,7 @@ our UI layer.
 - Project lead, development of the Studio Design System (TypeScript, React, Storybook, Webpack, Tailwind, GitHub
   Actions)
 - Refactoring the Studio design tools (camera tools, keyboard shortcuts, user input)
+- Certified incident commander
 
 ## Librato/SolarWinds
 
@@ -109,9 +124,15 @@ whatever skill was necessary to bring ideas and goals to fruition.
   - Angular
   - CoffeeScript
   - jQuery
+- GraphQL
+  - Apollo Server
+  - Apollo Client
+  - graphql-code-generator
+- Redis
+- MySQL
+- AWS
 - Node.js
 - Electron
-- GraphQL
 - Darwin/\*nix environments
 - Docker
 - Ruby
@@ -130,6 +151,6 @@ whatever skill was necessary to bring ideas and goals to fruition.
 - HTML
 - Vagrant
 
-# Education
+## Education
 
 High school diploma.

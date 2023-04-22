@@ -23,9 +23,9 @@ export function getPaths(dir: string) {
   return fs.readdirSync(join(process.cwd(), dir));
 }
 
-export async function getMDBySlug(dir: string, slug: string) {
-  const realSlug = slug.replace(/\.md$/, "");
-  const fullPath = join(join(process.cwd(), dir), `${realSlug}.md`);
+export async function getMDBySlug(dir: string, file: string) {
+  const slug = file.replace(/\.md$/, "");
+  const fullPath = join(join(process.cwd(), dir), file);
   const fileContents = fs.readFileSync(fullPath, "utf8");
   const { data, content } = matter(fileContents);
   let post = {
@@ -37,8 +37,8 @@ export async function getMDBySlug(dir: string, slug: string) {
 }
 
 export async function getMD(dir: string) {
-  const slugs = getPaths(dir);
-  const posts = (await Promise.all(slugs.map((slug) => getMDBySlug(dir, slug))))
+  const files = getPaths(dir);
+  const posts = (await Promise.all(files.map((file) => getMDBySlug(dir, file))))
     .filter((post) => post.published !== false)
     .sort((post1, post2) => (post1.date > post2.date ? -1 : 1));
   return posts;

@@ -10,7 +10,7 @@ export default async function Page({ params }: Page) {
   if (!params?.slug || typeof params.slug !== "string") {
     notFound();
   }
-  const post = await getMDBySlug("_posts", params.slug);
+  const post = await getMDBySlug("_posts", `${params.slug}.md`);
   const content = await markdownToHtml(post.content || "");
   return (
     <article className="mb-32">
@@ -34,7 +34,7 @@ export async function generateMetadata({ params }: Page): Promise<Metadata> {
   if (!params?.slug || typeof params.slug !== "string") {
     notFound();
   }
-  const post = await getMDBySlug("_posts", params.slug);
+  const post = await getMDBySlug("_posts", `${params.slug}.md`);
 
   let metadata: Metadata = {
     title: post.title,

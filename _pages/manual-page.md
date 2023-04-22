@@ -1,3 +1,12 @@
+---
+author:
+  name: "Adam Jahnke"
+  picture: "https://secure.gravatar.com/avatar/95c4a6a54bb911712b9f153afff92f69?size=200"
+date: "2012-12-06T13:39:39-0600"
+tags: []
+title: "Manual Page"
+---
+
 # Name
 adamjahnke v29.3 - Software Programmer
 

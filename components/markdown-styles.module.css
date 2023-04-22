@@ -9,6 +9,18 @@
   @apply my-6;
 }
 
+.markdown li {
+  @apply list-disc ml-8;
+}
+.markdown li ul,
+.markdown li ol {
+  @apply mt-0 mb-2;
+}
+
+.markdown h1 {
+  @apply text-5xl mt-12 mb-4 leading-snug;
+}
+
 .markdown h2 {
   @apply text-3xl mt-12 mb-4 leading-snug;
 }
