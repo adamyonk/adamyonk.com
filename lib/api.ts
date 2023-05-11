@@ -24,14 +24,15 @@ export function getPaths(dir: string) {
 }
 
 export async function getMDBySlug(dir: string, file: string) {
-  const slug = file.replace(/\.md$/, "");
   const fullPath = join(join(process.cwd(), dir), file);
   const fileContents = fs.readFileSync(fullPath, "utf8");
   const { data, content } = matter(fileContents);
+  const slug = data.slug ?? file.replace(/\.md$/, "");
   let post = {
     ...data,
     content,
     slug,
+    fullPath,
   };
   return s.mask(post, Post, "Could not parse post!");
 }
