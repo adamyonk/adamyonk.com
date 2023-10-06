@@ -17,6 +17,10 @@ const Footer = () => {
           <Link rel="me" href="https://reddit.com/u/adamyonk">
             Reddit
           </Link>
+          &nbsp;|&nbsp;
+          <Link rel="me" href="https://threads.net/@adamyonk">
+            Threads
+          </Link>
         </div>
       </Container>
     </footer>

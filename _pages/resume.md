@@ -26,12 +26,15 @@ resiliency of our systems.
 
 ### Responsibilities:
 
-- Refactored a crucual API service in-place, implemented stricter type-safety, linting rules to help cement good practices
-- Iteratively migrated front end from create-react-app with a home-grown deployment system to Next.js on Vercel
+- Refactored and productionized the central API service (Node.js, Express, Apollo, TypeScript) in-place, implemented stricter type-safety, linting rules to help cement good practices
 - Architectural decisionmaking
-- Custom data visualizations
-- Internal tooling
+- Implemented stricter type-saftety between the central API and the web interface (graphql-code-generator, Apollo,
+  TypeScript)
+- Iteratively migrated front end from create-react-app with a home-grown deployment system to Next.js on Vercel
+- Custom data visualizations (React, D3.js)
+- Internal tooling (Node.js, Python)
 - Interviewing and onboarding new team members
+- Dependency upgrades
 
 ## InVision
 
@@ -46,7 +49,7 @@ our UI layer. I was certified as an "incident commander" in InVision's certifica
 
 ### Responsibilities:
 
-- New & existing feature development for [InVision Studio](https://www.invisionapp.com/studio) (Node.js, TypeScript,
+- New & existing feature development for [InVision Studio](https://www.invisionapp.com/studio) (Electron, Node.js, TypeScript,
   React, Redux)
 - Development of the Studio App Store (TypeScript, React, GraphQL, Apollo)
 - Project lead, development of the Studio Design System (TypeScript, React, Storybook, Webpack, Tailwind, GitHub
