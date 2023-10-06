@@ -9,7 +9,7 @@ _Adam Jahnke_
 Springfield, MO  
 [<span>email</span>](mailto:adamyonk@icloud.com) | [<span>phone</span>](tel:14028179871)
 
-_References available upon request. I take my contact's privacy seriously._
+_References available upon request._
 
 # Job History
 
@@ -18,33 +18,42 @@ _References available upon request. I take my contact's privacy seriously._
 Software Engineer  
 November 2020 — Present
 
+As employee Nº 9, I have been living out my favorite part of startup life, wearing many hats and covering as many bases
+as possible, helping the team to adapt quickly to changing business needs and enabling rapid development, flexibity, and
+resiliency of our systems.
+
 ### Responsibilities:
 
-- Iteratively migrated front end from create-react-app with home-grown deployment system to Next.js on Vercel
+- Refactored and productionized the central API service (Node.js, Express, Apollo, TypeScript) in-place, implemented stricter type-safety, linting rules to help cement good practices
 - Architectural decisionmaking
-- Custom data visualizations
-- Internal tooling
+- Implemented stricter type-saftety between the central API and the web interface (graphql-code-generator, Apollo,
+  TypeScript)
+- Iteratively migrated front end from create-react-app with a home-grown deployment system to Next.js on Vercel
+- Custom data visualizations (React, D3.js)
+- Internal tooling (Node.js, Python)
 - Interviewing and onboarding new team members
+- Dependency upgrades
 
 ## InVision
 
 Senior Software Engineer, Lead Software Engineer  
 June 2018 – November 2020
 
-I have worked closely with the design team and led the charge to implement an "App Store" UI for third-party Studio
-plugins. I've been refactoring legacy code in the Studio Electron application to better separate logical and
-presentation code, and create a better interface for user input. I was made team lead for our "design system" project in
+I worked closely with the design team and led the charge to implement an "App Store" UI for third-party InVision Studio
+plugins. I refactored legacy code in the InVision Studio Electron application to better separate logical and
+presentation code, and created a better interface for user input. I was made team lead for our "design system" project in
 which I architected and organized a component library package to speed up development and increase the testability of
-our UI layer.
+our UI layer. I was certified as an "incident commander" in InVision's certification program.
 
 ### Responsibilities:
 
-- New & existing feature development for [InVision Studio](https://www.invisionapp.com/studio) (Node.js, TypeScript,
+- New & existing feature development for [InVision Studio](https://www.invisionapp.com/studio) (Electron, Node.js, TypeScript,
   React, Redux)
 - Development of the Studio App Store (TypeScript, React, GraphQL, Apollo)
 - Project lead, development of the Studio Design System (TypeScript, React, Storybook, Webpack, Tailwind, GitHub
   Actions)
 - Refactoring the Studio design tools (camera tools, keyboard shortcuts, user input)
+- Certified incident commander
 
 ## Librato/SolarWinds
 
@@ -116,9 +125,15 @@ whatever skill was necessary to bring ideas and goals to fruition.
   - Angular
   - CoffeeScript
   - jQuery
+- GraphQL
+  - Apollo Server
+  - Apollo Client
+  - graphql-code-generator
+- Redis
+- MySQL
+- AWS
 - Node.js
 - Electron
-- GraphQL
 - Darwin/\*nix environments
 - Docker
 - Ruby
@@ -137,6 +152,6 @@ whatever skill was necessary to bring ideas and goals to fruition.
 - HTML
 - Vagrant
 
-# Education
+## Education
 
 High school diploma.
