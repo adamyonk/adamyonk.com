@@ -24,7 +24,11 @@ open a browser in "kiosk" mode and refresh occasionally.
 I'll talk about the menu script first. Here is the source:
 
 ```bash
-
+# /lib/systemd/system/kiosk.service
+while true; do
+        wget --no-check-certificate --adjust-extension --span-hosts --backup-converted --convert-links --page-requisites --directory-prefix=/home/pi https://www.wheelhousefood.com/media/menu/lunch-dinner.html
+        sleep 1800
+done
 ```
 
 ### Kiosk Script
@@ -53,11 +57,12 @@ sed -i 's/"exited_cleanly":false/"exited_cleanly":true/' /home/pi/.config/chromi
 sed -i 's/"exit_type":"Crashed"/"exit_type":"Normal"/' /home/pi/.config/chromium/Default/Preferences
 
 # Open chromium
-chromium-browser --noerrdialogs --disable-infobars --kiosk file:///home/pi/www.wheelhousefood.com/…
+DISPLAY=:0 chromium-browser --noerrdialogs --disable-infobars --kiosk file:///home/pi/www.wheelhousefood.com/media/menu/lunch-dinner.html &
 
 # Refresh (ctrl-r) every 20 minutes
 while true; do
-   xdotool keydown ctrl+r; xdotool keyup ctrl+r;
+   xdotool keydown ctrl+r
+   xdotool keyup ctrl+r
    sleep 1200
 done
 ```
