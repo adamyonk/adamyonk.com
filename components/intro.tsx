@@ -6,8 +6,8 @@ const Intro = () => {
       </h1>
       <h4 className="text-center md:text-left text-lg mt-5 md:pl-8">
         I’m Adam Jahnke. I am currently building things at{" "}
-        <a title="Jeli's website" href="https://jeli.io">
-          Jeli
+        <a title="Hotpot's website" href="https://hotpot.works">
+          Hotpot
         </a>
         . I live in Springfield, Missouri with my wonderful wife{" "}
         <a title="Olivia's website" href="https://olivetheartist.com">

@@ -6,14 +6,15 @@ import PostHeader from "components/post-header";
 import { notFound } from "next/navigation";
 import type { Page } from "app/types";
 
-export default async function Page({ params }: Page) {
+export default async function Page(props: Page) {
+  const params = await props.params;
   if (!params?.slug || typeof params.slug !== "string") {
     notFound();
   }
   const post = await getMDBySlug("_posts", `${params.slug}.md`);
   const content = await markdownToHtml(post.content || "");
   return (
-    <article className="mb-32">
+    <article className="max-w-2xl mx-auto mb-32">
       <link
         rel="preload"
         href="https://unpkg.com/prismjs@0.0.1/themes/prism-tomorrow.css"
@@ -30,7 +31,8 @@ export default async function Page({ params }: Page) {
   );
 }
 
-export async function generateMetadata({ params }: Page): Promise<Metadata> {
+export async function generateMetadata(props: Page): Promise<Metadata> {
+  const params = await props.params;
   if (!params?.slug || typeof params.slug !== "string") {
     notFound();
   }

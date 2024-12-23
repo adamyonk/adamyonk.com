@@ -57,6 +57,7 @@ export const metadata: Metadata = {
       "https://reddit.com/u/adamyonk",
       "https://twitter.com/adamyonk",
       "https://hachyderm.io/@adamyonk",
+      "https://bsky.app/profile/adamyonk",
     ],
   },
 };

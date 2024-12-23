@@ -5,7 +5,8 @@ import { getMD, getMDBySlug } from "lib/api";
 import PostBody from "components/post-body";
 import type { Page } from "app/types";
 
-export default async function Page({ params }: Page) {
+export default async function Page(props: Page) {
+  const params = await props.params;
   if (!params?.slug || typeof params.slug !== "string") {
     notFound();
   }
@@ -18,7 +19,8 @@ export default async function Page({ params }: Page) {
   );
 }
 
-export async function generateMetadata({ params }: Page): Promise<Metadata> {
+export async function generateMetadata(props: Page): Promise<Metadata> {
+  const params = await props.params;
   if (!params?.slug || typeof params.slug !== "string") {
     notFound();
   }

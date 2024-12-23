@@ -10,16 +10,16 @@ const Footer = () => {
             GitHub
           </Link>
           &nbsp;|&nbsp;
+          <Link rel="me" href="https://bsky.app/profile/adamyonk">
+            Bluesky
+          </Link>
+          &nbsp;|&nbsp;
           <Link rel="me" href="https://hachyderm.io/@adamyonk">
             Mastodon
           </Link>
           &nbsp;|&nbsp;
           <Link rel="me" href="https://reddit.com/u/adamyonk">
             Reddit
-          </Link>
-          &nbsp;|&nbsp;
-          <Link rel="me" href="https://threads.net/@adamyonk">
-            Threads
           </Link>
         </div>
       </Container>
