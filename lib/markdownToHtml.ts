@@ -1,17 +1,17 @@
 import { unified } from "unified";
-import parse from "remark-parse";
-import frontmatter from "remark-frontmatter";
-import stringify from "remark-stringify";
-// import prism from "remark-prism";
-import html from "remark-html";
+import remarkParse from "remark-parse";
+import remarkRehype from "remark-rehype";
+import rehypeStringify from "rehype-stringify";
+import rehypeRaw from "rehype-raw";
+//import rehypePrismPlus from 'rehype-prism-plus'
 
 export default async function markdownToHtml(markdown: string) {
   const result = await unified()
-    .use(parse)
-    .use(frontmatter)
-    .use(stringify)
-    // .use(prism)
-    .use(html, { sanitize: false })
+    .use(remarkParse)
+    .use(remarkRehype, { allowDangerousHtml: true })
+    .use(rehypeRaw)
+    //.use(rehypePrismPlus, { ignoreMissing: false })
+    .use(rehypeStringify)
     .process(markdown);
   return result.toString();
 }

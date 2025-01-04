@@ -71,7 +71,8 @@ done
 ### systemctl orchestration
 
 /lib/systemd/system/kiosk.service:
-```[Unit]
+```systemd
+[Unit]
 Description=Chromium Kiosk
 Wants=graphical.target
 After=graphical.target
@@ -90,7 +91,7 @@ WantedBy=graphical.target
 ```
 
 /lib/systemd/system/menu.service:
-```
+```systemd
 [Unit]
 Description=Menu Updater
 Wants=graphical.target
@@ -108,10 +109,10 @@ WantedBy=graphical.target
 ```
 
 Start the service with:
-```
-sudo systemctl enable kiosk.service
-sudo systemctl start kiosk.service
+```shell
+$ sudo systemctl enable kiosk.service
+$ sudo systemctl start kiosk.service
 
-sudo systemctl enable menu.service
-sudo systemctl start menu.service
+$ sudo systemctl enable menu.service
+$ sudo systemctl start menu.service
 ```

@@ -16,9 +16,8 @@ export default async function Page(props: Page) {
   return (
     <article className="max-w-2xl mx-auto mb-32">
       <link
-        rel="preload"
+        rel="stylesheet"
         href="https://unpkg.com/prismjs@0.0.1/themes/prism-tomorrow.css"
-        as="script"
       />
       <PostHeader
         title={post.title}

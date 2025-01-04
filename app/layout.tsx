@@ -1,13 +1,22 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import Script from "next/script";
-import "styles/index.css";
-import { JetBrains_Mono } from "next/font/google";
+import "./globals.css";
 import Footer from "components/footer";
-
-const jetbrains_mono = JetBrains_Mono({
-  subsets: ["latin"],
-  variable: "--font-jetbrains-mono",
-});
+//import { JetBrains_Mono } from "next/font/google";
+//import { Fira_Sans } from "next/font/google";
+//
+//export const jetbrains_mono = JetBrains_Mono({
+//  subsets: ["latin"],
+//  display: "swap",
+//  variable: "--font-jetbrains-mono",
+//});
+//
+//export const fira_sans = Fira_Sans({
+//  subsets: ["latin"],
+//  display: "swap",
+//  weight: "400",
+//  variable: "--font-fira-sans",
+//});
 
 export default function RootLayout({
   // Layouts must accept a children prop.
@@ -17,14 +26,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html className={jetbrains_mono.variable} lang="en">
+    <html lang="en">
       <Script
         async
         defer
         data-domain="adamyonk.com"
         src="https://plausible.io/js/plausible.js"
       />
-      <body style={jetbrains_mono.style}>
+      <body
+        //className={[fira_sans.variable, jetbrains_mono.variable].join(" ")}
+      >
         <div className="min-h-screen">
           <main>
             <div className="container mx-auto px-5">{children}</div>
@@ -41,14 +52,15 @@ export default function RootLayout({
 // <link rel="webmention" href="https://webmention.io/adamyonk.com/webmention" />
 // <link rel="pingback" href="https://webmention.io/adamyonk.com/xmlrpc" />
 
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+};
+
 export const metadata: Metadata = {
   title: {
     default: "Adam Jahnke ☕️🏍 (adamyonk)",
     template: "%s | Adam Jahnke",
-  },
-  viewport: {
-    width: "device-width",
-    initialScale: 1,
   },
   verification: {
     me: [
