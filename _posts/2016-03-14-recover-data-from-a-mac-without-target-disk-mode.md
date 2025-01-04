@@ -1,11 +1,7 @@
 ---
 title: Recover Data from a Mac without Target Disk Mode
 date: "2016-03-14T09:17:28-0500"
-author:
-  name: Adam Jahnke
-  picture: "https://secure.gravatar.com/avatar/95c4a6a54bb911712b9f153afff92f69?size=200"
 tags: [apple, macos, command-line]
-published: true
 ---
 
 I was recently trying to pull data off of an iMac for a friend, but didn't have any Macs around with FireWire ports to get at the iMac HD in target disk mode<sup><a name="1-ref"></a>[1](#1)</sup>. This method does require an external hard drive.

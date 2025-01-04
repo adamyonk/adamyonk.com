@@ -2,9 +2,6 @@
 title: "Raspberry Pi Kiosk"
 date: "2019-11-23T05:35:07.322Z"
 tags: [gatsby]
-author:
-  name: Adam Jahnke
-  picture: "https://secure.gravatar.com/avatar/95c4a6a54bb911712b9f153afff92f69?size=200"
 ---
 
 Some very dear friends of mine run a restaraunt called The Wheelhouse. They

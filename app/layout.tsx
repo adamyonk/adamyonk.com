@@ -1,7 +1,10 @@
 import type { Metadata, Viewport } from "next";
 import Script from "next/script";
 import "./globals.css";
+import Container from "components/container";
 import Footer from "components/footer";
+import meta from "../sitemetadata"
+
 //import { JetBrains_Mono } from "next/font/google";
 //import { Fira_Sans } from "next/font/google";
 //
@@ -38,7 +41,9 @@ export default function RootLayout({
       >
         <div className="min-h-screen">
           <main>
-            <div className="container mx-auto px-5">{children}</div>
+            <Container>
+              {children}
+            </Container>
           </main>
         </div>
         <Footer />
@@ -59,9 +64,10 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   title: {
-    default: "Adam Jahnke ☕️🏍 (adamyonk)",
+    default: meta.title,
     template: "%s | Adam Jahnke",
   },
+  description: meta.description,
   verification: {
     me: [
       "https://github.com/adamyonk",

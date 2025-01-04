@@ -1,11 +1,7 @@
 ---
 title: Masked file inputs
 date: "2013-08-01T11:13:31-0500"
-author:
-  name: Adam Jahnke
-  picture: "https://secure.gravatar.com/avatar/95c4a6a54bb911712b9f153afff92f69?size=200"
 tags: [javascript]
-published: true
 ---
 
 I put together a pretty simple solution for masking yet another native HTML input that behaves just fine on its own. The lengths we'll go to for our designers…

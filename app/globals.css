@@ -37,8 +37,9 @@ a {
   color: rgb(var(--cyan));
 }
 
-input {
-  border: 1px solid gray;
+input[type=search] {
+  border: 1px solid rgb(var(--base00));
+  padding: 0 0.5em;
 }
 
 pre {

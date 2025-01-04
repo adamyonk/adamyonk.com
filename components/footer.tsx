@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer className="bg-neutral-50 border-t border-neutral-200">
       <Container>
-        <div className="py-6 flex flex-col lg:flex-row items-center">
+        <div className="max-w-2xl mx-auto py-6 flex flex-col lg:flex-row items-center">
           <Link rel="me" href="https://github.com/adamyonk">
             GitHub
           </Link>

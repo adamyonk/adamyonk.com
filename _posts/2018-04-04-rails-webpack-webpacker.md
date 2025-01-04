@@ -1,10 +1,6 @@
 ---
 title: Rails + webpack - webpacker
 date: "2018-04-04T21:06:50.000Z"
-author:
-  name: Adam Jahnke
-  picture: "https://secure.gravatar.com/avatar/95c4a6a54bb911712b9f153afff92f69?size=200"
-published: true
 tags: [webpack, javascript, rails]
 ---
 

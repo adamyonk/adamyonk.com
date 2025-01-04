@@ -1,11 +1,7 @@
 ---
 title: Pour Over Coffee Gear
 date: "2015-01-04T22:44:00-0600"
-author:
-  name: Adam Jahnke
-  picture: "https://secure.gravatar.com/avatar/95c4a6a54bb911712b9f153afff92f69?size=200"
 tags: [gear, coffee]
-published: true
 ---
 
 Writing about something as subjective as coffee is difficult. So don't take this as anything more than my personal opinion and preferences on coffee. I tried to boil the categories down to my favorite three items at varying price points. This post is mainly about gear, I may write something more along the lines of brewing how-tos in the future.

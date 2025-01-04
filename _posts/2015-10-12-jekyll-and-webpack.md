@@ -1,11 +1,7 @@
 ---
 title: Jekyll and Webpack
 date: "2015-10-12T09:30:00-0600"
-author:
-  name: Adam Jahnke
-  picture: "https://secure.gravatar.com/avatar/95c4a6a54bb911712b9f153afff92f69?size=200"
 tags: [javascript, webpack, jekyll]
-published: true
 ---
 
 I was recently setting up a Jekyll site that had the JavaScript and CSS compiled using Webpack. The compiled bundle should be parsed by Liquid, so it needed to somehow have the YAML triple-dashes prepended to it. Luckily, there is a Webpack plugin for just such an occasion! In `webpack.config.js`:

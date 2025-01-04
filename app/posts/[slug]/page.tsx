@@ -24,6 +24,7 @@ export default async function Page(props: Page) {
         coverImage={post.coverImage}
         date={post.date}
         author={post.author}
+        tags={post.tags}
       />
       <PostBody content={content} />
     </article>

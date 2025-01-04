@@ -1,11 +1,7 @@
 ---
 title: Using ImageOptim with guard-shell
 date: "2013-01-14T10:14:37-0600"
-author:
-  name: Adam Jahnke
-  picture: "https://secure.gravatar.com/avatar/95c4a6a54bb911712b9f153afff92f69?size=200"
 tags: [automation]
-published: true
 ---
 
 For the uninitiated, [ImageOptim][imageoptim] is a great Mac app that uses several well-known image optimization tools to compress images and help keep file sizes down and [Guard][guard] is "a command line tool to easily handle events on file system modifications." If you've never tried Guard, I'd encourage you to take some time and check it out. With over [150 plugins][guardplugins] now available, there's surely some way that you can use it to optimize your workflow.

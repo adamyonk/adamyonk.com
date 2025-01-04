@@ -1,11 +1,7 @@
 ---
 title: CoffeeScript Dependency Checking
 date: "2018-04-04T21:06:49.000Z"
-author:
-  name: Adam Jahnke
-  picture: "https://secure.gravatar.com/avatar/95c4a6a54bb911712b9f153afff92f69?size=200"
 tags: [coffeescript]
-published: true
 ---
 
 I just fixed an issue where a dependency (lodash) was leaking out as a global

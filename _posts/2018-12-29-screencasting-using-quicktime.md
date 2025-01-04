@@ -1,11 +1,7 @@
 ---
 title: Screencasting Using QuickTime
 date: "2018-12-29T11:13:31-0500"
-author:
-  name: Adam Jahnke
-  picture: "https://secure.gravatar.com/avatar/95c4a6a54bb911712b9f153afff92f69?size=200"
 tags: [tools]
-published: true
 ---
 
 I've found a lot of value in demoing work as a person who works on a
