@@ -2,34 +2,42 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  :root {
-    --base03: 0 43 54;
-    --base02: 7 54 66;
-    --base01: 88 110 117;
-    --base00: 101 123 131;
-    --base0: 131 148 150;
-    --base1: 147 161 161;
-    --base2: 238 232 213;
-    --base3: 253 246 227;
-    --yellow: 181 137 0;
-    --orange: 203 75 22;
-    --red: 220 50 47;
-    --magenta: 211 54 130;
-    --violet: 108 113 196;
-    --blue: 38 139 210;
-    --cyan: 42 161 152;
-    --green: 133 153 0;
-    --background: var(--base02);
-    --foreground: var(--base1);
-    --link: var(--base2);
-    --navlink: var(--base00);
-    /*--body: "Fira Sans", system-ui, sans-serif;*/
-    /*--font-monospace: "JetBrains Mono", "Fira Code", monospace;*/
-  }
+:root {
+  --base03: 0 43 54;
+  --base02: 7 54 66;
+  --base01: 88 110 117;
+  --base00: 101 123 131;
+  --base0: 131 148 150;
+  --base1: 147 161 161;
+  --base2: 238 232 213;
+  --base3: 253 246 227;
+  --yellow: 181 137 0;
+  --orange: 203 75 22;
+  --red: 220 50 47;
+  --magenta: 211 54 130;
+  --violet: 108 113 196;
+  --blue: 38 139 210;
+  --cyan: 42 161 152;
+  --green: 133 153 0;
+  --background: var(--base3);
+  --foreground: var(--base02);
+  --link: var(--base2);
+  --navlink: var(--base00);
+  /*--body: "Fira Sans", system-ui, sans-serif;*/
+  /*--font-monospace: "JetBrains Mono", "Fira Code", monospace;*/
+  --color-prettylights-background: rgb(var(--base2));
 }
+/*@media (prefers-color-scheme: dark) {*/
+/*  :root {*/
+/*    --background: var(--base02);*/
+/*    --foreground: var(--base2);*/
+/*    --color-prettylights-background: rgb(var(--base03));*/
+/*  }*/
+/*}*/
 
 body {
+  background-color: rgb(var(--background));
+  color: rgb(var(--foreground));
   /*font-family: var(--font-fira-sans);*/
 }
 
@@ -37,59 +45,211 @@ a {
   color: rgb(var(--cyan));
 }
 
-input[type=search] {
+textarea,
+input {
   border: 1px solid rgb(var(--base00));
+  border-radius: 4px;
   padding: 0 0.5em;
 }
 
+
+/* This is a theme distributed by `starry-night`.
+ * It’s based on what GitHub uses on their site.
+ * See <https://github.com/wooorm/starry-night> for more info. */
+:root {
+  --color-prettylights-syntax-comment: #59636e;
+  --color-prettylights-syntax-constant: #0550ae;
+  --color-prettylights-syntax-constant-other-reference-link: #0a3069;
+  --color-prettylights-syntax-entity: #6639ba;
+  --color-prettylights-syntax-storage-modifier-import: #1f2328;
+  --color-prettylights-syntax-entity-tag: #0550ae;
+  --color-prettylights-syntax-keyword: #cf222e;
+  --color-prettylights-syntax-string: #0a3069;
+  --color-prettylights-syntax-variable: #953800;
+  --color-prettylights-syntax-brackethighlighter-unmatched: #82071e;
+  --color-prettylights-syntax-brackethighlighter-angle: #59636e;
+  --color-prettylights-syntax-invalid-illegal-text: #f6f8fa;
+  --color-prettylights-syntax-invalid-illegal-bg: #82071e;
+  --color-prettylights-syntax-carriage-return-text: #f6f8fa;
+  --color-prettylights-syntax-carriage-return-bg: #cf222e;
+  --color-prettylights-syntax-string-regexp: #116329;
+  --color-prettylights-syntax-markup-list: #3b2300;
+  --color-prettylights-syntax-markup-heading: #0550ae;
+  --color-prettylights-syntax-markup-italic: #1f2328;
+  --color-prettylights-syntax-markup-bold: #1f2328;
+  --color-prettylights-syntax-markup-deleted-text: #82071e;
+  --color-prettylights-syntax-markup-deleted-bg: #ffebe9;
+  --color-prettylights-syntax-markup-inserted-text: #116329;
+  --color-prettylights-syntax-markup-inserted-bg: #dafbe1;
+  --color-prettylights-syntax-markup-changed-text: #953800;
+  --color-prettylights-syntax-markup-changed-bg: #ffd8b5;
+  --color-prettylights-syntax-markup-ignored-text: #d1d9e0;
+  --color-prettylights-syntax-markup-ignored-bg: #0550ae;
+  --color-prettylights-syntax-meta-diff-range: #8250df;
+  --color-prettylights-syntax-sublimelinter-gutter-mark: #818b98;
+}
+
+/*@media (prefers-color-scheme: dark) {*/
+/*  :root {*/
+/*    --color-prettylights-syntax-comment: #9198a1;*/
+/*    --color-prettylights-syntax-constant: #79c0ff;*/
+/*    --color-prettylights-syntax-constant-other-reference-link: #a5d6ff;*/
+/*    --color-prettylights-syntax-entity: #d2a8ff;*/
+/*    --color-prettylights-syntax-storage-modifier-import: #f0f6fc;*/
+/*    --color-prettylights-syntax-entity-tag: #7ee787;*/
+/*    --color-prettylights-syntax-keyword: #ff7b72;*/
+/*    --color-prettylights-syntax-string: #a5d6ff;*/
+/*    --color-prettylights-syntax-variable: #ffa657;*/
+/*    --color-prettylights-syntax-brackethighlighter-unmatched: #f85149;*/
+/*    --color-prettylights-syntax-brackethighlighter-angle: #9198a1;*/
+/*    --color-prettylights-syntax-invalid-illegal-text: #f0f6fc;*/
+/*    --color-prettylights-syntax-invalid-illegal-bg: #8e1519;*/
+/*    --color-prettylights-syntax-carriage-return-text: #f0f6fc;*/
+/*    --color-prettylights-syntax-carriage-return-bg: #b62324;*/
+/*    --color-prettylights-syntax-string-regexp: #7ee787;*/
+/*    --color-prettylights-syntax-markup-list: #f2cc60;*/
+/*    --color-prettylights-syntax-markup-heading: #1f6feb;*/
+/*    --color-prettylights-syntax-markup-italic: #f0f6fc;*/
+/*    --color-prettylights-syntax-markup-bold: #f0f6fc;*/
+/*    --color-prettylights-syntax-markup-deleted-text: #ffdcd7;*/
+/*    --color-prettylights-syntax-markup-deleted-bg: #67060c;*/
+/*    --color-prettylights-syntax-markup-inserted-text: #aff5b4;*/
+/*    --color-prettylights-syntax-markup-inserted-bg: #033a16;*/
+/*    --color-prettylights-syntax-markup-changed-text: #ffdfb6;*/
+/*    --color-prettylights-syntax-markup-changed-bg: #5a1e02;*/
+/*    --color-prettylights-syntax-markup-ignored-text: #f0f6fc;*/
+/*    --color-prettylights-syntax-markup-ignored-bg: #1158c7;*/
+/*    --color-prettylights-syntax-meta-diff-range: #d2a8ff;*/
+/*    --color-prettylights-syntax-sublimelinter-gutter-mark: #3d444d;*/
+/*  }*/
+/*}*/
+
 pre {
-  overflow-x: auto;
+  background-color: var(--color-prettylights-background);
+  border-radius: 4px;
+  overflow-x: scroll;
+  padding: 0 0.5em;
 }
 
-/**
- * Inspired by gatsby remark prism - https://www.gatsbyjs.com/plugins/gatsby-remark-prismjs/
- * 1. Make the element just wide enough to fit its content.
- * 2. Always fill the visible space in .code-highlight.
- */
-.code-highlight {
-  float: left; /* 1 */
-  min-width: 100%; /* 2 */
+.pl-c {
+  color: var(--color-prettylights-syntax-comment);
 }
 
-.code-line {
-  display: block;
-  padding-left: 16px;
-  padding-right: 16px;
-  margin-left: -16px;
-  margin-right: -16px;
-  border-left: 4px solid rgba(0, 0, 0, 0); /* Set placeholder for highlight accent border color to transparent */
+.pl-c1,
+.pl-s .pl-v {
+  color: var(--color-prettylights-syntax-constant);
 }
 
-.code-line.inserted {
-  background-color: rgba(16, 185, 129, 0.2); /* Set inserted line (+) color */
+.pl-e,
+.pl-en {
+  color: var(--color-prettylights-syntax-entity);
 }
 
-.code-line.deleted {
-  background-color: rgba(239, 68, 68, 0.2); /* Set deleted line (-) color */
+.pl-smi,
+.pl-s .pl-s1 {
+  color: var(--color-prettylights-syntax-storage-modifier-import);
 }
 
-.highlight-line {
-  margin-left: -16px;
-  margin-right: -16px;
-  background-color: rgba(55, 65, 81, 0.5); /* Set highlight bg color */
-  border-left: 4px solid rgb(59, 130, 246); /* Set highlight accent border color */
+.pl-ent {
+  color: var(--color-prettylights-syntax-entity-tag);
 }
 
-.line-number::before {
-  display: inline-block;
-  width: 1rem;
-  text-align: right;
-  margin-right: 16px;
-  margin-left: -8px;
-  color: rgb(156, 163, 175); /* Line number color */
-  content: attr(line);
+.pl-k {
+  color: var(--color-prettylights-syntax-keyword);
 }
 
+.pl-s,
+.pl-pds,
+.pl-s .pl-pse .pl-s1,
+.pl-sr,
+.pl-sr .pl-cce,
+.pl-sr .pl-sre,
+.pl-sr .pl-sra {
+  color: var(--color-prettylights-syntax-string);
+}
+
+.pl-v,
+.pl-smw {
+  color: var(--color-prettylights-syntax-variable);
+}
+
+.pl-bu {
+  color: var(--color-prettylights-syntax-brackethighlighter-unmatched);
+}
+
+.pl-ii {
+  color: var(--color-prettylights-syntax-invalid-illegal-text);
+  background-color: var(--color-prettylights-syntax-invalid-illegal-bg);
+}
+
+.pl-c2 {
+  color: var(--color-prettylights-syntax-carriage-return-text);
+  background-color: var(--color-prettylights-syntax-carriage-return-bg);
+}
+
+.pl-sr .pl-cce {
+  font-weight: bold;
+  color: var(--color-prettylights-syntax-string-regexp);
+}
+
+.pl-ml {
+  color: var(--color-prettylights-syntax-markup-list);
+}
+
+.pl-mh,
+.pl-mh .pl-en,
+.pl-ms {
+  font-weight: bold;
+  color: var(--color-prettylights-syntax-markup-heading);
+}
+
+.pl-mi {
+  font-style: italic;
+  color: var(--color-prettylights-syntax-markup-italic);
+}
+
+.pl-mb {
+  font-weight: bold;
+  color: var(--color-prettylights-syntax-markup-bold);
+}
+
+.pl-md {
+  color: var(--color-prettylights-syntax-markup-deleted-text);
+  background-color: var(--color-prettylights-syntax-markup-deleted-bg);
+}
+
+.pl-mi1 {
+  color: var(--color-prettylights-syntax-markup-inserted-text);
+  background-color: var(--color-prettylights-syntax-markup-inserted-bg);
+}
+
+.pl-mc {
+  color: var(--color-prettylights-syntax-markup-changed-text);
+  background-color: var(--color-prettylights-syntax-markup-changed-bg);
+}
+
+.pl-mi2 {
+  color: var(--color-prettylights-syntax-markup-ignored-text);
+  background-color: var(--color-prettylights-syntax-markup-ignored-bg);
+}
+
+.pl-mdr {
+  font-weight: bold;
+  color: var(--color-prettylights-syntax-meta-diff-range);
+}
+
+.pl-ba {
+  color: var(--color-prettylights-syntax-brackethighlighter-angle);
+}
+
+.pl-sg {
+  color: var(--color-prettylights-syntax-sublimelinter-gutter-mark);
+}
+
+.pl-corl {
+  text-decoration: underline;
+  color: var(--color-prettylights-syntax-constant-other-reference-link);
+}
 /* :root { */
 /*   --base03: #002b36; */
 /*   --base02: #073642; */

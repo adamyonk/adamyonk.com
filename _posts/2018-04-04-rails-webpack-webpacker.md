@@ -28,7 +28,7 @@ $ yarn uninstall @rails/webpacker webpack-dev-server
 
 ## Disable sprockets
 
-```ruby{4}
+```ruby {4}
 # config/environments/development.rb
 Rails.application.configure do
   …
@@ -49,7 +49,7 @@ Check `/public/assets` into git, then Add `/public/assets` to your `.gitignore`.
 
 ## Add build scripts
 
-```json{5-8}
+```json {5-8}
 // package.json
 {
   "name": "webpacked",
@@ -113,7 +113,7 @@ $ yarn add -D {file,extract,css,postcss}-loader cssnano
 
 And then set up a rule for them:
 
-```javascript{4-31}
+```javascript {4-31}
 // webpack.config.js
 module.exports = {
   …
@@ -151,7 +151,7 @@ module.exports = {
 
 Now, in your JavaScript files, you can require stylesheets like so:
 
-```javascript{2}
+```javascript {2}
 // app/assets/javascripts/application.js
 require("stylesheets/application.css")
 
@@ -165,7 +165,7 @@ Now if you load up your site, you're probably seeing something like:
 
 Add this helper to `app/helpers/application_helper.rb`:
 
-```ruby{3-5}
+```ruby {3-5}
 # app/helpers/application_helper.rb
 module ApplicationHelper
   def webpack_asset_url(name)
@@ -176,7 +176,7 @@ end
 
 Then wrap the paths of any assets you're including in that helper, and don't forget the extensions:
 
-```html{8-9}
+```html {8-9}
 <!-- app/views/layouts/application.html.erb -->
 <!DOCTYPE html>
 <html>
@@ -197,7 +197,7 @@ Then wrap the paths of any assets you're including in that helper, and don't for
 
 But wait, production! We need to tell Rails to serve the static assets in production:
 
-```ruby{4-8}
+```ruby {4-8}
 # app/helpers/application_helper.rb
 module ApplicationHelper
   def webpack_asset_url(name)
@@ -224,7 +224,7 @@ $ yarn precompile && \
 
 But wait, asset fingerprinting! Change the output filename for CSS and entrypoints:
 
-```javascript{12,33-35}
+```javascript {12,33-35}
 // webpack.config.js
 module.exports = {
   …
@@ -268,7 +268,7 @@ module.exports = {
 
 Now we need to tell Rails about these hashes somehow. First, we'll add the webpack-manifest-plugin (when building for production) to output a JSON map of the names of chunks to their hashed names:
 
-```javascript{4-6}
+```javascript {4-6}
 // webpack.config.js
 module.exports = {
   …
@@ -291,7 +291,7 @@ If you `yarn precompile` again, you should see it output a file like this, in ad
 
 Now let's update the Rails helper to get everything sorted out:
 
-```ruby{5,11-18}
+```ruby {5,11-18}
 # app/helpers/application_helper.rb
 module ApplicationHelper
   def webpack_asset_url(name)
@@ -319,7 +319,7 @@ You might have to restart the Rails server again, but now you should see it load
 
 For better caching, it's smart to separate the webpack runtime from your application's JavaScript:
 
-```javascript{4-6}
+```javascript {4-6}
 // webpack.config.js
 module.exports = {
   …
@@ -332,7 +332,7 @@ module.exports = {
 
 Then just include that `runtime` chunk before any other JavaScript:
 
-```html{9}
+```html {9}
 <!-- app/views/layouts/application.html.erb -->
 <!DOCTYPE html>
 <html>

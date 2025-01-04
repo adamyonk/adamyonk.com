@@ -1,5 +1,4 @@
 import markdownStyles from "./markdown-styles.module.css";
-import PrismLoader from "./prism";
 
 type Props = {
   content: string;
@@ -12,7 +11,6 @@ const PostBody = ({ content }: Props) => {
         className={markdownStyles["markdown"]}
         dangerouslySetInnerHTML={{ __html: content }}
       />
-      <PrismLoader />
     </div>
   );
 };

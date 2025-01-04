@@ -15,10 +15,6 @@ export default async function Page(props: Page) {
   const content = await markdownToHtml(post.content || "");
   return (
     <article className="max-w-2xl mx-auto mb-32">
-      <link
-        rel="stylesheet"
-        href="https://unpkg.com/prismjs@0.0.1/themes/prism-tomorrow.css"
-      />
       <PostHeader
         title={post.title}
         coverImage={post.coverImage}
