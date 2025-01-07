@@ -1,7 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import Script from "next/script";
 import "./globals.css";
-import Container from "components/container";
 import Head from "next/head";
 import Header from "components/header";
 import Footer from "components/footer";

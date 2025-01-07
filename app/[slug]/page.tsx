@@ -14,7 +14,7 @@ export default async function Page(props: Page) {
   const content = await markdownToHtml(post.content || "");
   return (
     <>
-      <article className="mb-32">
+      <article>
         <PostBody content={content} />
       </article>
     </>

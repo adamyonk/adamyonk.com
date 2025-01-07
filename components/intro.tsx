@@ -2,8 +2,8 @@ import Logo from "./logo"
 
 const Intro = () => {
   return (
-    <section className="">
-      <p className="">
+    <section>
+      <p>
         ✌🏻 I’m Adam Jahnke. I am currently building things at{" "}
         <a title="Hotpot's website" href="https://hotpot.works">
           Hotpot
