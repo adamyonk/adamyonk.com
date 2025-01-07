@@ -1,7 +1,5 @@
 ---
-author:
-  name: "Adam Jahnke"
-  picture: "https://secure.gravatar.com/avatar/95c4a6a54bb911712b9f153afff92f69?size=200"
+author: adam
 date: "2012-12-06T13:39:39-0600"
 tags: []
 title: "Manual Page"
@@ -18,8 +16,7 @@ burden of that complexity.
 # Description
 I've been writing software since 2006, and I love it. I especially enjoy
 working on tooling and interfaces, the things that humans are regularly
-interacting with. I've spent a lot of time working with designers to hone
-interfaces.
+interacting with. I've spent a lot of time collaborating closely with designers.
 
 # Usage
 Though I have worked remotely for nearly the entirety of my career, I really

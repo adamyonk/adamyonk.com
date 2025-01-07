@@ -11,9 +11,6 @@ Things I use.
 
 ## Software
 
-- 1Password
-  [macOS](https://geo.itunes.apple.com/us/app/1password/id443987910?mt=12&app=apps&at=1001lJ7Y)
-  [iOS](https://itunes.apple.com/us/app/1password/id568903335?mt=8&at=1001lJ7Y)
 - Reeder
   [macOS](https://geo.itunes.apple.com/us/app/reeder-3/id880001334?mt=12&app=apps&at=1001lJ7Y)
   [iOS](https://itunes.apple.com/us/app/reeder-3/id697846300?mt=8&at=1001lJ7Y)
@@ -23,24 +20,21 @@ Things I use.
   [iOS](https://apps.apple.com/us/app/darkroom-photo-editor/id953286746)
 - Pinner
   [iOS](https://itunes.apple.com/us/app/pinner-for-pinboard/id591613202?mt=8&at=1001lJ7Y)
-- Apollo
-  [iOS](https://itunes.apple.com/us/app/apollo-for-reddit/id979274575?mt=8&at=1001lJ7Y)
 - Working Copy
   [iOS](https://itunes.apple.com/us/app/working-copy/id896694807)
 - Scriptable
   [iOS](https://itunes.apple.com/us/app/scriptable/id1405459188)
 - Blink
   [iOS](https://itunes.apple.com/us/app/blink-shell-mosh-ssh/id1156707581?mt=8&at=1001lJ7Y)
-- Hyper
-  [macOS](https://hyper.is/)
+- Ghostty
+  [macOS](https://ghostty.org/)
 
 ## Hardware
 
 - [Apple MacBook Air with M2 Chip]()
 - [LG UltraFine 27" 5K Display](http://a.co/d/eKBeHuL)
 - [Roost Laptop Stand](http://amzn.to/2DXrUWU)
-- [Ultimate Hacking Keyboard](https://ultimatehackingkeyboard.com)
-- [Apple iPad Pro 11"]()
+- [Apple iPad Mini]()
 - [Apple iPhone 14 Pro]()
 - [Apple Watch Series 8]()
 - [Apple AirPods Pro]()
@@ -63,10 +57,6 @@ Things I use.
 - [Spyderco Bug](http://amzn.to/2DXFn13)
 - [Uncle Bill's Sliver Gripper](http://amzn.to/2n1dr4c)
 - [Olight i3E EOS AAA Flashlight](http://amzn.to/2DCZ3tp)
-- [Widgy Pico Pry Bar](https://countycomm.com/products/widgy-pry-bars)
-- [Mini Carabiners](http://amzn.to/2GjZo2N)
-- [Nite Ize S-Biner #2 Stainless](http://amzn.to/2GlKjO6)
-- [Vargo Titanium Water Bottle](http://amzn.to/2n1O1n0)
 
 ## Auto
 

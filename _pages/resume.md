@@ -6,13 +6,13 @@ tags: []
 title: Résumé
 ---
 
-# Resume
+# Résumé
 
 _Adam Jahnke_  
 Springfield, MO  
-[<span>email</span>](mailto:adamyonk@icloud.com) | [<span>phone</span>](tel:14028179871)
-
-_References available upon request._
+[<span>email</span>](mailto:adamyonk@icloud.com) |
+[<span>phone</span>](tel:14028179871) |
+[<span>linkedin</span>](https://linkedin.com/in/adamyonk)
 
 ## Job History
 

@@ -26,6 +26,10 @@ const Footer = () => {
       <Link rel="me" href="https://reddit.com/u/adamyonk">
         Reddit
       </Link>
+      {/*&nbsp;|&nbsp;
+      <Link href="/colophon">
+        Colophon
+      </Link>*/}
     </footer>
   );
 };

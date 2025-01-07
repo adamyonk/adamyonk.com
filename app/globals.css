@@ -51,10 +51,11 @@ h1, h2, h3, h4, h5, h6 {
   --green: 133 153 0;
   --background: var(--base3);
   --foreground: var(--base02);
-  --link: var(--base2);
+  --alt-background: var(--base2);
+  --link: var(--base02);
   --navlink: var(--base00);
 
-  --color-prettylights-background: rgb(var(--base2));
+  --color-prettylights-background: rgb(var(--alt-background));
   --color-prettylights-syntax-comment: #59636e;
   --color-prettylights-syntax-constant: #0550ae;
   --color-prettylights-syntax-constant-other-reference-link: #0a3069;
@@ -91,9 +92,9 @@ h1, h2, h3, h4, h5, h6 {
     --background: var(--base02);
     --foreground: var(--base2);
     --alt-background: var(--base03);
-    --color-prettylights-background: rgb(var(--alt-background));
     --link: var(--base2);
 
+    --color-prettylights-background: rgb(var(--alt-background));
     --color-prettylights-syntax-comment: #9198a1;
     --color-prettylights-syntax-constant: #79c0ff;
     --color-prettylights-syntax-constant-other-reference-link: #a5d6ff;
@@ -130,7 +131,7 @@ h1, h2, h3, h4, h5, h6 {
 body {
   background-color: rgb(var(--background));
   color: rgb(var(--foreground));
-  font-family: sans-serif;
+  font-family: system-ui, sans-serif;
 }
 
 a {
