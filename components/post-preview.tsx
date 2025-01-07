@@ -2,6 +2,7 @@
 import DateFormatter from "./date-formatter";
 import CoverImage from "./cover-image";
 import Link from "next/link";
+import Tags from "./tags";
 import type { Post } from "lib/api";
 
 const PostPreview = ({
@@ -9,6 +10,7 @@ const PostPreview = ({
   coverImage,
   date,
   excerpt,
+  tags,
   // author,
   slug,
 }: Post) => {
@@ -19,7 +21,10 @@ const PostPreview = ({
           <CoverImage slug={slug} title={title} src={coverImage} />
         </div>
       )}
-      <h3 className="text-3xl mb-3 leading-snug">
+      <small>
+        <DateFormatter dateString={date} />
+      </small>
+      <h3 className="text-3xl leading-snug">
         <Link
           as={`/posts/${slug}`}
           href="/posts/[slug]"
@@ -28,9 +33,9 @@ const PostPreview = ({
           {title}
         </Link>
       </h3>
-      <div className="text-lg mb-4">
-        <DateFormatter dateString={date} />
-      </div>
+      <small>
+        <Tags tags={tags} />
+      </small>
       <p className="text-lg leading-relaxed mb-4">{excerpt}</p>
       {/*<Avatar name={author.name} picture={author.picture} />*/}
     </div>

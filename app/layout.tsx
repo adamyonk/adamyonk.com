@@ -2,6 +2,8 @@ import type { Metadata, Viewport } from "next";
 import Script from "next/script";
 import "./globals.css";
 import Container from "components/container";
+import Head from "next/head";
+import Header from "components/header";
 import Footer from "components/footer";
 import meta from "../sitemetadata"
 
@@ -29,24 +31,25 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html
+      //className={[fira_sans.variable, jetbrains_mono.variable].join(" ")}
+      lang="en"
+    >
       <Script
         async
         defer
         data-domain="adamyonk.com"
         src="https://plausible.io/js/plausible.js"
       />
-      <body
-        //className={[fira_sans.variable, jetbrains_mono.variable].join(" ")}
-      >
-        <div className="min-h-screen">
-          <main>
-            <Container>
-              {children}
-            </Container>
-          </main>
-        </div>
-        <Footer />
+      <Head>
+        <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
+      </Head>
+      <body>
+        <main>
+          <Header />
+          {children}
+          <Footer />
+        </main>
       </body>
     </html>
   );

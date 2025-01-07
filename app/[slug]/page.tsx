@@ -13,9 +13,11 @@ export default async function Page(props: Page) {
   const post = await getMDBySlug("_pages", `${params.slug}.md`);
   const content = await markdownToHtml(post.content || "");
   return (
-    <article className="mb-32">
-      <PostBody content={content} />
-    </article>
+    <>
+      <article className="mb-32">
+        <PostBody content={content} />
+      </article>
+    </>
   );
 }
 

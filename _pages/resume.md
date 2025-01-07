@@ -1,11 +1,12 @@
 ---
-author:
-  name: "Adam Jahnke"
-  picture: "https://secure.gravatar.com/avatar/95c4a6a54bb911712b9f153afff92f69?size=200"
+author: adam
 date: "2012-12-06T13:39:39-0600"
+updated: "2025-01-07T13:39:39-0600"
 tags: []
-title: "Resume"
+title: Résumé
 ---
+
+# Resume
 
 _Adam Jahnke_  
 Springfield, MO  
@@ -13,21 +14,27 @@ Springfield, MO
 
 _References available upon request._
 
-# Job History
+## Job History
 
-## Jeli
+### Oilcan
+
+Principal Software Engineer  
+February 2024 — Present
+
+### Jeli/Pagerduty
 
 Software Engineer  
-November 2020 — Present
+November 2020 — February 2024
 
-As employee Nº 9, I have been living out my favorite part of startup life, wearing many hats and covering as many bases
-as possible, helping the team to adapt quickly to changing business needs and enabling rapid development, flexibity, and
-resiliency of our systems.
+As employee Nº 9, I lived out my favorite part of startup life - Wearing many hats and covering as many bases as
+possible, helping the team to adapt quickly to changing business needs and enabling rapid development, flexibility, and
+resiliency of our systems and eventually helping transition Jeli through an acquisition with PagerDuty.
 
-### Responsibilities:
+#### Responsibilities:
 
 - Refactored and productionized the central API service (Node.js, Express, Apollo, TypeScript) in-place, implemented stricter type-safety, linting rules to help cement good practices
 - Architectural decisionmaking
+- Customer support
 - Implemented stricter type-saftety between the central API and the web interface (graphql-code-generator, Apollo,
   TypeScript)
 - Iteratively migrated front end from create-react-app with a home-grown deployment system to Next.js on Vercel
@@ -36,7 +43,7 @@ resiliency of our systems.
 - Interviewing and onboarding new team members
 - Dependency upgrades
 
-## InVision
+### InVision
 
 Senior Software Engineer, Lead Software Engineer  
 June 2018 – November 2020
@@ -47,7 +54,7 @@ presentation code, and created a better interface for user input. I was made tea
 which I architected and organized a component library package to speed up development and increase the testability of
 our UI layer. I was certified as an "incident commander" in InVision's certification program.
 
-### Responsibilities:
+#### Responsibilities:
 
 - New & existing feature development for [InVision Studio](https://www.invisionapp.com/studio) (Electron, Node.js, TypeScript,
   React, Redux)
@@ -57,7 +64,7 @@ our UI layer. I was certified as an "incident commander" in InVision's certifica
 - Refactoring the Studio design tools (camera tools, keyboard shortcuts, user input)
 - Certified incident commander
 
-## Librato/SolarWinds
+### Librato/SolarWinds
 
 Front End Engineer, Senior Engineer  
 December 2013 – June 2018
@@ -68,13 +75,13 @@ architecture, to developer tools there. I spent a lot of time tuning and maintai
 researching and selecting technologies for new projects, documenting developer best practices, and writing command-line
 tools for developer happiness.
 
-### Responsibilities:
+#### Responsibilities:
 
 - Front end development, build process, architecture (webpack, Babel, React, Apollo, Redux, Backbone, Angular)
 - Ruby development (Rails, Sinatra)
 - Developer tools (Bash, Node.js, Docker, Vagrant)
 
-## Pure Charity
+### Pure Charity
 
 Developer  
 July 2011 – November 2013
@@ -87,13 +94,13 @@ developers on the team, and spending time reviewing code to ensure that it adher
 a passion for writing statistical and analytics tools for our business team, and for finding ways to automate tedious
 processes for the whole company.
 
-### Responsibilities:
+#### Responsibilities:
 
 - All front-end development and architecture (Haml, Sass, CoffeeScript, AJAX, PJAX, JavaScript templating, Backbone)
 - Rails development
 - Ruby development and automation
 
-## Elevate, LLC
+### Elevate, LLC
 
 Developer  
 February 2005 – July 2011
@@ -105,16 +112,17 @@ challenged constantly to translate his designs into working interfaces that were
 of a very small company, I was stretched to learn about the business and develop the ability to teach myself and grow
 whatever skill was necessary to bring ideas and goals to fruition.
 
-### Responsibilities:
+#### Responsibilities:
 
 - All front-end development (HTML, CSS, JavaScript, Sass, CoffeeScript)
 - Building and maintaining WordPress sites
 - Building and maintaining PHP sites using a custom content management system
 
-# Technologies
+## Technologies
 
 - JavaScript
   - TypeScript
+  - Hotwire
   - Webpack
   - Babel
   - React
@@ -132,6 +140,7 @@ whatever skill was necessary to bring ideas and goals to fruition.
   - Apollo Client
   - graphql-code-generator
 - Redis
+- PostgresQL
 - MySQL
 - AWS
 - Node.js
@@ -145,6 +154,7 @@ whatever skill was necessary to bring ideas and goals to fruition.
 - Go
 - Python
 - CSS
+  - TailwindCSS
   - SCSS/Sass
   - Stylus
   - Less
