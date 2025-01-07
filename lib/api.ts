@@ -52,6 +52,12 @@ export async function getMDBySlug(dir: string, file: string) {
   return s.mask(post, Post, "Could not parse post!");
 }
 
+export async function getMDByFn(dir: string, fn: (post: Post) => boolean) {
+  const posts = (await getMD(dir))
+    .filter(fn);
+  return posts;
+}
+
 export async function getMD(dir: string) {
   const files = getPaths(dir);
   const posts = (await Promise.all(files.map((file) => getMDBySlug(dir, file))))

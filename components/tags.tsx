@@ -15,7 +15,7 @@ const Tags = ({ tags }: Props) => {
         case "literal":
           return value
         case "element":
-          return <Link className={styles.tag} key={value} href={`/tags/${value}`}>{value}</Link>
+          return <Link className={styles.tag} key={value} href={`/posts/tagged/${value}`}>{value}</Link>
       }
     })}
   </span>

@@ -15,7 +15,7 @@ const Footer = () => {
         GitHub
       </Link>
       &nbsp;|&nbsp;
-      <Link rel="me" href="https://bsky.app/profile/adamyonk">
+      <Link rel="me" href="https://bsky.app/profile/adamyonk.com">
         Bluesky
       </Link>
       &nbsp;|&nbsp;

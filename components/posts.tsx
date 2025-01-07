@@ -4,13 +4,14 @@ import type { Post } from "lib/api";
 
 type Props = {
   posts: Post[];
+  title?: string;
 };
 
-const Posts = ({ posts }: Props) => {
+const Posts = ({ posts, title }: Props) => {
   return (
     <section>
       <h2 className="mb-8 text-5xl md:text-7xl font-bold tracking-tighter leading-tight">
-        Posts
+        {title ?? "Posts"}
       </h2>
       <div className={styles.posts}>
         {posts.map((post) => (
