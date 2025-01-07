@@ -21,13 +21,32 @@ You _can_ listen for an `input` event, but there's no way of differentiating bet
 contents of the input or when they click the clear button:
 
 ```html
-<input type=search onInput="alert(`The new value is [${this.value}].`)" />
+<input onInput="alert(`The new value is [${this.value}].`)" type=search value="some value" />
 ```
 
-<input type=search value="some value" onInput="alert(`The new value is [${this.value}].`)" />
+<input onInput="alert(`The new value is [${this.value}].`)" type=search value="some value" />
 
 So. We're left to surmise for ourselves what is going on.
 
 ```html
-<input type=search onClick="if (this.value) { setTimeout(() => { if (!this.value) { console.log("CLEARED") } }, 0) }" />
+<input onClick="if (this.value) { setTimeout(() => { if (!this.value) { alert('CLEARED') } }, 0) }" type=search value="some value" />
+```
+
+<input onClick="if (this.value) { setTimeout(() => { if (!this.value) { alert('CLEARED') } }, 0) }" type=search value="some value" />
+
+Here it is written out using `addEventListener`:
+
+```javascript
+input.addEventListener("click", ({ target }) => {
+  // Start by check if there IS a value:
+  if (target.value) {
+    setTimeout(() => {
+      // If in the next tick there IS NOT a value,
+      // the clear button was likely clicked:
+      if (!target.value) {
+        alert('CLEARED')
+      }
+    }, 0)
+  }
+})
 ```
