@@ -1,4 +1,10 @@
---- author: adam date: "2012-12-06T13:39:39-0600" updated: "2025-01-07T13:39:39-0600" tags: [] title: Résumé ---
+---
+author: adam
+date: "2012-12-06T13:39:39-0600"
+updated: "2025-01-07T13:39:39-0600"
+tags: []
+title: Résumé
+---
 
 # Résumé
 
