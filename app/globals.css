@@ -1,0 +1,654 @@
+/*
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+body::before {
+  background-image: url("/assets/skull.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: left 50vw top -10vw;
+  content: '';
+  inset: 0;
+  opacity: 0.2;
+  position: absolute;
+  z-index: -1;
+}
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+input, button, textarea, select {
+  font: inherit;
+}
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+p {
+  text-wrap: pretty;
+}
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+#root, #__next {
+  isolation: isolate;
+}
+
+:root {
+  --base03: 0 43 54;
+  --base02: 7 54 66;
+  --base01: 88 110 117;
+  --base00: 101 123 131;
+  --base0: 131 148 150;
+  --base1: 147 161 161;
+  --base2: 238 232 213;
+  --base3: 253 246 227;
+  --yellow: 181 137 0;
+  --orange: 203 75 22;
+  --red: 220 50 47;
+  --magenta: 211 54 130;
+  --violet: 108 113 196;
+  --blue: 38 139 210;
+  --cyan: 42 161 152;
+  --green: 133 153 0;
+  --background: var(--base3);
+  --foreground: var(--base02);
+  --alt-background: var(--base2);
+  --link: var(--base02);
+  --navlink: var(--base00);
+
+  --color-prettylights-background: rgb(var(--alt-background));
+  --color-prettylights-syntax-comment: #59636e;
+  --color-prettylights-syntax-constant: #0550ae;
+  --color-prettylights-syntax-constant-other-reference-link: #0a3069;
+  --color-prettylights-syntax-entity: #6639ba;
+  --color-prettylights-syntax-storage-modifier-import: #1f2328;
+  --color-prettylights-syntax-entity-tag: #0550ae;
+  --color-prettylights-syntax-keyword: #cf222e;
+  --color-prettylights-syntax-string: #0a3069;
+  --color-prettylights-syntax-variable: #953800;
+  --color-prettylights-syntax-brackethighlighter-unmatched: #82071e;
+  --color-prettylights-syntax-brackethighlighter-angle: #59636e;
+  --color-prettylights-syntax-invalid-illegal-text: #f6f8fa;
+  --color-prettylights-syntax-invalid-illegal-bg: #82071e;
+  --color-prettylights-syntax-carriage-return-text: #f6f8fa;
+  --color-prettylights-syntax-carriage-return-bg: #cf222e;
+  --color-prettylights-syntax-string-regexp: #116329;
+  --color-prettylights-syntax-markup-list: #3b2300;
+  --color-prettylights-syntax-markup-heading: #0550ae;
+  --color-prettylights-syntax-markup-italic: #1f2328;
+  --color-prettylights-syntax-markup-bold: #1f2328;
+  --color-prettylights-syntax-markup-deleted-text: #82071e;
+  --color-prettylights-syntax-markup-deleted-bg: #ffebe9;
+  --color-prettylights-syntax-markup-inserted-text: #116329;
+  --color-prettylights-syntax-markup-inserted-bg: #dafbe1;
+  --color-prettylights-syntax-markup-changed-text: #953800;
+  --color-prettylights-syntax-markup-changed-bg: #ffd8b5;
+  --color-prettylights-syntax-markup-ignored-text: #d1d9e0;
+  --color-prettylights-syntax-markup-ignored-bg: #0550ae;
+  --color-prettylights-syntax-meta-diff-range: #8250df;
+  --color-prettylights-syntax-sublimelinter-gutter-mark: #818b98;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: var(--base02);
+    --foreground: var(--base2);
+    --alt-background: var(--base03);
+    --link: var(--base2);
+
+    --color-prettylights-background: rgb(var(--alt-background));
+    --color-prettylights-syntax-comment: #9198a1;
+    --color-prettylights-syntax-constant: #79c0ff;
+    --color-prettylights-syntax-constant-other-reference-link: #a5d6ff;
+    --color-prettylights-syntax-entity: #d2a8ff;
+    --color-prettylights-syntax-storage-modifier-import: #f0f6fc;
+    --color-prettylights-syntax-entity-tag: #7ee787;
+    --color-prettylights-syntax-keyword: #ff7b72;
+    --color-prettylights-syntax-string: #a5d6ff;
+    --color-prettylights-syntax-variable: #ffa657;
+    --color-prettylights-syntax-brackethighlighter-unmatched: #f85149;
+    --color-prettylights-syntax-brackethighlighter-angle: #9198a1;
+    --color-prettylights-syntax-invalid-illegal-text: #f0f6fc;
+    --color-prettylights-syntax-invalid-illegal-bg: #8e1519;
+    --color-prettylights-syntax-carriage-return-text: #f0f6fc;
+    --color-prettylights-syntax-carriage-return-bg: #b62324;
+    --color-prettylights-syntax-string-regexp: #7ee787;
+    --color-prettylights-syntax-markup-list: #f2cc60;
+    --color-prettylights-syntax-markup-heading: #1f6feb;
+    --color-prettylights-syntax-markup-italic: #f0f6fc;
+    --color-prettylights-syntax-markup-bold: #f0f6fc;
+    --color-prettylights-syntax-markup-deleted-text: #ffdcd7;
+    --color-prettylights-syntax-markup-deleted-bg: #67060c;
+    --color-prettylights-syntax-markup-inserted-text: #aff5b4;
+    --color-prettylights-syntax-markup-inserted-bg: #033a16;
+    --color-prettylights-syntax-markup-changed-text: #ffdfb6;
+    --color-prettylights-syntax-markup-changed-bg: #5a1e02;
+    --color-prettylights-syntax-markup-ignored-text: #f0f6fc;
+    --color-prettylights-syntax-markup-ignored-bg: #1158c7;
+    --color-prettylights-syntax-meta-diff-range: #d2a8ff;
+    --color-prettylights-syntax-sublimelinter-gutter-mark: #3d444d;
+  }
+}
+
+body {
+  background-color: rgb(var(--background));
+  color: rgb(var(--foreground));
+  font-family: system-ui, sans-serif;
+}
+
+a {
+  color: rgb(var(--link));
+  text-decoration: underline dotted;
+}
+a:hover {
+  text-decoration: underline solid;
+}
+
+button,
+textarea,
+select,
+input {
+  background-color: rgb(var(--alt-background));
+  border: 1px solid rgb(var(--base00));
+  border-radius: 4px;
+  color: inherit;
+  padding: 0 0.5em;
+}
+
+main {
+  max-width: 777px;
+  margin: 0 auto;
+  padding: 0 1em;
+}
+
+article {
+  margin-bottom: 2em;
+
+  header {
+    margin-bottom: 1em;
+  }
+
+  .prose > * {
+    display: block;
+    margin: 1em 0;
+  }
+  .prose > *:first-child {
+    margin-top: 0;
+  }
+  .prose > *:last-child {
+    margin-bottom: 0;
+  }
+}
+
+section {
+  margin-bottom: 2em;
+}
+
+/* This is a theme distributed by `starry-night`.
+ * It’s based on what GitHub uses on their site.
+ * See <https://github.com/wooorm/starry-night> for more info. */
+pre {
+  background-color: var(--color-prettylights-background);
+  border-radius: 4px;
+  font-size: 14px;
+  overflow-x: scroll;
+  padding: 0 0.5em;
+}
+
+.pl-c {
+  color: var(--color-prettylights-syntax-comment);
+}
+
+.pl-c1,
+.pl-s .pl-v {
+  color: var(--color-prettylights-syntax-constant);
+}
+
+.pl-e,
+.pl-en {
+  color: var(--color-prettylights-syntax-entity);
+}
+
+.pl-smi,
+.pl-s .pl-s1 {
+  color: var(--color-prettylights-syntax-storage-modifier-import);
+}
+
+.pl-ent {
+  color: var(--color-prettylights-syntax-entity-tag);
+}
+
+.pl-k {
+  color: var(--color-prettylights-syntax-keyword);
+}
+
+.pl-s,
+.pl-pds,
+.pl-s .pl-pse .pl-s1,
+.pl-sr,
+.pl-sr .pl-cce,
+.pl-sr .pl-sre,
+.pl-sr .pl-sra {
+  color: var(--color-prettylights-syntax-string);
+}
+
+.pl-v,
+.pl-smw {
+  color: var(--color-prettylights-syntax-variable);
+}
+
+.pl-bu {
+  color: var(--color-prettylights-syntax-brackethighlighter-unmatched);
+}
+
+.pl-ii {
+  color: var(--color-prettylights-syntax-invalid-illegal-text);
+  background-color: var(--color-prettylights-syntax-invalid-illegal-bg);
+}
+
+.pl-c2 {
+  color: var(--color-prettylights-syntax-carriage-return-text);
+  background-color: var(--color-prettylights-syntax-carriage-return-bg);
+}
+
+.pl-sr .pl-cce {
+  font-weight: bold;
+  color: var(--color-prettylights-syntax-string-regexp);
+}
+
+.pl-ml {
+  color: var(--color-prettylights-syntax-markup-list);
+}
+
+.pl-mh,
+.pl-mh .pl-en,
+.pl-ms {
+  font-weight: bold;
+  color: var(--color-prettylights-syntax-markup-heading);
+}
+
+.pl-mi {
+  font-style: italic;
+  color: var(--color-prettylights-syntax-markup-italic);
+}
+
+.pl-mb {
+  font-weight: bold;
+  color: var(--color-prettylights-syntax-markup-bold);
+}
+
+.pl-md {
+  color: var(--color-prettylights-syntax-markup-deleted-text);
+  background-color: var(--color-prettylights-syntax-markup-deleted-bg);
+}
+
+.pl-mi1 {
+  color: var(--color-prettylights-syntax-markup-inserted-text);
+  background-color: var(--color-prettylights-syntax-markup-inserted-bg);
+}
+
+.pl-mc {
+  color: var(--color-prettylights-syntax-markup-changed-text);
+  background-color: var(--color-prettylights-syntax-markup-changed-bg);
+}
+
+.pl-mi2 {
+  color: var(--color-prettylights-syntax-markup-ignored-text);
+  background-color: var(--color-prettylights-syntax-markup-ignored-bg);
+}
+
+.pl-mdr {
+  font-weight: bold;
+  color: var(--color-prettylights-syntax-meta-diff-range);
+}
+
+.pl-ba {
+  color: var(--color-prettylights-syntax-brackethighlighter-angle);
+}
+
+.pl-sg {
+  color: var(--color-prettylights-syntax-sublimelinter-gutter-mark);
+}
+
+.pl-corl {
+  text-decoration: underline;
+  color: var(--color-prettylights-syntax-constant-other-reference-link);
+}
+/* :root { */
+/*   --base03: #002b36; */
+/*   --base02: #073642; */
+/*   --base01: #586e75; */
+/*   --base00: #657b83; */
+/*   --base0: #839496; */
+/*   --base1: #93a1a1; */
+/*   --base2: #eee8d5; */
+/*   --base3: #fdf6e3; */
+/*   --yellow: #b58900; */
+/*   --orange: #cb4b16; */
+/*   --red: #dc322f; */
+/*   --magenta: #d33682; */
+/*   --violet: #6c71c4; */
+/*   --blue: #268bd2; */
+/*   --cyan: #2aa198; */
+/*   --green: #859900; */
+/*   --background: var(--base02); */
+/*   --foreground: var(--base1); */
+/*   --link: var(--base2); */
+/*   --navlink: var(--base00); */
+/*   --body: "Fira Sans", system-ui, sans-serif; */
+/*   --font-monospace: "JetBrains Mono", "Fira Code", monospace; */
+/* } */
+/*@media (prefers-color-scheme: light) { */
+/*  :root { */
+/*    --background: var(--base3); */
+/*    --foreground: var(--base02); */
+/*    --link: var(--yellow); */
+/*  } */
+/*} */
+/*body { */
+/*  background-color: var(--background); */
+/*  color: var(--foreground); */
+/*  font-family: var(--body); */
+/*  line-height: 150%; */
+/*  margin: 1.5rem auto; */
+/*  max-width: 50rem; */
+/*  text-decoration-skip: ink; */
+/*  width: 90%; */
+/*} */
+/*@media print { */
+/*  body { */
+/*    background-color: transparent; */
+/*    font-size: 13px; */
+/*  } */
+/*} */
+/*::selection { */
+/*  background-color: var(--cyan); */
+/*} */
+/*h1, */
+/*h2, */
+/*h3, */
+/*h4, */
+/*h5, */
+/*h6 { */
+/*  color: var(--cyan); */
+/*  font-size: 100%; */
+/*  font-weight: 100; */
+/*  line-height: 1.1; */
+/*} */
+/*h1, */
+/*h2, */
+/*h3, */
+/*h4, */
+/*h5, */
+/*h6, */
+/*ol, */
+/*p, */
+/*ul, */
+/*.highlight { */
+/*  margin-bottom: 20px; */
+/*} */
+/*h1 { */
+/*  font-size: 2em; */
+/*  margin-bottom: 0.5em; */
+/*} */
+/*h2 { */
+/*  font-size: 1.3em; */
+/*} */
+/*a { */
+/*  border-bottom: 1px dotted transparent; */
+/*  color: var(--link); */
+/*  text-decoration: none; */
+/*} */
+/*@media print { */
+/*  a[href]:not(.logo-link)::after { */
+/*    content: " [" attr(href) "]"; */
+/*  } */
+/*  a[href^="tel:"] span, */
+/*  a[href^="mailto:"] span { */
+/*    display: none; */
+/*  } */
+/*  a[href^="tel:"]::after, */
+/*  a[href^="mailto:"]::after { */
+/*    content: attr(href); */
+/*  } */
+/*} */
+/*a:hover { */
+/*  border-color: var(--link); */
+/*} */
+/*hr { */
+/*  color: var(--base00); */
+/*  border: none; */
+/*  border-bottom: 0.1em solid currentColor; */
+/*  margin: 2em; */
+/*  position: relative; */
+/*} */
+/*hr::after { */
+/*  background-color: var(--background); */
+/*  content: "⤫"; */
+/*  font-size: 1em; */
+/*  left: 50%; */
+/*  padding: 0 1em; */
+/*  position: absolute; */
+/*  top: 50%; */
+/*  transform: translate(-50%, -50%); */
+/*} */
+/*blockquote { */
+/*  border-left: 0.2em solid var(--yellow); */
+/*  font-size: 1em; */
+/*  line-height: 150%; */
+/*  margin-left: 1em; */
+/*  padding-left: 1em; */
+/*} */
+/*big { */
+/*  font-size: 1.3em; */
+/*} */
+/*small { */
+/*  font-size: 0.8em; */
+/*} */
+/*strong { */
+/*  font-weight: 700; */
+/*} */
+/*em { */
+/*  font-style: italic; */
+/*} */
+/*ol, */
+/*ul { */
+/*  list-style-type: none; */
+/*} */
+/*ul li > p { */
+/*  margin: 0; */
+/*} */
+/*dl { */
+/*  display: flex; */
+/*  flex-wrap: wrap; */
+/*  justify-content: space-between; */
+/*  margin-bottom: 1em; */
+/*} */
+/*dl > * { */
+/*  width: 50%; */
+/*} */
+/*table { */
+/*  width: 100%; */
+/*} */
+/*th { */
+/*  text-align: left; */
+/*} */
+/*sup, */
+/*sub { */
+/*  line-height: 0; */
+/*} */
+/*.logo { */
+/*  align-items: center; */
+/*  display: grid; */
+/*  justify-content: center; */
+/*  margin: 1em auto 3em; */
+/*} */
+/*.logo a { */
+/*  border: none; */
+/*  color: #bd2b28; */
+/*  font-size: 250px; */
+/*  line-height: 1; */
+/*} */
+/*@media print { */
+/*  .logo a { */
+/*    font-size: 60px; */
+/*  } */
+/*} */
+/*nav { */
+/*  align-items: center; */
+/*  display: flex; */
+/*  justify-content: center; */
+/*  margin: 2em auto; */
+/*} */
+/*@media print { */
+/*  nav { */
+/*    display: none; */
+/*  } */
+/*} */
+/*nav a { */
+/*  border: none; */
+/*  color: var(--navlink); */
+/*  display: inline-block; */
+/*  margin: 0 0.5em; */
+/*  vertical-align: middle; */
+/*} */
+/*nav a svg { */
+/*  --size: 20px; */
+/*  height: var(--size); */
+/*  width: var(--size); */
+/*} */
+/*nav a path { */
+/*  fill: currentColor; */
+/*} */
+/*nav a:hover { */
+/*  border: none; */
+/*} */
+/*nav a.twitter:hover { */
+/*  color: #26d2fd; */
+/*} */
+/*nav a.github:hover { */
+/*  color: #4082c4; */
+/*} */
+/*nav a.reddit:hover { */
+/*  color: #cee3f8; */
+/*} */
+/*nav a.keybase:hover { */
+/*  color: #fd5f2b; */
+/*} */
+/*nav a.microblog path.star { */
+/*  fill: var(--background); */
+/*} */
+/*nav a.microblog:hover path.bubble { */
+/*  fill: url(#a); */
+/*} */
+/*nav a.microblog:hover path.star { */
+/*  fill: url(#b); */
+/*} */
+/*nav a.microblog:hover { */
+/*  color: #f80; */
+/*} */
+/*nav a.pgp:hover { */
+/*  color: #2aa298; */
+/*} */
+/*nav a.rss:hover { */
+/*  color: #fd9126; */
+/*} */
+/*nav a.json:hover { */
+/*  color: #8ee42a; */
+/*} */
+/*nav a.sale:hover { */
+/*  color: var(--red); */
+/*} */
+/*article { */
+/*  margin-bottom: 3em; */
+/*} */
+/*article img { */
+/*  box-shadow: unset !important; */
+/*  max-width: 100%; */
+/*} */
+/*article ul, */
+/*article ol { */
+/*  margin-left: 1em; */
+/*  padding-left: 1em; */
+/*} */
+/*article ul { */
+/*  list-style-type: disc; */
+/*} */
+/*article ol { */
+/*  list-style-type: decimal; */
+/*} */
+/*article li > p, */
+/*article li > ul { */
+/*  margin-bottom: 0; */
+/*  margin-top: 0; */
+/*} */
+/*article table { */
+/*  margin-bottom: 1.5em; */
+/*} */
+/*header { */
+/*  margin-bottom: 1em; */
+/*} */
+/*header h1 { */
+/*  margin-bottom: 0em; */
+/*} */
+/*.print-only { */
+/*  display: none; */
+/*} */
+/*@media print { */
+/*  .print-only { */
+/*    display: block; */
+/*  } */
+/*} */
+/*/1** */
+/*       * Prism things: */
+/*       *1/ */
+/*.gatsby-highlight-code-line { */
+/*  background-color: #feb; */
+/*  display: block; */
+/*  margin-right: -1em; */
+/*  margin-left: -1em; */
+/*  padding-right: 1em; */
+/*  padding-left: 0.75em; */
+/*  border-left: 0.25em solid #f99; */
+/*} */
+/*/1** */
+/*       * Add back the container background-color, border-radius, padding, margin */
+/*       * and overflow that we removed from <pre>. */
+/*       *1/ */
+/*.gatsby-highlight { */
+/*  background-color: #fdf6e3; */
+/*  border-radius: 0.3em; */
+/*  margin: 0.5em 0; */
+/*  padding: 1em; */
+/*  overflow: auto; */
+/*} */
+/*/1** */
+/*       * Remove the default PrismJS theme background-color, border-radius, margin, */
+/*       * padding and overflow. */
+/*       * 1. Make the element just wide enough to fit its content. */
+/*       * 2. Always fill the visible space in .gatsby-highlight. */
+/*       *1/ */
+/*.gatsby-highlight pre[class*="language-"] { */
+/*  background-color: transparent; */
+/*  margin: 0; */
+/*  padding: 0; */
+/*  overflow: initial; */
+/*  float: left; /1* 1 *1/ */
+/*  min-width: 100%; /1* 2 *1/ */
+/*} */
+/*:not(pre) > code[class*="language-"] { */
+/*  white-space: normal; */
+/*} */
+/*code[class*="language-"], */
+/*pre[class*="language-"] { */
+/*  font-family: var(--body); */
+/*} */

@@ -1,0 +1,10 @@
+.logo {
+  color: rgb(var(--red));
+  font-size: 2em;
+  line-height: 1;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
