@@ -8,9 +8,13 @@
 * {
   margin: 0;
 }
+
 body {
-  line-height: 1.5;
   -webkit-font-smoothing: antialiased;
+  background-color: rgb(var(--background));
+  color: rgb(var(--foreground));
+  font-family: system-ui, sans-serif;
+  line-height: 1.5;
 }
 body::before {
   background-image: url("/assets/skull.svg");
@@ -137,12 +141,6 @@ h1, h2, h3, h4, h5, h6 {
     --color-prettylights-syntax-meta-diff-range: #d2a8ff;
     --color-prettylights-syntax-sublimelinter-gutter-mark: #3d444d;
   }
-}
-
-body {
-  background-color: rgb(var(--background));
-  color: rgb(var(--foreground));
-  font-family: system-ui, sans-serif;
 }
 
 a {
