@@ -5,7 +5,7 @@ import type Author from "../interfaces/author";
 type Props = {
   title: string;
   coverImage?: string;
-  date: string;
+  date: Date;
   author: Author;
   tags: string[];
 };
@@ -15,7 +15,7 @@ const PostHeader = ({ title, tags, coverImage, date, author }: Props) => {
     <header>
       <h1>{title}</h1>
       <div>
-        <DateFormatter dateString={date} />
+        <DateFormatter date={date} />
         {tags &&
           <> | Tagged: <Tags tags={tags} /></>
         }

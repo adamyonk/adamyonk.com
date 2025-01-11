@@ -1,24 +1,24 @@
 //import { parseISO, format } from "date-fns";
 
 type Props = {
-  dateString: string;
+  date: Date;
   options?: Intl.DateTimeFormatOptions;
 };
 
-const DateFormatter = ({ dateString, options = {
+const DateFormatter = ({ date, options = {
   year: "numeric",
   month: "long",
   day: "numeric",
 } }: Props) => {
   //const date = format(parseISO(dateString), "LLLL d, yyyy");
-  const date = new Intl.DateTimeFormat(
+  const dateString = new Intl.DateTimeFormat(
     "en-US",
     options,
   ).format(
-    new Date(dateString)
+    date
   )
 
-  return <time dateTime={dateString}>{date}</time>;
+  return <time dateTime={date.toLocaleString()}>{dateString}</time>;
 };
 
 export default DateFormatter;

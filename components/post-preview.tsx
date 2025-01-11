@@ -15,7 +15,7 @@ const PostPreview = ({
   return (
     <div>
       <small>
-        <DateFormatter dateString={date} />
+        <DateFormatter date={date} />
       </small>
       <h3>
         <Link as={`/posts/${slug}`} href="/posts/[slug]">
