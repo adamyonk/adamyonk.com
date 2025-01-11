@@ -11,7 +11,16 @@
 body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
-  background: url("/assets/skull.svg") no-repeat right -5% top -5%;
+}
+body::after {
+  background-image: url("/assets/skull.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: left 50vw top -10vw;
+  content: '';
+  inset: 0;
+  opacity: 0.2;
+  position: absolute;
 }
 img, picture, video, canvas, svg {
   display: block;

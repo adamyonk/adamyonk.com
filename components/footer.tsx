@@ -6,28 +6,22 @@ const Footer = () => {
   return (
     <footer className={styles.footer}>
       <Logo />
-      &nbsp;|&nbsp;
       <Link rel="me" href="https://adamyonk.com/feed.xml">
         RSS
       </Link>
-      &nbsp;|&nbsp;
       <Link rel="me" href="https://github.com/adamyonk">
         GitHub
       </Link>
-      &nbsp;|&nbsp;
       <Link rel="me" href="https://bsky.app/profile/adamyonk.com">
         Bluesky
       </Link>
-      &nbsp;|&nbsp;
       <Link rel="me" href="https://hachyderm.io/@adamyonk">
         Mastodon
       </Link>
-      &nbsp;|&nbsp;
       <Link rel="me" href="https://reddit.com/u/adamyonk">
         Reddit
       </Link>
-      {/*&nbsp;|&nbsp;
-      <Link href="/colophon">
+      {/*<Link href="/colophon">
         Colophon
       </Link>*/}
     </footer>

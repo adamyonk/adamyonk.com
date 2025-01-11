@@ -12,7 +12,7 @@ export default async function Page(props: Page) {
     notFound();
   }
   const post = await getMDBySlug("_posts", `${params.slug}.md`);
-  const content = await markdownToHtml(post.content || "");
+
   return (
     <>
       <article className="max-w-2xl mx-auto mb-32">
@@ -23,7 +23,7 @@ export default async function Page(props: Page) {
           author={post.author}
           tags={post.tags}
         />
-        <PostBody content={content} />
+        <PostBody content={post.html} />
       </article>
     </>
   );

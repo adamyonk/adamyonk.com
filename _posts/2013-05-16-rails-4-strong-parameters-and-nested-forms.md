@@ -43,4 +43,4 @@ end
 
 Do you know of a better or easier way? [Let me know!][email]
 
-[email]: mailto:adamyonk@me.com?subject=Rails%204,%20Strong%20Parameters,%20and%20Nested%20Forms
+[email]: mailto:EMAIL

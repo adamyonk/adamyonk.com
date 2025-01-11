@@ -1,7 +1,9 @@
 import fs from "fs";
 import { join } from "path";
+import meta from "../sitemetadata"
 import matter from "gray-matter";
 import * as s from "superstruct";
+import markdownToHtml from "./markdownToHtml";
 
 const authors = {
  adam: {
@@ -18,6 +20,7 @@ const Post = s.object({
     avatar: s.optional(s.string()),
   }),
   content: s.string(),
+  html: s.string(),
   excerpt: s.optional(s.string()),
   coverImage: s.optional(s.string()),
   date: s.string(),
@@ -36,6 +39,7 @@ export async function getMDBySlug(dir: string, file: string) {
   const fullPath = join(join(process.cwd(), dir), file);
   const fileContents = fs.readFileSync(fullPath, "utf8");
   const { data, content } = matter(fileContents);
+  const html = (await markdownToHtml(content || "")).replaceAll(/mailto:EMAIL/g, `mailto:${meta.email}?subject=${encodeURIComponent(data.title)}`);
   const slug = data.slug ?? file.replace(/\.md$/, "");
   let author;
   if (typeof data.author === "string" && Object.keys(authors).includes(data.author)) {
@@ -46,6 +50,7 @@ export async function getMDBySlug(dir: string, file: string) {
     ...data,
     author: author ?? authors.adam,
     content,
+    html,
     slug,
     fullPath,
   };
