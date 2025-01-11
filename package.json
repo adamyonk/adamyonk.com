@@ -11,6 +11,7 @@
     "@types/rss": "^0.0.32",
     "classnames": "^2.3.1",
     "date-fns": "^2.28.0",
+    "feed": "^4.2.2",
     "gray-matter": "^4.0.3",
     "lodash": "^4.17.21",
     "next": "15.1.2",
@@ -22,7 +23,6 @@
     "remark": "^14.0.2",
     "remark-parse": "^11.0.0",
     "remark-rehype": "^11.1.1",
-    "rss": "^1.2.2",
     "superstruct": "^1.0.3",
     "typescript": "^5.7.0",
     "unified": "^11.0.5"

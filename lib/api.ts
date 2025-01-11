@@ -23,7 +23,7 @@ const Post = s.object({
   html: s.string(),
   excerpt: s.optional(s.string()),
   coverImage: s.optional(s.string()),
-  date: s.string(),
+  date: s.date(),
   slug: s.string(),
   published: s.optional(s.boolean()),
   tags: s.array(s.string()),
@@ -48,6 +48,7 @@ export async function getMDBySlug(dir: string, file: string) {
   author ??= authors.adam
   let post = {
     ...data,
+    date: new Date(data.date),
     author: author ?? authors.adam,
     content,
     html,

@@ -12,7 +12,7 @@ body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
 }
-body::after {
+body::before {
   background-image: url("/assets/skull.svg");
   background-size: contain;
   background-repeat: no-repeat;
@@ -21,6 +21,7 @@ body::after {
   inset: 0;
   opacity: 0.2;
   position: absolute;
+  z-index: -1;
 }
 img, picture, video, canvas, svg {
   display: block;
