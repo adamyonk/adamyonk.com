@@ -23,7 +23,7 @@ body::before {
   background-position: left 50vw top -10vw;
   content: '';
   inset: 0;
-  opacity: 0.2;
+  opacity: 0.15;
   position: absolute;
   z-index: -1;
 }
