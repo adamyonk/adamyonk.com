@@ -1,10 +1,10 @@
 import type { Metadata, Viewport } from "next";
 import Script from "next/script";
-import "./globals.css";
 import Head from "next/head";
 import Header from "components/header";
 import Footer from "components/footer";
 import meta from "../sitemetadata"
+import "./global.css";
 
 //import { JetBrains_Mono } from "next/font/google";
 //import { Fira_Sans } from "next/font/google";
