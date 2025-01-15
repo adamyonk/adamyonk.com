@@ -8,7 +8,7 @@ I was recently trying to pull data off of an iMac for a friend, but didn't have 
 
 Start up your Mac in single-user mode<sup><a name="2-ref"></a>[2](#2)</sup>, then run the following commands<sup><a name="3-ref"></a>[3](#3)</sup>:
 
-```bash
+```sh prompt{2,5,8,11,14,18,21}
 # Check the filesystem
 /sbin/fsck -y
 

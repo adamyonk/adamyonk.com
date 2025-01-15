@@ -41,7 +41,8 @@ export default function RootLayout({
         src="https://plausible.io/js/plausible.js"
       />
       <Head>
-        <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
+        <link title="The Weblog of Adam Jahnke" rel="alternate" type="application/rss+xml" href="/feed.xml" />
+        <link title="The Weblog of Adam Jahnke" rel="alternate" type="application/feed+json" href="/feed.json" />
       </Head>
       <body>
         <main>

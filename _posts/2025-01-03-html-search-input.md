@@ -21,7 +21,10 @@ You _can_ listen for an `input` event, but there's no way of differentiating bet
 contents of the input or when they click the clear button:
 
 ```html
-<input onInput="alert(`The new value is [${this.value}].`)" type=search value="some value" />
+<input
+  onInput="alert(`The new value is [${this.value}].`)"
+  type=search
+  value="some value" />
 ```
 
 <input onInput="alert(`The new value is [${this.value}].`)" type=search value="some value" />
@@ -29,7 +32,10 @@ contents of the input or when they click the clear button:
 So. We're left to surmise for ourselves what is going on.
 
 ```html
-<input onClick="if (this.value) { setTimeout(() => { if (!this.value) { alert('CLEARED') } }, 0) }" type=search value="some value" />
+<input
+  onClick="if (this.value) { setTimeout(() => { if (!this.value) { alert('CLEARED') } }, 0) }"
+  type=search
+  value="some value" />
 ```
 
 <input onClick="if (this.value) { setTimeout(() => { if (!this.value) { alert('CLEARED') } }, 0) }" type=search value="some value" />

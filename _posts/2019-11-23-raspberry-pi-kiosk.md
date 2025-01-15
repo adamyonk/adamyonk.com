@@ -20,12 +20,11 @@ open a browser in "kiosk" mode and refresh occasionally.
 
 I'll talk about the menu script first. It just `wget`s the source for the webpage to keep a local cache in case there is any internet outage. Here is the source:
 
-```bash
-# /lib/systemd/system/kiosk.service
+```bash title="menu.sh"
 while true; do
-        wget --no-check-certificate --adjust-extension --span-hosts --backup-converted --convert-links --page-requisites --directory-prefix=/home/pi https://www.wheelhousefood.com/media/menu/lunch-dinner.html
-        # re-download public page every 30 minutes
-        sleep 1800
+    wget --no-check-certificate --adjust-extension --span-hosts --backup-converted --convert-links --page-requisites --directory-prefix=/home/pi https://www.wheelhousefood.com/media/menu/lunch-dinner.html
+    # re-download public page every 30 minutes
+    sleep 1800
 done
 ```
 
@@ -33,13 +32,13 @@ done
 
 The kiosk script is pretty straightforward. Requires the following dependencies:
 
-```shell
-$ sudo apt-get install chromium sed xdotool unclutter
+```sh prompt{1}
+sudo apt-get install chromium sed xdotool unclutter
 ```
 
 Comments added inline below:
 
-```bash
+```bash title="kiosk.sh"
 #!/bin/bash
 
 # Turn off the screensaver
@@ -67,8 +66,7 @@ done
 
 ### systemctl orchestration
 
-/lib/systemd/system/kiosk.service:
-```systemd
+```ini title="/lib/systemd/system/kiosk.service"
 [Unit]
 Description=Chromium Kiosk
 Wants=graphical.target
@@ -87,8 +85,7 @@ Group=pi
 WantedBy=graphical.target
 ```
 
-/lib/systemd/system/menu.service:
-```systemd
+```ini title="/lib/systemd/system/menu.service"
 [Unit]
 Description=Menu Updater
 Wants=graphical.target
@@ -106,10 +103,9 @@ WantedBy=graphical.target
 ```
 
 Start the service with:
-```shell
-$ sudo systemctl enable kiosk.service
-$ sudo systemctl start kiosk.service
-
-$ sudo systemctl enable menu.service
-$ sudo systemctl start menu.service
+```sh prompt{1..4}
+sudo systemctl enable kiosk.service
+sudo systemctl start kiosk.service
+sudo systemctl enable menu.service
+sudo systemctl start menu.service
 ```

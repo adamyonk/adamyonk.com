@@ -14,15 +14,15 @@ Unfortunately, the `coffeelint` tool doesn't seem to have a `no-undef` rule
 similar to eslint, so these sort of fell through the cracks. I came up with
 this method to check our source code for missing requires:
 
-```bash
-$ ag '_[.( ]' coffee --files-with-matches | \
+```sh prompt{1}
+ag '_[.( ]' coffee --files-with-matches | \
   xargs ag '(?s).*lodash.*' --files-without-matches
 ```
 
 And for a bonus, just flip the matchers to check for files with extraneous
 requires:
 
-```bash
-$ ag '_[.( ]' coffee --files-without-matches | \
+```sh prompt{1}
+ag '_[.( ]' coffee --files-without-matches | \
   xargs ag '(?s).*lodash.*' --files-with-matches
 ```
