@@ -1,3 +1,4 @@
+export const maxDuration = 25;
 import feed from '../../lib/feed';
 
 export async function GET() {
