@@ -3,8 +3,9 @@ const nextConfig = {
   experimental: {
     turbo: {
       treeShaking: true
-    }
-  }
+    },
+  },
+  serverExternalPackages: ['vscode-oniguruma'],
 }
 
 const withBundleAnalyzer = require('@next/bundle-analyzer')({
