@@ -12,20 +12,13 @@
 body {
   -webkit-font-smoothing: antialiased;
   background-color: rgb(var(--background));
+  background-image: url("/assets/skull.svg");
+  background-position: left 50vw top -10vw;
+  background-repeat: no-repeat;
+  background-size: contain;
   color: rgb(var(--foreground));
   font-family: system-ui, sans-serif;
   line-height: 1.5;
-}
-body::before {
-  background-image: url("/assets/skull.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: left 50vw top -10vw;
-  content: '';
-  inset: 0;
-  opacity: 0.15;
-  position: absolute;
-  z-index: -1;
 }
 img, picture, video, canvas, svg {
   display: block;
