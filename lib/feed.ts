@@ -13,8 +13,8 @@ const feed = new Feed({
     email: meta.email,
   },
   feedLinks: {
-    rss: `${meta.siteUrl}/feed.xml`, 
-    json: `${meta.siteUrl}/feed.json`, 
+    rss: `${meta.siteUrl}/feed.xml`,
+    json: `${meta.siteUrl}/feed.json`,
   },
   language: "en-US",
 })
