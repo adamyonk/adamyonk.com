@@ -4,9 +4,10 @@ import meta from "../sitemetadata"
 import matter from "gray-matter";
 import * as s from "superstruct";
 import markdownToHtml from "./markdownToHtml";
+//import { memoize } from "lodash";
 
 const authors = {
- adam: {
+  adam: {
     name: "Adam Jahnke",
     email: "adamyonk@icloud.com",
     avatar: "https://secure.gravatar.com/avatar/95c4a6a54bb911712b9f153afff92f69?size=200",
@@ -43,7 +44,7 @@ export async function getMDBySlug(dir: string, file: string) {
   const slug = data.slug ?? file.replace(/\.md$/, "");
   let author;
   if (typeof data.author === "string" && Object.keys(authors).includes(data.author)) {
-    author = authors[data.author as keyof typeof authors] ;
+    author = authors[data.author as keyof typeof authors];
   }
   author ??= authors.adam
   let post = {
@@ -57,6 +58,7 @@ export async function getMDBySlug(dir: string, file: string) {
   };
   return s.mask(post, Post, "Could not parse post!");
 }
+//export const getMDBySlug = memoize(_getMDBySlug, (dir: string, file: string) => `${dir}/${file}`);
 
 export async function getMDByFn(dir: string, fn: (post: Post) => boolean) {
   const posts = (await getMD(dir))

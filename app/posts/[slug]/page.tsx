@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import markdownToHtml from "lib/markdownToHtml";
 import { getMDBySlug, getMD } from "lib/api";
 import PostBody from "components/post-body";
 import PostHeader from "components/post-header";

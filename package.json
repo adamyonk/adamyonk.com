@@ -1,4 +1,5 @@
 {
+  "type": "module",
   "private": true,
   "scripts": {
     "dev": "next --turbopack",
@@ -9,6 +10,7 @@
   },
   "dependencies": {
     "@microflash/rehype-starry-night": "^7.2.1",
+    "@wooorm/starry-night": "^3.6.0",
     "classnames": "^2.5.1",
     "date-fns": "^4.1.0",
     "feed": "^4.2.2",

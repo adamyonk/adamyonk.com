@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import markdownToHtml from "lib/markdownToHtml";
 import { getMD, getMDBySlug } from "lib/api";
 import PostBody from "components/post-body";
 import type { Page } from "app/types";
@@ -11,11 +10,10 @@ export default async function Page(props: Page) {
     notFound();
   }
   const post = await getMDBySlug("_pages", `${params.slug}.md`);
-  const content = await markdownToHtml(post.content || "");
   return (
     <>
       <article>
-        <PostBody content={content} />
+        <PostBody content={post.html} />
       </article>
     </>
   );
