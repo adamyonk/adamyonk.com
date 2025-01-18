@@ -1,12 +1,18 @@
 import withBundleAnalyzer from '@next/bundle-analyzer'
-/** @type {import('next').NextConfig} */
-const nextConfig = {
+import { NextConfig } from 'next'
+
+const nextConfig: NextConfig = {
   experimental: {
     turbo: {
       treeShaking: true
     },
   },
-  serverExternalPackages: ['vscode-oniguruma'],
+  outputFileTracingExcludes: {
+    '/feed.xml': ['.git', '.next/cache'],
+  },
+  serverExternalPackages: [
+    'vscode-oniguruma',
+  ],
 }
 
 export default withBundleAnalyzer({
