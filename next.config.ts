@@ -8,7 +8,12 @@ const nextConfig: NextConfig = {
     },
   },
   outputFileTracingExcludes: {
+    '/': ['.git', '.next/cache'],
     '/feed.xml': ['.git', '.next/cache'],
+    '/feed.json': ['.git', '.next/cache'],
+    '/\[slug\]': ['.git', '.next/cache'],
+    '/posts/\[slug\]': ['.git', '.next/cache'],
+    '/posts/tagged/\[slug\]': ['.git', '.next/cache'],
   },
   serverExternalPackages: [
     'vscode-oniguruma',
