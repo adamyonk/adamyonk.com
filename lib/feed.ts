@@ -1,6 +1,7 @@
 import { Feed } from "feed";
 import meta from "../sitemetadata"
 import { getMD } from "lib/api"
+import { markdownToBasicHtml } from "./markdownToHtml";
 
 const feed = new Feed({
   title: meta.title,
@@ -21,19 +22,20 @@ const feed = new Feed({
 
 const allPosts = await getMD("_posts");
 
-allPosts.forEach(post => {
+await Promise.all(allPosts.map(async post => {
+  const html = (await markdownToBasicHtml(post.content || "")).replaceAll(/mailto:EMAIL/g, `mailto:${meta.email}?subject=${encodeURIComponent(post.title)}`);
   feed.addItem({
     title: post.title,
     description: post.excerpt ?? "",
     link: `${meta.siteUrl}/posts/${post.slug}`,
     id: `${meta.siteUrl}/posts/${post.slug}`,
     date: post.date,
-    content: post.html,
+    content: html,
     author: [post.author ?? meta.author],
     category: (post.tags ?? []).map(tag => ({
       name: tag,
     })),
   })
-})
+}))
 
 export default feed;

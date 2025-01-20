@@ -60,3 +60,12 @@ export default async function markdownToHtml(markdown: string) {
     .process(markdown);
   return result.toString();
 }
+
+export async function markdownToBasicHtml(markdown: string) {
+  const result = await unified()
+    .use(remarkParse)
+    .use(remarkRehype, { allowDangerousHtml: true })
+    .use(rehypeStringify, { allowDangerousHtml: true })
+    .process(markdown);
+  return result.toString();
+}

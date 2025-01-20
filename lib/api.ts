@@ -4,7 +4,6 @@ import meta from "../sitemetadata"
 import matter from "gray-matter";
 import * as s from "superstruct";
 import markdownToHtml from "./markdownToHtml";
-//import { memoize } from "lodash";
 
 const authors = {
   adam: {
