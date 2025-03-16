@@ -1,0 +1,14 @@
+---
+layout: page
+---
+
+<h1>{{ title }}</h1>
+<p>{{ date }}</p>
+<p>
+  under:
+{%- for tag in tags -%}
+{{tag}},
+{%- endfor -%}
+</p>
+
+{{ content }}

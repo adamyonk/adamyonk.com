@@ -1,0 +1,159 @@
+:root {
+  /* ---------------------------------------------------------------------------
+  color
+  --------------------------------------------------------------------------- */
+  color-scheme: light dark;
+  interpolate-size: allow-keywords;
+
+  /* tints & shades */
+  --0: 100% 0 h;
+  --50: 99% calc(c/16) h;
+  --100: 94% calc(c/4) h;
+  --200: 88% calc(c/2) h;
+  --300: 70% c h;
+  --300: 70% c h;
+  --400: 60% c h;
+  --500: 50% c h;
+  --600: 40% c h;
+  --700: 30% c h;
+  --800: 20% calc(c/1.5) h;
+  --900: 15% calc(c/2) h;
+
+  /* source colors */
+  --neutral: oklch(80% 0.01 210);
+  --primary: oklch(30% 0.16 210);
+  --secondary: oklch(70% 0.11 20);
+
+  /* preset colors */
+  --color-text: light-dark(
+    var(--primary),
+    white
+  );
+  --color-bg: light-dark(
+    white,
+    oklch(from var(--primary) var(--800))
+  );
+  --color-accent: var(--secondary);
+  --color-border: light-dark(
+    var(--neutral),
+    oklch(from var(--primary) var(--600))
+  );
+  --color-subtle: light-dark(
+    oklch(from var(--neutral) var(--50)),
+    oklch(from var(--primary) var(--900))
+  );
+  --color-shadow: black;
+
+  /* ---------------------------------------------------------------------------
+  spacing
+  --------------------------------------------------------------------------- */
+  --space-scale: 2;
+  --space-base: 1.5rem;
+  --space-xxs: calc(var(--space-xs) / var(--space-scale));
+  --space-xs: calc(var(--space-sm) / var(--space-scale));
+  --space-sm: calc(var(--space-base) / var(--space-scale));
+  --space-md: var(--space-base);
+  --space-lg: calc(var(--space-md) * var(--space-scale));
+  --space-xl: calc(var(--space-lg) * var(--space-scale));
+  --space-xxl: calc(var(--space-xl) * var(--space-scale));
+  --space-xxxl: calc(var(--space-xxl) * var(--space-scale));
+  --space-flex: clamp(8rem, 20vw, 16rem);
+
+  /* ---------------------------------------------------------------------------
+  typography
+  --------------------------------------------------------------------------- */
+
+  /* font stacks */
+  --font-main: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
+
+  --font-code: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono", "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro", "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
+
+  /* font properties */
+  --font-mono: 0;
+  --font-weight: 400;
+
+  @media (--dark) {
+    --font-weight: 350;
+  }
+
+  /* font size */
+  --size-base: max(1.125em, min(calc(0.675em + 0.5vw), 1.875em));
+  --size-scale-sm: 1.2;
+  --size-scale-lg: 1.333;
+  --size-xxxs: calc(var(--size-xxs) / var(--size-scale-sm));
+  --size-xxs: calc(var(--size-xs) / var(--size-scale-sm));
+  --size-xs: calc(var(--size-sm) / var(--size-scale-sm));
+  --size-sm: calc(var(--size-md) / var(--size-scale-sm));
+  --size-md: 1em;
+  --size-lg: calc(var(--size-md) * var(--size-scale-lg));
+  --size-xl: calc(var(--size-lg) * var(--size-scale-lg));
+  --size-xxl: calc(var(--size-xl) * var(--size-scale-lg));
+  --size-xxxl: calc(var(--size-xxl) * var(--size-scale-lg));
+  --size-xxxxl: calc(var(--size-xxxl) * var(--size-scale-lg));
+
+  /* measure */
+  --measure-xs: 16ch;
+  --measure-sm: 32ch;
+  --measure-md: 48ch;
+  --measure-lg: 60ch;
+  --measure-xl: 72ch;
+
+  /* line height */
+  --leading-base: 1.1;
+  --leading-scale: 1.25;
+  --leading-xs: calc(var(--leading-sm) / var(--leading-scale));
+  --leading-sm: var(--leading-base);
+  --leading-md: calc(var(--leading-sm) * var(--leading-scale));
+  --leading-lg: calc(var(--leading-md) * var(--leading-scale));
+  --leading-fluid: calc(0.45rem + 1.25em);
+
+  /* letter spacing */
+  --tracking-sm: -0.025em;
+  --tracking-md: 0;
+  --tracking-lg: 0.1em;
+  --tracking-xl: 0.3em;
+
+  /* ---------------------------------------------------------------------------
+  borders
+  --------------------------------------------------------------------------- */
+
+  /* border radius */
+  --border-radius-0: 0;
+  --border-radius-sm: 0.2rem;
+  --border-radius-md: 0.4rem;
+  --border-radius-lg: 0.8rem;
+  --border-radius-xl: 1.6rem;
+
+  /* border weight */
+  --border-weight-sm: 0.0625rem;
+  --border-weight-md: 0.1rem;
+  --border-weight-lg: 0.25rem;
+
+  /* ---------------------------------------------------------------------------
+  z-index layers
+  --------------------------------------------------------------------------- */
+  --layer-1: 1;
+  --layer-2: 2;
+  --layer-3: 3;
+  --layer-4: 4;
+  --layer-5: 5;
+
+  /* ---------------------------------------------------------------------------
+  shadows
+  --------------------------------------------------------------------------- */
+  --shadow-color: 220 3% 15%;
+  --shadow-sm: 0 1px 2px -1px oklch(from var(--color-shadow) l c h / 10%);
+  --shadow-md:
+    0 -1px 3px 0 oklch(from var(--color-shadow) l c h / 2%),
+    0 1px 2px -5px oklch(from var(--color-shadow) l c h / 2%),
+    0 2px 5px -5px oklch(from var(--color-shadow) l c h / 4%),
+    0 4px 12px -5px oklch(from var(--color-shadow) l c h / 5%),
+    0 12px 15px -5px oklch(from var(--color-shadow) l c h / 7%);
+  --shadow-lg:
+    0 -1px 2px 0 oklch(from var(--color-shadow) l c h / 3%),
+    0 2px 1px -2px oklch(from var(--color-shadow) l c h / 4%),
+    0 5px 5px -2px oklch(from var(--color-shadow) l c h / 5%),
+    0 10px 10px -2px oklch(from var(--color-shadow) l c h / 6%),
+    0 20px 20px -2px oklch(from var(--color-shadow) l c h / 7%),
+    0 40px 40px -2px oklch(from var(--color-shadow) l c h / 8%);
+}

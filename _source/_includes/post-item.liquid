@@ -1,0 +1,5 @@
+<li class="mb-xs">
+  {{post.date | fullDate}}
+  <a class="pt-xs pb-xs pr-xs" href="{{ post.url }}">{{ post.data.title }}</a>
+  tagged: {{post.data.tags | filterTags | tagUrl | toSentence}}
+</li>

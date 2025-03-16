@@ -1,0 +1,18 @@
+---
+layout: page.html
+pagination:
+  data: collections
+  size: 1
+  alias: tag
+  filter:
+    - posts
+permalink: /tags/{{ tag }}/
+---
+
+<h1>Tagged “{{ tag }}”</h1>
+
+<ul class="unlisted size-sm weight-600">
+{%- for post in collections[tag] | reverse -%}
+  {% include "post-item", post: post %}
+{%- endfor -%}
+</ul>

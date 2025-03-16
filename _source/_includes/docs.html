@@ -1,0 +1,8 @@
+<ul class="docs-nav">
+  {% assign sortedDocs = collections.docs | sort: "order" %}
+  {%- for entry in sortedDocs -%}
+  <li>
+    <a href="{{ entry.url }}">{{ entry.data.title }}</a>
+  </li>
+  {%- endfor -%}
+</ul>

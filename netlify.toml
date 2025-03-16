@@ -1,0 +1,15 @@
+[build]
+  publish = "_public/"
+  command = "npm run publish:prod"
+
+[context.branch-deploy]
+  command = "npm run publish:stage"
+
+[context.deploy-preview]
+  command = "npm run publish:stage"
+
+[[headers]]
+  for = "/assets/fonts/*"
+  [headers.values]
+    Cache-Control = "public, max-age=365000000, immutable"
+

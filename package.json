@@ -1,0 +1,25 @@
+{
+  "name": "grease",
+  "version": "3.0.0",
+  "private": true,
+  "type": "module",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.0.0",
+    "@11ty/eleventy-img": "^5.0.0",
+    "@microflash/rehype-starry-night": "^7.2.2",
+    "eleventy-plugin-unified": "^2.0.0",
+    "esbuild": "^0.24.0",
+    "eslint": "^9.11.1",
+    "lightningcss": "^1.27.0",
+    "sharp": "^0.33.5",
+    "stylelint": "^16.9.0",
+    "stylelint-config-standard": "^36.0.0"
+  },
+  "scripts": {
+    "start": "eleventy --serve --incremental --quiet --port 4200",
+    "publish:stage": "ELEVENTY_ENV=stage eleventy",
+    "publish:prod": "ELEVENTY_ENV=prod eleventy",
+    "lint:css": "stylelint \"_source/**/*.css\" --fix",
+    "lint:js": "eslint \"_source/**/*.js\" --fix"
+  }
+}

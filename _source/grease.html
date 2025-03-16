@@ -1,0 +1,52 @@
+---
+title: Grease
+description: Grease takes the friction out of building fast, adaptable, aesthetic websites.
+layout: page.html
+stylesheet: pages/docs.css
+eleventyImport:
+  collections: ["docs"]
+# noindex: true
+# canonical: https://example.com/page.html
+---
+
+<header class="grid mb-lg@md">
+  <random-shapes class="grease-marks bleed" quantity="50" scale="100" jitter="30"></random-shapes>
+  <h1 class="hero span-12">
+    <span>Grease</span>
+  </h1>
+  <p class="size-lg span-12 pb-sm border-bottom border-weight-md blend-difference">Grease takes the friction out of building fast, adaptable, aesthetic websites.</p>
+</header>
+
+<section id="docs" class="grid --dense">
+  
+  <nav class="docs-block sticky@md start-10 span-3 border-left@md mb-lg">
+    <small-details>
+      <details>
+        <summary class="size-sm weight-400 uppercase tracking-lg pt-xs pb-sm">Using Grease</summary>
+        <ul class="unlisted size-sm weight-600">
+        {%- for post in collections.docs -%}
+          <li class="mb-xs">
+            <a class="pt-xs pb-xs pr-xs" href="#{{ post.data.title | slugify }}">{{ post.data.title }}</a>
+          </li>
+        {%- endfor -%}
+        <li class="mb-xs"></li>
+            <a class="pt-xs pb-xs pr-xs" href="/kitchen-sink/">Kitchen sink</a>
+          </li>
+        </ul>
+      </details>
+    </small-details>
+  </nav>
+  
+  <article class="docs-block start-1 span-9 measure-xl border-left@md">
+    {%- for post in collections.docs -%}
+      <h2 id="{{ post.data.title | slugify }}">{{ post.data.title }}</h2>
+      {{ post.content }}
+    {%- endfor -%}
+  </article>
+  
+</section>
+
+<footer class="relative span-12 mt-lg pt-md size-sm">
+  <random-shapes class="grease-marks bleed-start span-5 mt-xxl -mr-xl hidden@sm absolute" style="width: 30%; inset-block-start: inherit; inset-block-end: 0; inset-inline-end: 0; rotate: -45deg" quantity="10" jitter="10" scale="150"></random-shapes>
+  <p>By <a href="https://aaadaaam.com">AAADAAAM</a>. Have fun.</p>
+</footer>
