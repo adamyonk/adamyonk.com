@@ -4,8 +4,6 @@ date: "2025-03-01T05:35:07.322Z"
 tags: [vim, til]
 ---
 
-TIL loclist vs qflist
-
 A workflow I find myself quite often when I’m searching a project:
 
 - Fuzzy search for something

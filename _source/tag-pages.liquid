@@ -11,8 +11,8 @@ permalink: /tags/{{ tag }}/
 
 <h1>Tagged “{{ tag }}”</h1>
 
-<ul class="unlisted size-sm weight-600">
-{%- for post in collections[tag] | reverse -%}
+<ul class="unlisted size-sm flex column gap-md">
+{%- for post in collections[tag] published reversed -%}
   {% include "post-item", post: post %}
 {%- endfor -%}
 </ul>

@@ -3,12 +3,9 @@ layout: page
 ---
 
 <h1>{{ title }}</h1>
-<p>{{ date }}</p>
-<p>
-  under:
-{%- for tag in tags -%}
-{{tag}},
-{%- endfor -%}
+<p class="color --text --secondary-200">
+  Posted {{ date | fullDate }} 
+  and tagged: {{tags | filterTags | tagUrl | toSentence}}
 </p>
 
 {{ content }}

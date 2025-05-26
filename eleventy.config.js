@@ -11,7 +11,7 @@ import fullDate from './_source/_utilities/fullDate.js';
 import getRandom from './_source/_utilities/getRandom.js';
 import markdownify from './_source/_utilities/markdownify.js';
 import { IdAttributePlugin } from '@11ty/eleventy';
-import EleventyUnifiedPlugin from 'eleventy-plugin-unified';
+//import EleventyUnifiedPlugin from 'eleventy-plugin-unified';
 
 export default async function (eleventyConfig) {
   /* --------------------------------------------------------------------------
@@ -34,14 +34,15 @@ export default async function (eleventyConfig) {
   /* --------------------------------------------------------------------------
   MarkdownIt settings
   -------------------------------------------------------------------------- */
-  //const markdownItOptions = {
-  //  html: true,
-  //  typographer: true,
-  //};
+  const markdownItOptions = {
+    html: true,
+    linkify: true,
+    typographer: true,
+  };
   //eleventyConfig.setLibrary('md', markdownIt(markdownItOptions));
-  eleventyConfig.addPlugin(EleventyUnifiedPlugin, {
-    htmlTransforms: [["@microflash/rehype-starry-night"]],
-  });
+  //eleventyConfig.addPlugin(EleventyUnifiedPlugin, {
+  //  htmlTransforms: [["@microflash/rehype-starry-night"]],
+  //});
 
   /* --------------------------------------------------------------------------
   Files & folders

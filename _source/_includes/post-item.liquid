@@ -1,5 +1,5 @@
-<li class="mb-xs">
-  {{post.date | fullDate}}
-  <a class="pt-xs pb-xs pr-xs" href="{{ post.url }}">{{ post.data.title }}</a>
-  tagged: {{post.data.tags | filterTags | tagUrl | toSentence}}
+<li class="">
+  <span class="">{{post.date | fullDate}}</span>
+  <a class="pt-xs pb-xs pr-xs weight-500 size-lg block" href="{{ post.url }}">{{ post.data.title }}</a>
+  <span class="color --text --secondary-200">tagged: {{post.data.tags | filterTags | tagUrl | toSentence}}</span>
 </li>
