@@ -30,6 +30,7 @@ export default async function (eleventyConfig) {
   eleventyConfig.addFilter("toSentence", toSentence)
   eleventyConfig.addFilter("tagUrl", tagUrl)
   eleventyConfig.addFilter("filterTags", function filterTags(values = []) { return values.filter(value => !["posts"].includes(value))})
+  eleventyConfig.addFilter("published", function filterPublished(posts = []) { return posts.filter(post => post.data.published !== false)})
 
   /* --------------------------------------------------------------------------
   MarkdownIt settings

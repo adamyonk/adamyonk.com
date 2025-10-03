@@ -1,7 +1,7 @@
 ---
 title: "Raspberry Pi Kiosk"
 date: "2019-11-23T05:35:07.322Z"
-tags: [gatsby]
+tags: [raspberry pi]
 ---
 
 Some very dear friends of mine run a restaraunt called The Wheelhouse. They
