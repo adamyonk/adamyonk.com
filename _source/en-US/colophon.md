@@ -4,7 +4,7 @@ date: "2025-01-07T13:39:39-0600"
 updated: "2025-01-07T13:39:39-0600"
 tags: []
 title: Colophon
-layout: page.html
+layout: page
 ---
 
 # Colophon

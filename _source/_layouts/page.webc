@@ -1,0 +1,27 @@
+---
+layout: base
+---
+
+<script webc:setup>
+  function link_list(links, locale) {
+    return new Intl.ListFormat(locale, {
+      style: 'long',
+      type: 'conjunction',
+    }).format(links.map(link =>
+      `<a href="${link.url}" lang="${link.lang}" hreflang="${link.lang}">${link.label}</a>`
+    ))
+  }
+</script>
+
+<main class="grid {% if page.grid %}{{ page.grid }}{% endif %} pb-lg">
+  <a class="size-xxxxl mt-sm mb-sm" href="{{ "/" | locale_url }}">⤫</a>
+
+  <div @raw="content"></div>
+</main>
+
+<footer class="grid">
+  <p>
+    <span @text="i18n('also_available_in')"></span>
+    <span @html="link_list(locale_links(page.url), page.locale)"></span>
+  </p>
+</footer>

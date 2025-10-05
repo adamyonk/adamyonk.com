@@ -1,9 +1,13 @@
 <!DOCTYPE html>
-<html lang="en" {% if theme %} class="{{ theme }}"{% endif %}>
-
+<html dir="ltr" lang="{{page.lang}}" {% if theme %} class="{{ theme }}"{% endif %}>
   <head>
-
     <meta charset="utf-8">
+
+    <link rel="alternate" hreflang="{{page.lang}}" href="{{page.url}}">
+    {% assign links = page.url | locale_links %}
+    {%- for link in links %}
+      <link rel="alternate" hreflang="{{link.lang}}" href="{{link.url}}">
+    {%- endfor -%}
 
     <script>document.documentElement.classList.add('js');</script>
 
