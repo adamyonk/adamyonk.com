@@ -13,8 +13,8 @@ layout: base
   }
 </script>
 
-<main class="grid {% if page.grid %}{{ page.grid }}{% endif %} pb-lg">
-  <a class="size-xxxxl mt-sm mb-sm" href="{{ "/" | locale_url }}">⤫</a>
+<main :class="`grid ${page.grid ? page.grid : ''} pb-lg`">
+  <a class="size-xxxxl mt-sm mb-sm" :href="locale_url('/')">⤫</a>
 
   <div @raw="content"></div>
 </main>
