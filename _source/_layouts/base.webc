@@ -20,10 +20,10 @@
     <link webc:if="cononical" rel="canonical" :href="canonical">
     <link webc:else rel="canonical" :href="env.baseUrl + page.url">
 
-    <link rel="alternate icon" type="image/png" sizes="32x32" href="../assets/images/icons/favicon-32x32.png">
-    <link rel="icon" type="image/svg+xml" href="../assets/images/icons/favicon.svg">
-    <link rel="mask-icon" href="../assets/images/icons/favicon.svg" color="#000000">
-    <link rel="apple-touch-icon" href="../assets/images/icons/favicon-196x196.png">
+    <link rel="alternate icon" type="image/png" sizes="32x32" href="/assets/images/icons/favicon-32x32.png">
+    <link rel="icon" type="image/svg+xml" href="/assets/images/icons/favicon.svg">
+    <link rel="mask-icon" href="/assets/images/icons/favicon.svg" color="#000000">
+    <link rel="apple-touch-icon" href="/assets/images/icons/favicon-196x196.png">
 
     <style>
       @view-transition {
@@ -39,10 +39,10 @@
     <style @raw="getBundle('css')" webc:keep></style>
     <script @raw="getBundle('js')" webc:keep></script>
 
-    <link webc:keep rel="stylesheet" href="../assets/css/main.css" media="all">
-    <script webc:keep src="../assets/js/app.js" type="module"></script>
+    <link webc:keep rel="stylesheet" href="/assets/css/main.css" media="all">
+    <script webc:keep src="/assets/js/app.js" type="module"></script>
 
-    <link webc:keep webc:if="stylesheet" rel="stylesheet" @href="../assets/css/${stylesheet}" media="all">
+    <link webc:keep webc:if="stylesheet" rel="stylesheet" @href="/assets/css/${stylesheet}" media="all">
     <script webc:keep webc:if="javascript" @src="/assets/js/${javascript}" type="module"></script>
   </head>
 
