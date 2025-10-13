@@ -1,0 +1,3 @@
+<ul class="unlisted size-sm flex column gap-md mt-sm">
+  <post-item webc:for="post of posts" :@post="post"></post-item>
+</ul>

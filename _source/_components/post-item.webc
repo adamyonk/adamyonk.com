@@ -1,0 +1,5 @@
+<li class="">
+  <span class="block" @text="fullDate(post.date)"></span>
+  <a class="pt-xs pb-xs pr-xs weight-500 size-lg" :href="locale_url(post.url)" @text="post.data.title"></a>
+  <tag-list class="block" :@tags="post.data.tags"></tag-list>
+</li>

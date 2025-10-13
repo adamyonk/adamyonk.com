@@ -2,8 +2,9 @@
 layout: page
 ---
 
-<h1 class="leading-flush">Adam Jahnke<br/>
-<small class="size-xxs weight-400 italic">Fixer</small>
+<h1 class="leading-flush">
+  Adam Jahnke<br/>
+  <small class="size-xxs weight-400 italic">Fixer</small>
 </h1>
 
 <p>
@@ -16,9 +17,4 @@ layout: page
 </p>
 
 <h3>Posts:</h3>
-<ul class="unlisted size-sm flex column gap-md mt-sm">
-{%- assign posts = collections.posts | published | reverse -%}
-{%- for post in posts -%}
-  {% include "post-item", post: post %}
-{%- endfor -%}
-</ul>
+<post-list :@posts="published(collections.posts).reverse()"></post-list>

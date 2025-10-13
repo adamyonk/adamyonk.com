@@ -11,11 +11,11 @@ const devUrl = "";
 // set the baseUrl according to the environment
 let baseUrl;
 if (environment === PROD_ENV) {
-	baseUrl = prodUrl;
+  baseUrl = prodUrl;
 } else if (environment === STAGE_ENV) {
-	baseUrl = stageUrl;
+  baseUrl = stageUrl;
 } else {
-	baseUrl = devUrl;
+  baseUrl = devUrl;
 }
 
 // useful for env-specific template conditionals

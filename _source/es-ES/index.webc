@@ -2,25 +2,19 @@
 layout: page
 ---
 
-<h1 class="leading-flush">Adam Jahnke<br/>
-<small class="size-xxs weight-400 italic">Fixer</small>
+<h1 class="leading-flush">
+  Adam Jahnke<br/>
+  <small class="size-xxs weight-400 italic">Fijador</small>
 </h1>
-
 
 <p>
   Soy Adam Jahnke. Vivo en Valencia, España, con mi pareja <a href="https://olivetheartist.com">Olivia</a>.
 </p>
-
 
 <p>
   Si buscas un desarrollador frontend/fullstack con experiencia para puestos de consultoría o de colaborador individual, 
   <a href="mailto:Adam Jahnke <contracting@adamyonk.com>">¡contáctanos!</a>
 </p>
 
-<h3>Posts:</h3>
-<ul class="unlisted size-sm flex column gap-md mt-sm">
-{%- assign posts = collections.posts | published | reverse -%}
-{%- for post in posts -%}
-  {% include "post-item", post: post %}
-{%- endfor -%}
-</ul>
+<h3>Entradas de blog:</h3>
+<post-list :@posts="published(collections.posts).reverse()"></post-list>

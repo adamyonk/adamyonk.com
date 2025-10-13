@@ -1,3 +1,3 @@
-export default function tagUrl(values) {
-	return values.map((tag) => `<a href="/tags/${tag}">${tag}</a>`);
+export default function tagUrl(values, context) {
+  return values.map((tag) => `<a href="/en-US/tags/${tag}">${tag}</a>`);
 }

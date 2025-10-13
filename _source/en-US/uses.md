@@ -6,6 +6,7 @@ date: "2012-12-06T13:39:39-0600"
 tags: []
 title: "Uses"
 layout: page
+noindex: true
 ---
 
 Things I use.

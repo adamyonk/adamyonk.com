@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html dir="ltr" :lang="page.lang" :class="theme ? theme : ''">
+  <head>
+    <meta charset="utf-8">
+
+    <link rel="alternate" :hreflang="page.lang" :href="page.url">
+    <link webc:for="link of locale_links(page.url)" rel="alternate" :hreflang="link.lang" :href="link.url">
+    <link href="/feed/feed.xml" type="application/atom+xml" rel="alternate" />
+
+    <script>document.documentElement.classList.add('js');</script>
+
+    <title @text="escape(title || site.title)"></title>
+    <meta name="description" :content="description ? description : site.description">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta webc:if="noindex" name="robots" content="noindex, nofollow">
+
+    <link webc:if="cononical" rel="canonical" :href="canonical">
+    <link webc:else rel="canonical" :href="env.baseUrl + page.url">
+
+    <link rel="alternate icon" type="image/png" sizes="32x32" href="../assets/images/icons/favicon-32x32.png">
+    <link rel="icon" type="image/svg+xml" href="../assets/images/icons/favicon.svg">
+    <link rel="mask-icon" href="../assets/images/icons/favicon.svg" color="#000000">
+    <link rel="apple-touch-icon" href="../assets/images/icons/favicon-196x196.png">
+
+    <style>
+      @view-transition {
+        navigation: auto;
+      }
+
+      ::view-transition-old(root),
+      ::view-transition-new(root) {
+        animation-duration: 0.1s;
+      }
+    </style>
+
+    <style @raw="getBundle('css')" webc:keep></style>
+    <script @raw="getBundle('js')" webc:keep></script>
+
+    <link webc:keep rel="stylesheet" href="../assets/css/main.css" media="all">
+    <script webc:keep src="../assets/js/app.js" type="module"></script>
+
+    <link webc:keep webc:if="stylesheet" rel="stylesheet" @href="../assets/css/${stylesheet}" media="all">
+    <script webc:keep webc:if="javascript" @src="/assets/js/${javascript}" type="module"></script>
+  </head>
+
+  <body @class="class">
+    <scroll-sentinel></scroll-sentinel>
+
+    <animate-on-scroll @raw="content"></animate-on-scroll>
+
+    <!-- `defer` bucket -->
+    <style @raw="getBundle('css', 'defer')" webc:keep></style>
+    <script @raw="getBundle('js', 'defer')" webc:keep></script>
+  </body>
+</html>

@@ -20,8 +20,15 @@ layout: base
 </main>
 
 <footer class="grid">
-  <p>
+  <p webc:if="locale_links().length">
     <span @text="i18n('also_available_in')"></span>
-    <span @html="link_list(locale_links(page.url), page.locale)"></span>
+    <span @html="link_list(locale_links(), page.locale)"></span>
+  </p>
+
+  <p>
+    Find me on:
+    <a href="https://hachyderm.io/@adamyonk">Mastodon</a>,
+    <a href="https://bsky.app/profile/adamyonk.com">Bluesky</a>,
+    and <a href="https://github.com/adamyonk">GitHub</span>.
   </p>
 </footer>

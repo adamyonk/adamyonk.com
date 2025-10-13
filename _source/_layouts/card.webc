@@ -1,0 +1,6 @@
+---
+layout: base
+---
+<main class="card">
+  <section class="grid" @raw="content"></section>
+</main>

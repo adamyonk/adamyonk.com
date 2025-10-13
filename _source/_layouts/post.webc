@@ -1,0 +1,11 @@
+---
+layout: page
+---
+
+<h1 @text="title"></h1>
+<p class="color --text --secondary-200">
+  Posted <span @text="fullDate(date)"></span>
+  and <tag-list :@tags="tags"></tag-list>
+</p>
+
+<template webc:nokeep @raw="content"></template>

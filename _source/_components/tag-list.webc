@@ -1,0 +1,14 @@
+<script webc:setup>
+  const list = function(tags) {
+    return toSentence(filterTags(
+      tags
+    ).map((tag) =>
+      `<a href="/en-US/tags/${tag}">${tag}</a>`
+    ));
+  }
+</script>
+
+<span webc:root="override" class="color --text --secondary-200">
+  tagged:
+  <span @raw="list(tags)"></span>
+</span>

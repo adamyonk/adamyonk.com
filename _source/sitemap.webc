@@ -1,0 +1,13 @@
+---
+eleventyExcludeFromCollections: true
+permalink: /sitemap.xml
+---
+<script webc:setup>
+  const head = `<?xml version="1.0" encoding="UTF-8"?>`
+</script><template @raw="head" webc:nokeep></template>
+
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url webc:for="item of collections.all" webc:if="item.data.noindex !== true">
+  <loc @text="env.baseUrl + item.url"></loc>
+</url>
+</urlset>

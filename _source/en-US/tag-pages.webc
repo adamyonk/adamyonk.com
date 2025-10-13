@@ -1,0 +1,17 @@
+---js
+let layout = 'page';
+let pagination = {
+  data: 'collections',
+  size: 1,
+  alias: 'tag',
+  filter: ['posts'],
+};
+let eleventyExcludeFromCollections = true;
+let permalink = function(data) {
+  return `/tags/${this.slugify(data.tag)}/index.htm`;
+};
+---
+
+<h1>Tagged “<span webc:root @text="tag"></span>”</h1>
+
+<post-list :@posts="published(collections[tag]).reverse()"></post-list>
