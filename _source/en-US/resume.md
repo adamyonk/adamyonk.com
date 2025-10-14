@@ -1,7 +1,7 @@
 ---
 author: adam
 date: "2012-12-06T13:39:39-0600"
-updated: "2025-01-07T13:39:39-0600"
+updated: "2025-10-14T13:39:39-0600"
 tags: []
 title: Résumé
 layout: page
@@ -36,10 +36,19 @@ After 20+ years building the web, I've developed a genuine passion for JavaScrip
 
 ## Job History
 
+### Heavybit
+
+Contracting Software Engineer  
+June 2025 — Present
+- Public-facing React site with content stored in Sanity.io
+- Internal data Application built with Vue and PostgresQL 
+
+---
+
 ### Oilcan
 
 Principal Software Engineer  
-March 2024 — Present
+March 2024 — June 2025
 
 I joined Oilcan early, during their seed round, and began building features onto the existing [Hotpot](https://hotpot.works) Ruby on Rails application, and getting some solid frontend foundations laid out before we expanded our team.
 
@@ -170,7 +179,3 @@ I was hired as employee Nº 2 at [Elevate](http://elevate.co/), a web design an
 - PHP
 - HTML
 - Vagrant
-
-## Education
-
-High school diploma.
