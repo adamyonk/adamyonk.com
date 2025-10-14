@@ -10,7 +10,7 @@ layout: page
 # Résumé
 
 _Adam Jahnke_  
-Valencia, Spain  
+València, Spain  
 [email](mailto:hola@adamyonk.com) | [phone](tel:14028179871) | [linkedin](https://linkedin.com/in/adamyonk)
 
 ## Professional Summary
