@@ -20,7 +20,7 @@ layout: base
 </main>
 
 <footer class="grid">
-  <p webc:if="locale_links().length">
+  <p webc:if="!page.url.startsWith('/tags') && locale_links().length">
     <span @text="i18n('also_available_in')"></span>
     <span @html="link_list(locale_links(), page.locale)"></span>
   </p>

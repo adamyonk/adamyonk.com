@@ -5,3 +5,4 @@ _public/
 
 # Local Netlify folder
 .netlify
+deno.lock

@@ -10,7 +10,11 @@ import setVar from "./_source/_utilities/setVar.js";
 import fullDate from "./_source/_utilities/fullDate.js";
 import getRandom from "./_source/_utilities/getRandom.js";
 import markdownify from "./_source/_utilities/markdownify.js";
-import { EleventyI18nPlugin, IdAttributePlugin, RenderPlugin } from "@11ty/eleventy";
+import {
+  EleventyI18nPlugin,
+  IdAttributePlugin,
+  RenderPlugin,
+} from "@11ty/eleventy";
 import pluginWebc from "@11ty/eleventy-plugin-webc";
 import { feedPlugin } from "@11ty/eleventy-plugin-rss";
 //import EleventyUnifiedPlugin from 'eleventy-plugin-unified';
