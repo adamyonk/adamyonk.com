@@ -9,7 +9,7 @@
 
     <script>document.documentElement.classList.add('js');</script>
 
-    <title @text="escape(title || site.title)"></title>
+    <title @text="title || site.title"></title>
     <meta name="description" :content="description ? description : site.description">
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
