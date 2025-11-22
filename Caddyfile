@@ -1,0 +1,35 @@
+{
+    auto_https off
+    admin off
+}
+
+:80 {
+    root * /srv/_public
+    encode gzip
+
+    # Cache headers for fonts
+    @fonts path /assets/fonts/*
+    header @fonts Cache-Control "public, max-age=365000000, immutable"
+
+    # Redirect /en-US/* to /* (301 permanent)
+    @hasEnUS path /en-US/*
+    redir @hasEnUS /{path} 301
+
+    # Spanish language redirect (302 temporary)
+    @spanish {
+        not path /es-ES/*
+        header Accept-Language *es-ES*
+    }
+    redir @spanish /es-ES{uri} 302
+
+    # Default: rewrite to /en-US/* if not already localized
+    @notLocalized {
+        not path /en-US/*
+        not path /es-ES/*
+    }
+    rewrite @notLocalized /en-US{uri}
+
+    # Serve files
+    try_files {path} {path}/ {path}/index.html
+    file_server
+}
