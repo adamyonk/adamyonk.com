@@ -19,6 +19,7 @@
   },
   "scripts": {
     "start": "eleventy --serve --incremental --quiet --port 4200",
+    "watch": "eleventy --watch",
     "publish:stage": "ELEVENTY_ENV=stage eleventy",
     "publish:prod": "ELEVENTY_ENV=prod eleventy",
     "format": "biome format --write ./_source",

@@ -1,0 +1,10 @@
+---
+eleventyExcludeFromCollections: true
+permalink: /robots.txt
+---
+<template webc:nokeep>
+User-agent: *
+Allow: /
+Host: https://adamyonk.com/
+Sitemap: https://adamyonk.com/sitemap.xml
+</template>

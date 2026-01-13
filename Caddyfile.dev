@@ -3,8 +3,8 @@
     admin off
 }
 
-:80 {
-    root * /srv/_public
+:4200 {
+    root * ./_public
     encode gzip
 
     # Cache headers for fonts
