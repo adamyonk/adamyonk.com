@@ -129,6 +129,6 @@ export default async function (eleventyConfig) {
       includes: "_includes",
       data: "_data",
     },
-    templateFormats: ["html", "md"],
+    templateFormats: ["html", "md", "njk"],
   };
 }

@@ -1,9 +1,8 @@
 {
-    auto_https off
     admin off
 }
 
-:4200 {
+adamyonk.localhost {
     root * ./_public
     encode gzip
 

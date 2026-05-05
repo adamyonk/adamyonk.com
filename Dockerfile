@@ -13,6 +13,8 @@ RUN npm ci
 COPY . .
 
 # Build the site
+ARG URL
+ENV URL=$URL
 RUN npm run publish:prod
 
 # Production stage
