@@ -6,7 +6,7 @@ const STAGE_ENV = "stage";
 // the possible base URLs
 const prodUrl = process.env.URL;
 const stageUrl = process.env.DEPLOY_PRIME_URL;
-const devUrl = "";
+const devUrl = process.env.URL || "";
 
 // set the baseUrl according to the environment
 let baseUrl;

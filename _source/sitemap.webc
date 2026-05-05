@@ -8,6 +8,6 @@ permalink: /sitemap.xml
 
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url webc:for="item of collections.all" webc:if="item.data.noindex !== true">
-  <loc @text="env.baseUrl + item.url"></loc>
+  <loc @text="env.baseUrl + item.url.replace(/^\/(en-US|es-ES)\//, '/')"></loc>
 </url>
 </urlset>
