@@ -1,0 +1,9 @@
+---
+eleventyExcludeFromCollections: true
+permalink: /.well-known/security.txt
+---
+<template webc:nokeep>
+Contact: mailto:adamyonk@icloud.com
+Expires: 2027-05-17T00:00:00.000Z
+Preferred-Languages: en
+</template>
