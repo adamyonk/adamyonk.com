@@ -4,7 +4,7 @@ layout: page
 
 <h1 class="leading-flush">
   Adam Jahnke<br/>
-  <small class="size-xxs weight-400 italic">Fijador</small>
+  <small class="size-xxs weight-400 italic" lang="en">Fixer</small>
 </h1>
 
 <p>
@@ -13,7 +13,7 @@ layout: page
 
 <p>
   Si buscas un desarrollador frontend/fullstack con experiencia para puestos de consultoría o de colaborador individual, 
-  <a href="mailto:Adam Jahnke <contracting@adamyonk.com>">¡contáctanos!</a>
+  <a href="mailto:Adam Jahnke <contracting@adamyonk.com>">¡contáctame!</a>
 </p>
 
 <h3>Entradas de blog:</h3>
